@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="600.0" styleClass="anchor" stylesheets="@paneCustomer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller">
+   <children>
+      <Label layoutX="40.0" layoutY="55.0" opacity="0.66" text="Personal Information">
+         <font>
+            <Font name="Montserrat Bold" size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="40.0" layoutY="81.0" prefHeight="5.0" prefWidth="503.0" />
+      <Label fx:id="cusName" layoutX="40.0" layoutY="102.0" text="Name  -  ">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="cAlias" layoutX="41.0" layoutY="178.0" text="alias">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="cEmail" layoutX="40.0" layoutY="142.0" text="email">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="cAddress" layoutX="40.0" layoutY="214.0" text="address">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="TOP" layoutX="369.0" layoutY="99.0"  prefHeight="127.0" prefWidth="128.0" text=" Click to change image" textFill="#c6c6c6">
+         <graphic>
+            <ImageView fx:id="cImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="bigImage">
+               <image>
+                  <Image url="@../../../../FARM/Advance-programming-farm/src/images/budding-leaves512.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Montserrat Light" size="12.0" />
+         </font>
+      </JFXButton>
+    <TitledPane fx:id="cBalance" contentDisplay="TEXT_ONLY" expanded="false" graphicTextGap="8.0" layoutX="13.0" layoutY="245.0" prefHeight="71.0" prefWidth="202.0" stylesheets="@paneCustomer.css" text="Balance">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="titled-pane">
+               <children>
+                  <TextField layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="132.0" promptText="enter amount" />
+                  <JFXButton layoutX="152.0" layoutY="10.0" text="add" />
+               </children>
+            </AnchorPane>
+      </content>
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+    </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="710.0" styleClass="main" stylesheets="@farmer.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="10.0" prefHeight="384.0" prefWidth="217.0" styleClass="left">
+         <children>
+            <Label layoutX="40.0" layoutY="414.0" text="YOUR INFORMATION" textFill="#bfbfbf">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="chatAvail" contentDisplay="RIGHT" layoutX="31.0" layoutY="358.0" onAction="#updateChat" text="Available for chat" />
+            <Label fx:id="pAddress" layoutX="40.0" layoutY="339.0" text="address">
+               <font>
+                  <Font name="Montserrat Regular" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="pAlias" layoutX="43.0" layoutY="247.0" text="alias">
+               <font>
+                  <Font name="Montserrat Regular" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="pEmail" layoutX="40.0" layoutY="310.0" text="email">
+               <font>
+                  <Font name="Montserrat Regular" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="pName" layoutX="42.0" layoutY="282.0" text="Name  -  ">
+               <font>
+                  <Font name="Montserrat Regular" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton contentDisplay="TOP" layoutX="46.0" layoutY="40.0" onAction="#upload" prefHeight="114.0" prefWidth="134.0" text=" Click to change image" textFill="#c4c4c456">
+               <font>
+                  <Font name="Montserrat Light" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="pImage" fitHeight="118.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-add-image-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="pBalance" layoutX="84.0" layoutY="207.0" text="balance">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="217.0" layoutY="58.0" prefHeight="400.0" prefWidth="493.0" styleClass="center">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="31.0" layoutY="81.0" prefHeight="89.0" prefWidth="208.0">
+               <graphic>
+                  <AnchorPane prefHeight="72.0" prefWidth="160.0" styleClass="anchorBtn">
+                     <children>
+                        <ImageView blendMode="MULTIPLY" fitHeight="80.0" fitWidth="192.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/CBR_07_glass_sheen.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="56.0" fitWidth="54.0" layoutX="72.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-image">
+                           <image>
+                              <Image url="@../images/icons8-field-48.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="34.0" layoutY="49.0" styleClass="anchor-text" text="Preview Crops" textAlignment="CENTER">
+                           <font>
+                              <Font name="Leelawadee UI Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="674.0" layoutY="2.0" onAction="#appClose" prefHeight="16.0" prefWidth="9.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" styleClass="img-btn">
+               <image>
+                  <Image url="@../images/icons8-close-window-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="641.0" layoutY="3.0" onAction="#setIconified" prefHeight="16.0" prefWidth="9.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true" styleClass="img-btn">
+               <image>
+                  <Image url="@../images/icons8-minimize-window-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

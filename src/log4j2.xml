@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorinterval="30" status="info" strict="true">
+    <Properties>
+        <Property name="Client">src/log/Client.log</Property>
+        <Property name="FileName">src/log/debug.log</Property>
+    </Properties>
+    <Appenders>
+        <!-- General Appenders -->
+        <Appender type="Console" name="ConsoleAppender">
+            <Layout type="PatternLayout" pattern="%d %p [%t] %m%n" />
+        </Appender>
+
+        <Appender type="File" name="FileAppender" fileName="${FileName}">
+            <Layout type="PatternLayout" pattern="%d %p %C [%t] %m%n" />
+        </Appender>
+        <!-- /General Appenders -->
+        <!-- MainSample Specific Appenders -->
+        <Appender type="File" name="ClientFileAppender" fileName="${Client}">
+            <Layout type="PatternLayout" pattern="%d %p %C [%t] %m%n" />
+        </Appender>
+        <!-- /MainSample Appenders -->
+    </Appenders>
+    <Loggers>
+        <Root level="all">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="FileAppender" />
+        </Root>
+        <Logger name="Client" level="all" additivity="false">
+            <AppenderRef ref="ClientFileAppender"/>
+            <AppenderRef ref="ConsoleAppender" />
+        </Logger>
+
+    </Loggers>
+</Configuration>

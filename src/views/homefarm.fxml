@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="600.0" styleClass="anchor" stylesheets="@paneFarm.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ConFarm">
+   <children>
+      <Label layoutX="40.0" layoutY="55.0" opacity="0.66" text="Personal Information">
+         <font>
+            <Font name="Montserrat Bold" size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="40.0" layoutY="81.0" prefHeight="5.0" prefWidth="503.0" />
+      <Label fx:id="pName" layoutX="40.0" layoutY="102.0" text="Name  -  ">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="pAlias" layoutX="41.0" layoutY="178.0" text="alias">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="pEmail" layoutX="40.0" layoutY="142.0" text="email">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="pAddress" layoutX="40.0" layoutY="214.0" text="address">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="TOP" layoutX="369.0" layoutY="99.0" onAction="#upload" prefHeight="127.0" prefWidth="128.0" text=" Click to change image" textFill="#c6c6c6">
+         <graphic>
+            <ImageView fx:id="pImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="bigImage">
+               <image>
+                  <Image url="@../../../../FARM/Advance-programming-farm/src/images/budding-leaves512.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Montserrat Light" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

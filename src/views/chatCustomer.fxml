@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="600.0" styleClass="anchor" stylesheets="@paneFarm.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller">
+   <children>
+      <TextArea fx:id="chatBoxCustomer" editable="false" layoutX="19.0" layoutY="47.0" prefHeight="220.0" prefWidth="433.0" />
+      <TextField fx:id="chatSendBoxCustomer" layoutX="20.0" layoutY="278.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="433.0" />
+      <JFXButton layoutX="466.0" layoutY="278.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="116.0" text="SEND" />
+      <JFXButton layoutX="467.0" layoutY="242.0" onAction="#initiateChat" prefHeight="25.0" prefWidth="116.0" text="Connect" />
+      <TableView layoutX="466.0" layoutY="47.0" prefHeight="195.0" prefWidth="116.0">
+        <columns>
+          <TableColumn prefWidth="115.0" text="farmers" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

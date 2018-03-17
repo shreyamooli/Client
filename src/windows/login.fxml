@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="block" prefHeight="450.0" prefWidth="400.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerLogin">
+   <children>
+      <AnchorPane fx:id="signInPage" disable="true" layoutX="25.0" layoutY="25.0" opacity="0.0" prefHeight="400.0" prefWidth="350.0" styleClass="main">
+         <children>
+            <JFXTextField fx:id="signUpName" alignment="CENTER" layoutX="46.0" layoutY="67.0" maxWidth="273.0" minWidth="218.0" prefHeight="45.0" prefWidth="273.0" promptText="FULL NAME" unFocusColor="#4d4d4d00" />
+            <JFXTextField fx:id="signUpEmail" alignment="CENTER" layoutX="46.0" layoutY="113.0" maxWidth="273.0" minWidth="218.0" prefHeight="45.0" prefWidth="273.0" promptText="EMAIL" unFocusColor="#4d4d4d00" />
+            <JFXPasswordField fx:id="signUpPassword" alignment="CENTER" layoutX="46.0" layoutY="159.0" maxWidth="145.0" minWidth="135.0" prefHeight="45.0" prefWidth="135.0" promptText="PASSWORD" unFocusColor="#4d4d4d00" />
+            <JFXPasswordField fx:id="signUpPassword1" layoutX="184.0" layoutY="159.0" maxWidth="145.0" minWidth="135.0" prefHeight="45.0" prefWidth="135.0" promptText="PASSWORD" unFocusColor="#4d4d4d00" />
+            <JFXTextField fx:id="address" alignment="CENTER" layoutX="45.0" layoutY="205.0" maxWidth="273.0" minWidth="218.0" prefHeight="45.0" prefWidth="273.0" promptText="ADDRESS" unFocusColor="#4d4d4d00" />
+            <JFXRadioButton fx:id="radioFarmer" layoutX="46.0" layoutY="252.0" onAction="#radioChanged" prefHeight="40.0" prefWidth="135.0" text="FARMER">
+               <toggleGroup>
+                  <ToggleGroup fx:id="btn" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="radioCustomer" layoutX="184.0" layoutY="252.0" onAction="#radioChanged" prefHeight="40.0" prefWidth="135.0" text="CUSTOMER" toggleGroup="$btn" />
+            <JFXButton layoutX="183.0" layoutY="302.0" onAction="#signUp" prefHeight="45.0" prefWidth="273.0" styleClass="loginbtn" text="Sign Up" />
+            <Label layoutX="39.0" layoutY="353.0" lineSpacing="4.0" prefHeight="40.0" prefWidth="250.0" text="by signing up you agree to FARM's Terms &amp; Conditions." textFill="#9a9a9a" wrapText="true">
+               <font>
+                  <Font name="Leelawadee Bold" size="11.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="47.0" layoutY="303.0" onAction="#switchToSignUp" prefHeight="25.0" prefWidth="110.0" styleClass="loginbtnAlt" text="Back" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" styleClass="feild-image">
+                     <image>
+                        <Image url="@../images/icons8-long-arrow-left-26.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Leelawadee UI" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="120.0" layoutY="11.0" text="FARM">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signUpPage" layoutX="25.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="350.0" styleClass="main" stylesheets="@login.css">
+         <children>
+            <Label layoutX="46.0" layoutY="19.0" text="We are" textFill="#a1a1a14c">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="151.0" layoutY="11.0" text="FARM">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="59.0" prefHeight="53.0" prefWidth="218.0" text="Welcome back, please log into your account." textFill="#979797" wrapText="true">
+               <font>
+                  <Font name="Leelawadee UI" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="signInEmail" labelFloat="true" layoutX="46.0" layoutY="146.0" maxWidth="250.0" minWidth="218.0" prefHeight="45.0" prefWidth="250.0" promptText="Email" unFocusColor="#4d4d4d00">
+               <font>
+                  <Font name="Leelawadee UI" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="signInPassword" labelFloat="true" layoutX="46.0" layoutY="192.0" maxWidth="250.0" minWidth="218.0" prefHeight="45.0" prefWidth="250.0" promptText="Password" unFocusColor="#4d4d4d00">
+               <font>
+                  <Font name="Leelawadee UI" size="12.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton layoutX="47.0" layoutY="302.0" onAction="#signIn" prefHeight="45.0" prefWidth="99.0" styleClass="loginbtn" text="Login">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton contentDisplay="RIGHT" layoutX="185.0" layoutY="301.0" onAction="#switchToSignUp" prefHeight="45.0" prefWidth="99.0" styleClass="loginbtnAlt" text="Sign Up">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="feild-image">
+                     <image>
+                        <Image url="@../images/icons8-right-arrow-26.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXCheckBox checkedColor="#d05955" layoutX="36.0" layoutY="260.0" text="Remember me" textFill="#9a9a9a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXButton layoutX="181.0" layoutY="256.0" text="forgot password?" textFill="#9a9a9a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="263.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true" styleClass="feild-image">
+               <image>
+                  <Image url="@../images/icons8-customer-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="265.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true" styleClass="feild-image">
+               <image>
+                  <Image url="@../images/icons8-lock-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="506.0" prefWidth="649.0" styleClass="main" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerLogin">
+   <children>
+      <AnchorPane layoutX="329.0" prefHeight="506.0" prefWidth="365.0">
+         <children>
+            <AnchorPane fx:id="signInPage" prefHeight="506.0" prefWidth="329.0">
+               <children>
+                  <TextField fx:id="signInEmail" alignment="CENTER" layoutX="55.0" layoutY="264.0" prefHeight="25.0" prefWidth="220.0" promptText="Name" />
+                  <PasswordField fx:id="signInPassword" alignment="CENTER" layoutX="55.0" layoutY="305.0" prefHeight="25.0" prefWidth="220.0" promptText="Password" />
+                  <JFXButton layoutX="104.0" layoutY="361.0" onAction="#signIn" prefHeight="25.0" prefWidth="122.0" styleClass="mainBtn" text="Login" />
+                  <Label layoutX="71.0" layoutY="476.0" text="Don't have an account?" textFill="#b0b0b0d6">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="210.0" layoutY="473.0" onAction="#switchToSignUp" styleClass="atlBtn" text="Sign Up" />
+                  <ImageView cache="true" fitHeight="131.0" fitWidth="136.0" layoutX="88.0" layoutY="79.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/icons8-barn-80.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView cache="true" fitHeight="24.0" fitWidth="24.0" layoutX="249.0" layoutY="264.0" opacity="0.74" pickOnBounds="true" preserveRatio="true" styleClass="mainIcon">
+                     <image>
+                        <Image url="@../images/ic_account_circle_black_18dp_2x.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView cache="true" fitHeight="25.0" fitWidth="25.0" layoutX="248.0" layoutY="305.0" opacity="0.74" pickOnBounds="true" preserveRatio="true" styleClass="mainIcon">
+                     <image>
+                        <Image url="@../images/ic_fingerprint_black_18dp_2x.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="signUpPage" disable="true" opacity="0.0" prefHeight="506.0" prefWidth="329.0">
+               <children>
+                  <TextField fx:id="signUpName" alignment="CENTER" layoutX="55.0" layoutY="179.0" prefHeight="25.0" prefWidth="220.0" promptText="Name" />
+                  <PasswordField fx:id="signUpPassword" alignment="CENTER" layoutX="29.0" layoutY="328.0" prefHeight="25.0" prefWidth="122.0" promptText="Password" />
+                  <JFXButton layoutX="104.0" layoutY="422.0" onAction="#signUp" prefHeight="25.0" prefWidth="122.0" styleClass="mainBtn" text="Sign Up" />
+                  <Label layoutX="71.0" layoutY="476.0" text="Don't have an account?" textFill="#b0b0b0d6">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="210.0" layoutY="473.0" onAction="#switchToSignUp" styleClass="atlBtn" text="Sign In!" />
+                  <ImageView cache="true" fitHeight="131.0" fitWidth="136.0" layoutX="90.0" layoutY="14.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/icons8-barn-80.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView cache="true" fitHeight="24.0" fitWidth="24.0" layoutX="249.0" layoutY="264.0" opacity="0.74" pickOnBounds="true" preserveRatio="true" styleClass="mainIcon">
+                     <image>
+                        <Image url="@../images/ic_account_circle_black_18dp_2x.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="signUpPassword2" alignment="CENTER" layoutX="171.0" layoutY="328.0" prefHeight="25.0" prefWidth="122.0" promptText="Password" />
+                  <TextField fx:id="signUpEmail" alignment="CENTER" layoutX="55.0" layoutY="228.0" prefHeight="25.0" prefWidth="220.0" promptText="Email" />
+                  <TextField fx:id="address" alignment="CENTER" layoutX="55.0" layoutY="276.0" prefHeight="25.0" prefWidth="220.0" promptText="Address" />
+                  <JFXRadioButton fx:id="radioFarmer" layoutX="52.0" layoutY="384.0" onAction="#radioChanged" selected="true" text="Farmer">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="btn" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="radioCustomer" layoutX="172.0" layoutY="384.0" onAction="#radioChanged" text="Customer" toggleGroup="$btn" />
+               </children>
+            </AnchorPane>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="320.0" layoutY="3.0" onAction="#appClose" prefHeight="20.0" prefWidth="20.0" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="25.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" styleClass="btnImageWhite">
+                     <image>
+                        <Image url="@../images/icons8-close-window-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="290.0" layoutY="3.0" onAction="#setIconified" prefHeight="20.0" prefWidth="20.0" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" styleClass="btnImageWhite">
+                     <image>
+                        <Image url="@../images/icons8-minimize-window-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

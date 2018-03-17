@@ -1,0 +1,70 @@
+.main{
+    -fx-border-color: white;
+    -fx-background-color: white;
+}
+
+.jfx-progress-bar-red .track  {
+
+    -fx-background-color: transparent;
+
+    -fx-stroke: transparent;
+}
+
+.jfx-progress-bar-red .bar  {
+
+
+    -fx-stroke: red;
+}
+.jfx-progress-bar-gtrrn .bar  {
+
+    -fx-stroke: #00ff11;
+    -fx-effect: dropshadow( gaussian , rgb(0, 192, 7), 15 , 0.0 , 0 , 0 );
+    -fx-background-color: transparent;
+}
+
+
+.hiscard{
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: white;
+}
+
+.in{
+
+    -fx-background-color: #eaf0ff;
+    -fx-padding: 3px 7px 0px 7px;
+     //   -fx-text-alignment: right;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+
+
+}
+
+.out{
+
+    -fx-background-color: #a5c6a5;
+    -fx-padding: 3px 7px 0px 7px;
+
+     //   -fx-text-alignment: left;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-translate-x: 5;
+
+
+}
+
+.mid{
+
+    -fx-background-color: #dff8ff;
+    -fx-padding: 3px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    //-fx-text-alignment: center;
+
+
+}
+
+.paneHolder{
+    -fx-padding: 7px 7px 7px 7px;
+
+}

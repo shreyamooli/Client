@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="mainFarm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="620.0" stylesheets="@paneCustomer.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerCustomer">
+    <children>
+        <AnchorPane fx:id="topPane" layoutX="10.0" layoutY="7.0" prefHeight="101.0" prefWidth="600.0" styleClass="anchor">
+            <children>
+                <HBox layoutX="81.0" layoutY="63.0" prefHeight="37.0" prefWidth="438.0">
+                    <children>
+                        <ToggleButton fx:id="homeBtnCus" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#loadWhoeverCus" prefHeight="37.0" prefWidth="109.0" styleClass="toggle-btn" text="Home" textAlignment="CENTER">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="bar1" />
+                            </toggleGroup>
+                            <font>
+                                <Font name="Montserrat SemiBold" size="15.0" />
+                            </font>
+                        </ToggleButton>
+                        <ToggleButton fx:id="cropBtnCus" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#loadWhoeverCus" prefHeight="37.0" prefWidth="109.0" styleClass="toggle-btn" text="Crops" toggleGroup="$bar1">
+                            <font>
+                                <Font name="Montserrat SemiBold" size="15.0" />
+                            </font></ToggleButton>
+                        <ToggleButton fx:id="historyBtnCus" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#loadWhoeverCus" prefHeight="37.0" prefWidth="109.0" styleClass="toggle-btn" text="Kart" toggleGroup="$bar1">
+                            <font>
+                                <Font name="Montserrat SemiBold" size="15.0" />
+                            </font></ToggleButton>
+                        <ToggleButton fx:id="chatBtnCus" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#loadWhoeverCus" prefHeight="37.0" prefWidth="109.0" styleClass="toggle-btn" text="Chats" toggleGroup="$bar1">
+                            <font>
+                                <Font name="Montserrat SemiBold" size="15.0" />
+                            </font></ToggleButton>
+                    </children>
+                </HBox>
+                <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="565.0" onAction="#appClose" prefHeight="16.0" prefWidth="9.0" text=" ">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" styleClass="img-btn">
+                            <image>
+                                <Image url="@../images/ic_close_black_24dp.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="532.0" onAction="#setIconified" prefHeight="16.0" prefWidth="9.0" text=" ">
+                    <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true" styleClass="img-btn">
+                            <image>
+                                <Image url="@../images/ic_vertical_align_bottom_black_24dp_2x.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="10.0" layoutY="108.0" prefHeight="317.0" prefWidth="600.0" styleClass="anchor" />
+        <AnchorPane fx:id="bottomPaneCus" layoutX="10.0" layoutY="108.0" prefHeight="317.0" prefWidth="600.0" styleClass="anchor">
+            <children>
+                <Label alignment="CENTER" layoutX="91.0" layoutY="27.0" prefHeight="274.0" prefWidth="418.0" text="WELCOME TO FARM" textAlignment="CENTER">
+                    <font>
+                        <Font name="Montserrat Black" size="32.0" />
+                    </font>
+                </Label>
+            <AnchorPane fx:id="homeCustomer" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="317.0" prefWidth="600.0" styleClass="anchor" stylesheets="@paneCustomer.css">
+               <children>
+                  <Label layoutX="40.0" layoutY="55.0" opacity="0.66" text="Personal Information">
+                     <font>
+                        <Font name="Montserrat Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="40.0" layoutY="81.0" prefHeight="5.0" prefWidth="503.0" />
+                  <Label fx:id="cusName" layoutX="40.0" layoutY="102.0" text="Name  -  ">
+                     <font>
+                        <Font name="Montserrat Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cAlias" layoutX="41.0" layoutY="178.0" text="alias">
+                     <font>
+                        <Font name="Montserrat Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cEmail" layoutX="40.0" layoutY="142.0" text="email">
+                     <font>
+                        <Font name="Montserrat Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cAddress" layoutX="40.0" layoutY="214.0" text="address">
+                     <font>
+                        <Font name="Montserrat Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXButton contentDisplay="TOP" layoutX="369.0" layoutY="99.0" prefHeight="127.0" prefWidth="128.0" text=" Click to change image" textFill="#c6c6c6">
+                     <graphic>
+                        <ImageView fx:id="cImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="bigImage">
+                           <image>
+                              <Image url="@../../../../FARM/Advance-programming-farm/src/images/budding-leaves512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Montserrat Light" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <TitledPane fx:id="cBalance" contentDisplay="TEXT_ONLY" expanded="false" graphicTextGap="8.0" layoutX="13.0" layoutY="245.0" prefHeight="71.0" prefWidth="202.0" stylesheets="@paneCustomer.css" text="Balance">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="titled-pane">
+                           <children>
+                              <TextField fx:id="creditField" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="132.0" promptText="enter amount" />
+                              <JFXButton layoutX="152.0" layoutY="10.0" onAction="#addCredit" text="add" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Montserrat Regular" size="13.0" />
+                     </font>
+                  </TitledPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="chatCustomer" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="317.0" prefWidth="600.0" styleClass="anchor" stylesheets="@paneFarm.css">
+               <children>
+                  <TextArea fx:id="chatBoxCustomer" disable="true" editable="false" layoutX="19.0" layoutY="47.0" opacity="0.0" prefHeight="220.0" prefWidth="433.0" />
+                  <TextField fx:id="chatSendBoxCustomer" layoutX="20.0" layoutY="278.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="433.0" />
+                  <JFXButton layoutX="466.0" layoutY="278.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="116.0" styleClass="toggle-btn" text="SEND" />
+                  <JFXButton layoutX="466.0" layoutY="244.0" onAction="#initiateChat" prefHeight="25.0" prefWidth="116.0" styleClass="toggle-btn" text="Connect" />
+                  <TableView fx:id="farmerTable" layoutX="466.0" layoutY="47.0" prefHeight="195.0" prefWidth="116.0">
+                     <columns>
+                        <TableColumn fx:id="farmerColumn" prefWidth="115.0" text="farmers" />
+                     </columns>
+                  </TableView>
+                  <ScrollPane fx:id="scrollPane" layoutX="20.0" layoutY="47.0" prefHeight="220.0" prefWidth="433.0">
+                     <content>
+                        <GridPane fx:id="gridChat" prefHeight="218.0" prefWidth="410.0" vgap="5.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="cropCustomer" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="317.0" prefWidth="600.0" styleClass="anchor" stylesheets="@paneCustomer.css">
+               <children>
+                  <TableView fx:id="cropTable" layoutX="19.0" layoutY="86.0" prefHeight="200.0" prefWidth="563.0">
+                     <columns>
+                        <TableColumn fx:id="cropName" prefWidth="88.0" text="name" />
+                        <TableColumn fx:id="cropWeight" prefWidth="58.0" text="weight" />
+                        <TableColumn fx:id="cropQuantity" prefWidth="75.0" text="quantity" />
+                        <TableColumn fx:id="cropCost" prefWidth="76.0" text="cost" />
+                        <TableColumn fx:id="cropAvailable" prefWidth="69.0" text="available" />
+                        <TableColumn fx:id="cropOwner" prefWidth="117.0" text="owner" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="cropSearch" layoutX="359.0" layoutY="53.0" />
+                  <JFXButton layoutX="508.0" layoutY="53.0" prefHeight="25.0" prefWidth="73.0" text="search" />
+               </children>
+            </AnchorPane>
+            </children></AnchorPane>
+        <AnchorPane layoutX="10.0" layoutY="424.0" prefHeight="43.0" prefWidth="410.0" styleClass="anchor">
+            <children>
+                <Label layoutX="11.0" layoutY="13.0" styleClass="toggle-btn" text="trademark thingy" />
+                <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="563.0" layoutY="9.0">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" styleClass="img-btn">
+                            <image>
+                                <Image url="@../images/ic_settings_black_24dp_2x.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

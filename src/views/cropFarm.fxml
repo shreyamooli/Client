@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#setTable" prefHeight="317.0" prefWidth="600.0" styleClass="anchor" stylesheets="@paneFarm.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller">
+   <children>
+      <TableView fx:id="cropTable" layoutX="-1.0" layoutY="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="286.0" prefWidth="600.0" styleClass="none">
+        <columns>
+          <TableColumn fx:id="ctName" prefWidth="87.0" resizable="false" text="name" />
+            <TableColumn fx:id="ctWeight" prefWidth="106.0" resizable="false" text="weight" />
+            <TableColumn fx:id="ctCost" prefWidth="116.0" resizable="false" text="cost" />
+            <TableColumn fx:id="ctQuantity" prefWidth="128.0" resizable="false" text="quantity" />
+            <TableColumn fx:id="ctAvailable" prefWidth="136.0" resizable="false" text="available" />
+        </columns>
+      </TableView>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="534.0" layoutY="246.0" onAction="#displayAddCrop" prefHeight="40.0" prefWidth="40.0" styleClass="addbtn" text=" ">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_add_circle_black_24dp_2x.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+   </children>
+</AnchorPane>

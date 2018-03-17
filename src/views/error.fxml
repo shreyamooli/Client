@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="errrorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="200.0" styleClass="main" stylesheets="@msg%20sheets.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXProgressBar layoutY="10.0" styleClass="jfx-progress-bar-red" />
+      <JFXProgressBar layoutY="5.0" rotate="180.0" styleClass="jfx-progress-bar-red" />
+   </children>
+</AnchorPane>

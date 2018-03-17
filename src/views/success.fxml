@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="successPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" styleClass="main" stylesheets="@msg%20sheets.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="116.0" opacity="0.8" prefHeight="17.0" prefWidth="173.0" text="Success" textAlignment="CENTER" textFill="#00ff37">
+         <font>
+            <Font name="ProstoSans-Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="121.0" fitWidth="144.0" layoutX="28.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/discount-10-icon.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="150.0" prefHeight="17.0" prefWidth="200.0" text="yay!, operation successful" textAlignment="CENTER" textFill="#a6a6a6d5">
+         <font>
+            <Font name="Segoe UI Semibold" size="12.0" />
+         </font>
+      </Label>
+      <JFXProgressBar layoutY="106.0" styleClass="jfx-progress-bar-gtrrn" />
+      <Label fx:id="successLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="174.0" prefHeight="17.0" prefWidth="200.0" text=" " textAlignment="CENTER" textFill="#464646d6">
+         <font>
+            <Font name="Segoe UI Semibold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

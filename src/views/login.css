@@ -1,0 +1,35 @@
+.root {
+    -fx-focus-color: black;
+    -fx-faint-focus-color: transparent;
+}
+
+.main{
+    -fx-background-color: #0d0c13;
+}
+
+.mainBtn{
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-text-fill: whitesmoke;
+    -fx-border-color: white;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+}
+
+
+.atlBtn{
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( gaussian , rgba(255, 255, 255, 0.98), 5 , 0.0 , 0 , 0 );
+
+}
+
+.mainIcon{
+    -fx-opacity: .5;
+    -fx-effect: innershadow( gaussian , rgba(49, 49, 49, 0.63), 7 , 1 , 1 , 1 );
+
+}
+
+.btnImageWhite{
+    -fx-effect: innershadow( gaussian , rgba(255, 255, 255, 0.87), 7 , 1 , 1 , 1 );
+-fx-cursor: hand;
+
+}

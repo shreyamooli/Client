@@ -1,0 +1,885 @@
+2018-02-09 16:10:14,745 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:20:39,078 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:22:21,986 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:22:41,914 ERROR client.ClientCustomer [JavaFX Application Thread] null
+2018-02-09 16:25:36,811 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:27:38,468 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 16:32:28,508 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:32:45,857 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 16:43:35,460 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:43:46,554 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:44:46,814 INFO server.Server [main] server started
+2018-02-09 16:47:15,171 INFO server.Server [main] server started
+2018-02-09 16:47:24,089 INFO server.Server [main] Client connected
+2018-02-09 16:47:24,732 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:47:29,537 INFO server.Server [main] Client connected
+2018-02-09 16:47:29,606 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:51:47,024 INFO server.Server [main] server started
+2018-02-09 16:51:55,779 INFO server.Server [main] Client connected
+2018-02-09 16:51:56,252 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:52:15,996 INFO server.Server [main] Client connected
+2018-02-09 16:52:16,039 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:54:20,861 INFO server.Server [main] Client connected
+2018-02-09 16:54:20,891 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:54:42,137 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 16:54:52,508 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 16:57:33,717 INFO server.Server [main] Client connected
+2018-02-09 16:57:33,743 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 16:58:00,136 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 16:58:10,700 INFO server.Server [main] Client connected
+2018-02-09 16:58:10,740 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 17:03:11,255 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 17:06:18,568 INFO server.Server [main] Client connected
+2018-02-09 17:06:18,740 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 17:06:35,037 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 17:06:42,633 INFO server.Server [main] Client connected
+2018-02-09 17:06:42,658 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 17:06:58,239 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 18:07:20,342 INFO server.Server [main] Client connected
+2018-02-09 18:07:20,406 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:07:49,831 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 18:08:04,577 INFO server.Server [main] Client connected
+2018-02-09 18:08:04,660 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:08:34,243 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 18:11:51,540 INFO server.Server [main] Client connected
+2018-02-09 18:11:51,587 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:12:12,449 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 18:12:21,651 INFO server.Server [main] Client connected
+2018-02-09 18:12:21,960 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:12:41,388 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 18:16:27,137 INFO server.Server [main] Client connected
+2018-02-09 18:16:27,217 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:16:54,387 INFO server.Server [main] Client connected
+2018-02-09 18:16:54,412 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:19:18,918 INFO server.Server [main] Client connected
+2018-02-09 18:19:18,936 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:19:46,241 INFO server.Server [main] Client connected
+2018-02-09 18:19:46,273 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:20:39,756 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 18:20:44,142 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 18:45:26,850 INFO server.Server [main] Client connected
+2018-02-09 18:45:26,962 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:45:59,069 INFO server.Server [main] Client connected
+2018-02-09 18:45:59,094 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:46:47,506 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 18:46:51,869 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 18:53:28,729 INFO server.Server [main] Client connected
+2018-02-09 18:53:28,756 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:53:41,619 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 18:53:48,399 INFO server.Server [main] Client connected
+2018-02-09 18:53:48,427 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:54:06,807 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 18:55:25,284 INFO server.Server [main] Client connected
+2018-02-09 18:55:25,330 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:56:15,468 INFO server.Server [main] Client connected
+2018-02-09 18:56:15,503 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 18:56:28,393 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 18:56:35,786 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 19:02:19,834 INFO server.Server [main] Client connected
+2018-02-09 19:02:19,858 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 19:02:35,918 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 19:02:43,875 INFO server.Server [main] Client connected
+2018-02-09 19:02:43,899 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 19:03:04,034 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 19:03:42,528 INFO server.Server [main] Client connected
+2018-02-09 19:03:42,555 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 19:04:07,581 INFO server.Server [main] Client connected
+2018-02-09 19:04:07,607 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 19:04:26,712 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 19:04:28,371 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 19:12:30,067 INFO server.Server [main] Client connected
+2018-02-09 19:12:30,098 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 19:12:50,345 INFO server.Server [main] Client connected
+2018-02-09 19:12:50,381 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 19:13:11,993 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 19:13:26,798 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 19:15:22,493 INFO server.Server [main] Client connected
+2018-02-09 19:15:22,533 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 19:15:36,985 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 19:15:47,110 INFO server.Server [main] Client connected
+2018-02-09 19:15:47,137 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 19:16:11,414 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 19:35:18,997 ERROR client.Client [JavaFX Application Thread] Connection refused (Connection refused)
+2018-02-09 19:36:10,269 INFO server.Server [main] server started
+2018-02-09 19:36:18,608 INFO server.Server [main] Client connected
+2018-02-09 19:36:19,302 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 19:36:35,575 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 19:36:44,593 INFO server.Server [main] Client connected
+2018-02-09 19:36:44,617 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 19:37:05,283 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 20:29:06,855 INFO server.Server [main] server started
+2018-02-09 20:29:30,013 INFO server.Server [main] Client connected
+2018-02-09 20:29:30,516 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:30:01,080 INFO server.Server [main] Client connected
+2018-02-09 20:30:01,123 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:30:13,666 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 20:30:19,084 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 20:36:39,243 INFO server.Server [main] Client connected
+2018-02-09 20:36:39,294 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:37:00,762 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 20:37:09,434 INFO server.Server [main] Client connected
+2018-02-09 20:37:09,461 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:37:25,305 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 20:41:10,671 INFO server.Server [main] Client connected
+2018-02-09 20:41:10,715 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:42:24,459 INFO server.Server [main] server started
+2018-02-09 20:42:41,996 INFO server.Server [main] Client connected
+2018-02-09 20:42:42,586 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:42:49,307 INFO server.Server [main] Client connected
+2018-02-09 20:42:49,352 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:47:24,599 INFO server.Server [main] server started
+2018-02-09 20:47:30,958 INFO server.Server [main] Client connected
+2018-02-09 20:47:31,033 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:47:37,755 INFO server.Server [main] Client connected
+2018-02-09 20:47:37,779 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:47:59,047 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 20:48:01,295 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 20:57:08,424 INFO server.Server [main] Client connected
+2018-02-09 20:57:08,574 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:57:44,560 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 20:58:53,519 INFO server.Server [main] Client connected
+2018-02-09 20:58:53,548 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:58:59,248 INFO server.Server [main] Client connected
+2018-02-09 20:58:59,319 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 20:59:28,926 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 20:59:32,071 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 21:02:55,120 INFO server.Server [main] Client connected
+2018-02-09 21:02:55,163 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:03:03,262 INFO server.Server [main] Client connected
+2018-02-09 21:03:03,289 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:03:33,369 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 21:03:35,819 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 21:08:00,890 INFO server.Server [main] Client connected
+2018-02-09 21:08:00,917 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:08:07,462 INFO server.Server [main] Client connected
+2018-02-09 21:08:07,536 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:08:57,036 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 21:08:59,509 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 21:10:18,315 INFO server.Server [main] Client connected
+2018-02-09 21:10:18,344 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:10:25,215 INFO server.Server [main] Client connected
+2018-02-09 21:10:25,245 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:10:45,934 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 21:10:47,354 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 21:12:42,091 INFO server.Server [main] Client connected
+2018-02-09 21:12:42,124 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:12:52,325 INFO server.Server [main] Client connected
+2018-02-09 21:12:52,378 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:13:15,582 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 21:13:19,444 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 21:16:01,872 INFO server.Server [main] Client connected
+2018-02-09 21:16:01,921 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:16:08,943 INFO server.Server [main] Client connected
+2018-02-09 21:16:08,971 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:16:39,851 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 21:16:41,819 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 21:20:02,260 INFO server.Server [main] Client connected
+2018-02-09 21:20:02,320 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:20:08,503 INFO server.Server [main] Client connected
+2018-02-09 21:20:08,571 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:20:28,466 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 21:20:30,644 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-09 21:22:00,408 INFO server.Server [main] Client connected
+2018-02-09 21:22:00,450 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:22:07,130 INFO server.Server [main] Client connected
+2018-02-09 21:22:07,162 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-09 21:22:32,773 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-09 21:22:34,300 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-10 03:12:51,863 INFO server.Server [main] server started
+2018-02-10 03:15:24,259 INFO server.Server [main] Client connected
+2018-02-10 03:15:24,351 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:15:29,866 INFO server.Server [main] Client connected
+2018-02-10 03:15:29,998 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:16:11,419 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 03:16:14,723 INFO client.ClientFarmer$StartServer [Thread-5] client server accepted
+2018-02-10 03:19:48,942 INFO server.Server [main] Client connected
+2018-02-10 03:19:48,968 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:19:56,298 INFO server.Server [main] Client connected
+2018-02-10 03:19:56,324 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:20:13,957 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 03:20:17,027 INFO client.ClientFarmer$StartServer [Thread-5] client server accepted
+2018-02-10 03:30:43,635 INFO server.Server [main] Client connected
+2018-02-10 03:30:43,667 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:30:50,422 INFO server.Server [main] Client connected
+2018-02-10 03:30:50,470 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:31:17,899 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 03:31:22,816 INFO client.ClientFarmer$StartServer [Thread-5] client server accepted
+2018-02-10 03:31:27,928 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 03:31:27,930 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 03:31:27,934 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:31:27,935 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:39:37,511 INFO server.Server [main] Client connected
+2018-02-10 03:39:37,542 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:39:45,613 INFO server.Server [main] Client connected
+2018-02-10 03:39:45,668 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:40:14,510 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 03:40:18,323 INFO client.ClientFarmer$StartServer [Thread-5] client server accepted
+2018-02-10 03:40:24,023 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 03:40:24,025 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 03:40:24,033 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:40:24,034 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:40:24,035 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] ReadOnlyDoubleProperty [bean: Label@22726449[styleClass=label in]'hi', name: width, value: 0.0]
+2018-02-10 03:42:20,844 INFO server.Server [main] Client connected
+2018-02-10 03:42:20,913 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:42:26,150 INFO server.Server [main] Client connected
+2018-02-10 03:42:26,178 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:43:03,312 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 03:43:03,790 INFO client.ClientFarmer$StartServer [Thread-5] client server accepted
+2018-02-10 03:43:10,250 WARN client.ClientCustomer$listenchat [Thread-6] 0.0
+2018-02-10 03:43:10,254 WARN client.ClientCustomer$listenchat [Thread-6] 0.0
+2018-02-10 03:43:10,314 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:43:10,314 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:43:10,315 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] ReadOnlyDoubleProperty [bean: Label@68d65577[styleClass=label in]'hi', name: width, value: 0.0]
+2018-02-10 03:47:41,369 INFO server.Server [main] Client connected
+2018-02-10 03:47:41,396 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:47:48,494 INFO server.Server [main] Client connected
+2018-02-10 03:47:48,564 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:48:24,296 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 03:48:27,229 INFO client.ClientFarmer$StartServer [Thread-5] client server accepted
+2018-02-10 03:48:36,069 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 03:48:36,070 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 03:48:36,074 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:48:36,074 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:48:36,075 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:55:00,549 INFO server.Server [main] Client connected
+2018-02-10 03:55:00,590 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:55:08,317 INFO server.Server [main] Client connected
+2018-02-10 03:55:08,345 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:55:34,227 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 03:55:37,350 INFO client.ClientFarmer$StartServer [Thread-5] client server accepted
+2018-02-10 03:55:46,080 WARN client.ClientCustomer$listenchat [Thread-6] 0.0
+2018-02-10 03:55:46,082 WARN client.ClientCustomer$listenchat [Thread-6] 0.0
+2018-02-10 03:55:46,087 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:55:46,087 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:55:46,090 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:55:46,090 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 03:58:37,233 INFO server.Server [main] Client connected
+2018-02-10 03:58:37,272 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 03:58:53,005 INFO server.Server [main] Client connected
+2018-02-10 03:58:53,073 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 04:00:04,846 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 04:00:08,644 INFO client.ClientFarmer$StartServer [Thread-5] client server accepted
+2018-02-10 04:00:11,940 WARN client.ClientCustomer$listenchat [Thread-8] 0.0
+2018-02-10 04:00:11,944 WARN client.ClientCustomer$listenchat [Thread-8] 0.0
+2018-02-10 04:04:51,132 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 04:04:51,133 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 04:04:51,133 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 04:04:51,134 WARN client.ClientCustomer$listenchat$2 [JavaFX Application Thread] 0.0
+2018-02-10 04:08:01,320 INFO server.Server [main] Client connected
+2018-02-10 04:08:01,369 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 04:08:15,073 INFO server.Server [main] Client connected
+2018-02-10 04:08:15,156 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 04:08:31,881 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 04:08:33,349 INFO client.ClientFarmer$StartServer [Thread-5] client server accepted
+2018-02-10 04:09:10,291 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 04:09:11,786 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 04:13:48,231 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 04:13:48,232 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 04:14:17,485 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 04:14:17,486 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 04:16:17,347 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 04:16:17,347 WARN client.ClientCustomer$listenchat [Thread-5] 0.0
+2018-02-10 01:02:23,134 INFO server.Server [main] server started
+2018-02-10 01:02:42,032 INFO server.Server [main] Client connected
+2018-02-10 01:02:42,103 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 01:02:56,989 INFO server.Server [main] Client connected
+2018-02-10 01:02:57,034 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 01:03:18,077 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 01:03:20,644 INFO client.ClientFarmer$StartServer [Thread-5] client server accepted
+2018-02-10 01:25:26,442 INFO server.Server [main] Client connected
+2018-02-10 01:25:26,526 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:05:24,006 INFO server.Server [main] server started
+2018-02-10 10:05:45,046 INFO server.Server [main] Client connected
+2018-02-10 10:05:45,095 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:05:47,756 INFO server.Server [main] Client connected
+2018-02-10 10:05:47,782 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:06:22,091 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 10:06:26,852 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-10 10:08:53,980 INFO server.Server [main] Client connected
+2018-02-10 10:08:54,037 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:09:01,701 INFO server.Server [main] Client connected
+2018-02-10 10:09:01,731 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:09:20,811 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 10:09:22,482 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-10 10:11:36,478 INFO server.Server [main] Client connected
+2018-02-10 10:11:36,513 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:11:42,819 INFO server.Server [main] Client connected
+2018-02-10 10:11:42,854 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:12:00,938 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 10:12:19,316 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-10 10:23:42,620 INFO server.Server [main] Client connected
+2018-02-10 10:23:42,660 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:23:47,649 INFO server.Server [main] Client connected
+2018-02-10 10:23:47,706 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:24:19,444 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 10:24:23,606 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-10 10:48:21,988 INFO server.Server [main] server started
+2018-02-10 10:48:38,495 INFO server.Server [main] Client connected
+2018-02-10 10:48:38,569 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:48:45,054 INFO server.Server [main] Client connected
+2018-02-10 10:48:45,115 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 10:49:15,983 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 10:49:17,648 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-10 11:01:51,049 INFO server.Server [main] Client connected
+2018-02-10 11:01:51,137 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 11:01:58,999 INFO server.Server [main] Client connected
+2018-02-10 11:01:59,069 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 11:02:39,688 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 11:02:41,272 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-10 11:07:50,034 INFO server.Server [main] server started
+2018-02-10 11:07:59,283 INFO server.Server [main] Client connected
+2018-02-10 11:07:59,309 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 11:08:06,417 INFO server.Server [main] Client connected
+2018-02-10 11:08:06,475 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 11:08:34,241 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 11:08:38,123 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-10 12:28:52,113 INFO server.Server [main] server started
+2018-02-10 12:29:27,209 INFO server.Server [main] Client connected
+2018-02-10 12:29:27,295 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 12:29:28,994 INFO server.Server [main] Client connected
+2018-02-10 12:29:29,008 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 12:31:36,589 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 12:31:39,686 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-10 12:43:45,934 INFO server.Server [main] Client connected
+2018-02-10 12:43:46,069 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 12:43:53,910 INFO server.Server [main] Client connected
+2018-02-10 12:43:54,019 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-10 12:44:23,499 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-10 12:44:28,944 INFO client.ClientFarmer$StartServer [Thread-4] client server accepted
+2018-02-12 11:39:12,405 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-12 11:40:38,220 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-12 11:43:18,709 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-12 11:44:02,603 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-12 11:45:07,853 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-12 11:45:25,915 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-12 11:46:44,527 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-12 11:47:32,996 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-12 13:53:59,923 INFO server.Server [main] server started
+2018-02-12 13:54:06,946 INFO server.Server [main] Client connected
+2018-02-12 13:54:07,050 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-12 14:00:12,673 INFO server.Server [main] Client connected
+2018-02-12 14:00:12,741 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-12 14:03:12,503 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-12 14:03:24,560 INFO client.ClientFarmer$StartServer [Thread-8] client server accepted
+2018-02-12 19:22:21,446 INFO server.Server [main] Client connected
+2018-02-12 19:22:21,502 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-12 23:42:07,753 INFO server.Server [main] server started
+2018-02-12 23:42:25,893 INFO server.Server [main] Client connected
+2018-02-12 23:42:25,969 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-12 23:42:44,779 ERROR client.ClientFarmer [JavaFX Application Thread] crops.Crop; local class incompatible: stream classdesc serialVersionUID = 8323075697430584384, local class serialVersionUID = -6799485922633682154
+2018-02-12 23:44:10,920 INFO server.Server [main] Client connected
+2018-02-12 23:44:10,964 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-13 00:10:18,879 INFO server.Server [main] Client connected
+2018-02-13 00:10:18,975 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-13 00:12:37,859 INFO server.Server [main] server started
+2018-02-13 00:12:59,902 INFO server.Server [main] Client connected
+2018-02-13 00:12:59,938 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-13 00:18:17,617 INFO server.Server [main] server started
+2018-02-13 00:18:24,888 INFO server.Server [main] Client connected
+2018-02-13 00:18:24,927 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-13 00:19:28,263 INFO server.Server [main] Client connected
+2018-02-13 00:19:28,293 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-13 00:21:54,201 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-14 11:26:15,233 INFO server.Server [main] server started
+2018-02-14 11:27:54,161 INFO server.Server [main] Client connected
+2018-02-14 11:27:54,373 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 12:24:29,678 INFO server.Server [main] Client connected
+2018-02-14 12:24:29,799 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 12:26:07,992 INFO server.Server [main] server started
+2018-02-14 12:26:32,723 INFO server.Server [main] Client connected
+2018-02-14 12:26:32,838 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 12:28:29,965 INFO server.Server [main] server started
+2018-02-14 12:28:48,108 INFO server.Server [main] Client connected
+2018-02-14 12:28:48,215 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 12:38:14,223 INFO server.Server [main] server started
+2018-02-14 12:38:25,612 INFO server.Server [main] Client connected
+2018-02-14 12:38:25,631 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 12:39:36,523 INFO server.Server [main] server started
+2018-02-14 12:39:43,946 INFO server.Server [main] Client connected
+2018-02-14 12:39:44,037 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 12:43:13,225 INFO server.Server [main] Client connected
+2018-02-14 12:43:13,260 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 12:44:38,537 INFO server.Server [main] Client connected
+2018-02-14 12:44:38,560 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 16:37:56,925 INFO server.Server [main] server started
+2018-02-14 16:40:22,861 INFO server.Server [main] Client connected
+2018-02-14 16:40:23,070 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 17:51:04,705 INFO server.Server [main] Client connected
+2018-02-14 17:51:04,724 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 17:58:02,987 INFO server.Server [main] Client connected
+2018-02-14 17:58:03,011 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 17:59:22,745 INFO server.Server [main] server started
+2018-02-14 17:59:30,927 INFO server.Server [main] Client connected
+2018-02-14 17:59:30,951 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 18:06:25,034 INFO server.Server [main] Client connected
+2018-02-14 18:06:25,054 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 18:06:56,599 INFO server.Server [main] Client connected
+2018-02-14 18:06:56,623 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 18:08:33,895 INFO server.Server [main] Client connected
+2018-02-14 18:08:33,917 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 18:12:33,182 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-14 19:20:28,262 INFO server.Server [main] Client connected
+2018-02-14 19:20:28,284 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 19:27:00,425 INFO server.Server [main] Client connected
+2018-02-14 19:27:00,470 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 19:29:55,188 INFO server.Server [main] Client connected
+2018-02-14 19:29:55,224 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 20:58:16,160 INFO server.Server [main] Client connected
+2018-02-14 20:58:16,191 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 21:00:17,921 INFO server.Server [main] Client connected
+2018-02-14 21:00:17,964 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 21:01:13,993 INFO server.Server [main] Client connected
+2018-02-14 21:01:14,052 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 21:10:42,392 INFO server.Server [main] Client connected
+2018-02-14 21:10:42,413 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 21:12:33,798 INFO server.Server [main] Client connected
+2018-02-14 21:12:33,837 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 21:13:48,021 INFO server.Server [main] Client connected
+2018-02-14 21:13:48,060 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 21:15:45,680 INFO server.Server [main] Client connected
+2018-02-14 21:15:45,702 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 21:17:25,753 INFO server.Server [main] Client connected
+2018-02-14 21:17:25,776 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 21:19:10,095 INFO server.Server [main] Client connected
+2018-02-14 21:19:10,133 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 21:21:24,397 INFO server.Server [main] Client connected
+2018-02-14 21:21:24,415 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-14 21:30:26,159 INFO server.Server [main] Client connected
+2018-02-14 21:30:26,185 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-15 23:37:32,945 ERROR client.Client [JavaFX Application Thread] Connection refused (Connection refused)
+2018-02-16 00:14:29,614 INFO server.Server [main] server started
+2018-02-16 00:14:39,360 INFO server.Server [main] Client connected
+2018-02-16 00:14:39,454 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 00:15:14,287 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 03:54:55,589 INFO server.Server [main] server started
+2018-02-16 03:55:07,449 INFO server.Server [main] Client connected
+2018-02-16 03:55:07,502 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 03:56:09,014 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 04:07:13,284 INFO server.Server [main] Client connected
+2018-02-16 04:07:13,317 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 05:40:07,890 INFO server.Server [main] server started
+2018-02-16 05:40:20,623 INFO server.Server [main] Client connected
+2018-02-16 05:40:20,651 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 05:40:21,259 ERROR sql.SqlAccessor [main] [SQLITE_ERROR] SQL error or missing database (near ",": syntax error)
+2018-02-16 05:40:51,179 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: customers)
+2018-02-16 05:40:53,653 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: farmers)
+2018-02-16 05:40:53,661 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: customers)
+2018-02-16 05:41:05,608 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: farmers)
+2018-02-16 05:41:09,499 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: farmers)
+2018-02-16 05:41:09,506 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: customers)
+2018-02-16 05:41:11,083 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: farmers)
+2018-02-16 05:41:11,087 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: customers)
+2018-02-16 05:44:39,564 INFO server.Server [main] server started
+2018-02-16 05:44:52,056 INFO server.Server [main] Client connected
+2018-02-16 05:44:52,091 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 05:44:52,667 ERROR sql.SqlAccessor [main] [SQLITE_ERROR] SQL error or missing database (near ",": syntax error)
+2018-02-16 05:45:24,315 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: farmers)
+2018-02-16 05:45:26,594 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: farmers)
+2018-02-16 05:45:26,598 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: customers)
+2018-02-16 05:45:28,543 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: farmers)
+2018-02-16 05:45:28,547 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: customers)
+2018-02-16 05:46:43,021 INFO server.Server [main] server started
+2018-02-16 05:47:02,301 INFO server.Server [main] Client connected
+2018-02-16 05:47:02,423 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 05:47:47,728 ERROR sql.SqlAccessor [Thread-1] null
+2018-02-16 05:47:47,910 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 06:19:42,677 ERROR client.Client [JavaFX Application Thread] Connection refused (Connection refused)
+2018-02-16 06:20:22,739 INFO server.Server [main] server started
+2018-02-16 06:20:27,576 INFO server.Server [main] Client connected
+2018-02-16 06:20:27,696 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 06:21:12,392 ERROR sql.SqlAccessor [Thread-1] null
+2018-02-16 06:21:12,517 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 06:29:33,852 INFO server.Server [main] server started
+2018-02-16 06:29:54,399 INFO server.Server [main] Client connected
+2018-02-16 06:29:54,453 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 06:42:38,645 INFO server.Server [main] server started
+2018-02-16 06:43:05,483 INFO server.Server [main] server started
+2018-02-16 06:43:11,277 INFO server.Server [main] Client connected
+2018-02-16 06:43:11,314 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 06:43:38,286 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (near ")": syntax error)
+2018-02-16 06:44:41,026 INFO server.Server [main] server started
+2018-02-16 06:44:48,481 INFO server.Server [main] Client connected
+2018-02-16 06:44:48,620 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 06:45:54,956 ERROR sql.SqlAccessor [Thread-1] null
+2018-02-16 06:45:55,078 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 06:49:26,607 INFO server.Server [main] Client connected
+2018-02-16 06:49:26,640 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 06:49:39,242 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 07:03:32,751 INFO server.Server [main] server started
+2018-02-16 07:03:44,694 INFO server.Server [main] Client connected
+2018-02-16 07:03:44,755 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 07:06:14,929 INFO server.Server [main] server started
+2018-02-16 07:06:20,374 INFO server.Server [main] Client connected
+2018-02-16 07:06:20,410 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 07:16:01,222 INFO server.Server [main] server started
+2018-02-16 07:20:12,933 INFO server.Server [main] Client connected
+2018-02-16 07:20:12,962 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 07:21:39,759 INFO server.Server [main] server started
+2018-02-16 07:21:45,677 INFO server.Server [main] Client connected
+2018-02-16 07:21:45,708 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 07:22:27,381 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 07:50:27,617 INFO server.Server [main] server started
+2018-02-16 07:50:42,386 INFO server.Server [main] Client connected
+2018-02-16 07:50:42,463 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 07:51:01,928 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 07:56:00,598 INFO server.Server [main] Client connected
+2018-02-16 07:56:00,632 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:06:38,021 INFO server.Server [main] server started
+2018-02-16 08:06:48,915 INFO server.Server [main] Client connected
+2018-02-16 08:06:48,957 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:08:33,958 INFO server.Server [main] server started
+2018-02-16 08:08:39,141 INFO server.Server [main] Client connected
+2018-02-16 08:08:39,261 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:19:06,527 INFO server.Server [main] Client connected
+2018-02-16 08:19:06,557 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:27:11,979 INFO server.Server [main] server started
+2018-02-16 08:29:25,740 INFO server.Server [main] Client connected
+2018-02-16 08:29:25,878 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:31:08,796 INFO server.Server [main] server started
+2018-02-16 08:31:17,884 INFO server.Server [main] Client connected
+2018-02-16 08:31:17,934 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:33:04,076 INFO server.Server [main] Client connected
+2018-02-16 08:33:04,109 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:33:48,399 ERROR server.Server [main] Address already in use (Bind failed)
+2018-02-16 08:34:02,992 INFO server.Server [main] server started
+2018-02-16 08:34:09,108 INFO server.Server [main] Client connected
+2018-02-16 08:34:09,152 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:35:40,992 INFO server.Server [main] server started
+2018-02-16 08:35:48,495 INFO server.Server [main] Client connected
+2018-02-16 08:35:48,537 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:36:57,266 INFO server.Server [main] server started
+2018-02-16 08:37:03,268 INFO server.Server [main] Client connected
+2018-02-16 08:37:03,307 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:38:44,492 INFO server.Server [main] server started
+2018-02-16 08:39:01,967 INFO server.Server [main] Client connected
+2018-02-16 08:39:02,014 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:49:17,190 INFO server.Server [main] server started
+2018-02-16 08:49:40,945 INFO server.Server [main] Client connected
+2018-02-16 08:49:41,046 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:54:46,369 INFO server.Server [main] Client connected
+2018-02-16 08:54:46,439 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:57:35,128 INFO server.Server [main] server started
+2018-02-16 08:57:42,502 INFO server.Server [main] Client connected
+2018-02-16 08:57:42,616 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:59:33,137 INFO server.Server [main] Client connected
+2018-02-16 08:59:33,164 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 08:59:51,855 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 08:59:54,469 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/media/m/Codes/Client/out/production/Client/views/add.fxml
+
+2018-02-16 09:01:27,446 INFO server.Server [main] Client connected
+2018-02-16 09:01:27,472 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 09:02:08,419 INFO server.Server [main] Client connected
+2018-02-16 09:02:08,449 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 09:02:31,098 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 09:04:00,350 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/media/m/Codes/Client/out/production/Client/views/add.fxml
+
+2018-02-16 14:46:00,502 INFO server.Server [main] server started
+2018-02-16 14:46:19,318 INFO server.Server [main] Client connected
+2018-02-16 14:46:19,393 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 14:46:35,441 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 14:46:37,575 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml
+
+2018-02-16 14:52:06,764 INFO server.Server [main] Client connected
+2018-02-16 14:52:06,787 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 14:53:37,079 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 14:56:26,805 INFO server.Server [main] Client connected
+2018-02-16 14:56:26,828 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 14:56:37,906 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 14:57:09,048 INFO server.Server [main] Client connected
+2018-02-16 14:57:09,118 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 14:57:20,027 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 14:57:22,295 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml
+
+2018-02-16 15:14:30,929 INFO server.Server [main] Client connected
+2018-02-16 15:14:31,023 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 15:14:51,887 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 15:14:53,591 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml
+
+2018-02-16 15:19:59,493 INFO server.Server [main] Client connected
+2018-02-16 15:19:59,522 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 15:20:11,563 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 15:23:38,022 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml
+
+2018-02-16 15:25:23,866 INFO server.Server [main] server started
+2018-02-16 15:25:41,039 INFO server.Server [main] Client connected
+2018-02-16 15:25:41,083 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 15:25:57,293 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 15:26:13,969 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml
+
+2018-02-16 15:30:38,795 INFO server.Server [main] Client connected
+2018-02-16 15:30:38,832 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 15:31:26,310 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 15:34:39,363 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml
+
+2018-02-16 15:34:57,803 INFO server.Server [main] Client connected
+2018-02-16 15:34:57,862 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 15:35:09,284 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 15:42:33,037 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml
+
+2018-02-16 16:00:23,547 INFO server.Server [main] server started
+2018-02-16 16:00:31,771 INFO server.Server [main] Client connected
+2018-02-16 16:00:31,866 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 16:01:35,758 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 16:02:19,948 ERROR client.ClientFarmer [JavaFX Application Thread] Error resolving onAction='#addCrop', either the event handler is not in the Namespace or there is an error in the script.
+/I:/Client/out/production/Client/views/add.fxml:16
+
+2018-02-16 16:05:51,564 INFO server.Server [main] Client connected
+2018-02-16 16:05:51,600 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 16:06:02,913 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 16:09:06,146 ERROR client.ClientFarmer [JavaFX Application Thread] Error resolving onAction='#addCrop', either the event handler is not in the Namespace or there is an error in the script.
+/I:/Client/out/production/Client/views/add.fxml:16
+
+2018-02-16 16:09:15,472 INFO server.Server [main] Client connected
+2018-02-16 16:09:15,502 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 16:09:28,499 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 16:29:38,384 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml:17
+
+2018-02-16 16:29:55,063 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml:17
+
+2018-02-16 16:30:04,748 INFO server.Server [main] Client connected
+2018-02-16 16:30:04,793 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 16:30:22,856 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 16:30:47,192 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml
+
+2018-02-16 16:31:44,561 INFO server.Server [main] Client connected
+2018-02-16 16:31:44,597 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 16:31:55,122 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 18:05:49,523 ERROR client.ClientFarmer [JavaFX Application Thread] 
+/I:/Client/out/production/Client/views/add.fxml
+
+2018-02-16 18:06:26,171 INFO server.Server [main] Client connected
+2018-02-16 18:06:26,264 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 18:35:07,397 INFO server.Server [main] Client connected
+2018-02-16 18:35:07,484 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 18:35:26,218 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 18:39:18,338 INFO server.Server [main] Client connected
+2018-02-16 18:39:18,521 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 18:39:31,827 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 18:44:41,030 INFO server.Server [main] Client connected
+2018-02-16 18:44:41,077 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 18:49:55,050 INFO server.Server [main] Client connected
+2018-02-16 18:49:55,140 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 18:50:10,047 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 19:01:21,131 INFO server.Server [main] Client connected
+2018-02-16 19:01:21,177 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 19:01:45,780 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 19:05:06,112 INFO server.Server [main] Client connected
+2018-02-16 19:05:06,142 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 19:05:29,041 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 19:23:09,478 INFO server.Server [main] Client connected
+2018-02-16 19:23:09,514 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 19:23:23,211 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 19:26:02,706 INFO server.Server [main] Client connected
+2018-02-16 19:26:02,733 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 19:26:13,671 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 19:26:49,739 INFO server.Server [main] Client connected
+2018-02-16 19:26:49,768 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 19:27:00,934 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-16 19:29:12,631 INFO server.Server [main] Client connected
+2018-02-16 19:29:12,712 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-16 19:29:23,890 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-17 10:55:41,691 INFO server.Server [main] server started
+2018-02-17 10:55:56,846 INFO server.Server [main] Client connected
+2018-02-17 10:55:56,928 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-20 18:12:39,842 INFO server.Server [main] server started
+2018-02-20 18:12:53,385 INFO server.Server [main] Client connected
+2018-02-20 18:12:53,570 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-20 13:37:09,304 INFO server.Server [main] server started
+2018-02-20 13:38:41,636 INFO server.Server [main] Client connected
+2018-02-20 13:38:41,731 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-23 13:46:44,062 INFO server.Server [main] server started
+2018-02-23 13:46:55,269 INFO server.Server [main] Client connected
+2018-02-23 13:46:55,487 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-23 13:47:12,671 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-23 13:49:31,484 INFO server.Server [main] Client connected
+2018-02-23 13:49:31,517 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-23 15:45:14,434 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 15:46:23,006 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 15:47:18,920 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 15:48:28,436 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 15:48:49,630 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 15:49:58,116 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 15:55:45,712 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 15:56:44,149 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 15:57:11,922 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 15:59:37,738 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:00:08,071 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:00:37,589 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:01:18,966 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:01:44,933 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:02:47,210 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:04:57,933 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:05:51,251 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:06:19,083 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:08:39,148 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:09:15,518 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:16:21,273 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:17:55,192 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:18:27,145 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:19:17,302 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:19:42,106 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:21:47,450 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:22:56,470 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:23:29,111 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:24:05,181 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:35:04,099 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:38:56,016 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:39:35,193 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:40:45,295 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 16:41:39,583 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 17:01:31,765 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-23 17:06:03,940 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 13:45:01,346 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 13:46:15,115 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 13:47:15,476 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 13:48:15,299 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 13:50:25,344 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 13:51:30,845 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 14:36:25,141 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 14:47:01,276 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 14:47:53,433 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 14:49:06,403 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 14:54:52,054 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 14:56:09,040 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 14:57:09,999 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-02-24 14:58:15,455 INFO server.Server [main] server started
+2018-02-24 14:58:26,037 INFO server.Server [main] Client connected
+2018-02-24 14:58:26,168 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 14:59:18,927 INFO server.Server [main] Client connected
+2018-02-24 14:59:18,954 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 15:00:19,333 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-02-24 15:02:10,018 INFO server.Server [main] Client connected
+2018-02-24 15:02:10,041 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 15:33:24,302 INFO server.Server [main] Client connected
+2018-02-24 15:33:24,411 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 16:09:32,904 INFO server.Server [main] server started
+2018-02-24 16:09:44,614 INFO server.Server [main] Client connected
+2018-02-24 16:09:44,682 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 16:54:39,411 INFO server.Server [main] Client connected
+2018-02-24 16:54:39,458 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 16:59:18,912 INFO server.Server [main] Client connected
+2018-02-24 16:59:18,935 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 17:10:55,011 INFO server.Server [main] Client connected
+2018-02-24 17:10:55,036 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 17:24:47,543 INFO server.Server [main] Client connected
+2018-02-24 17:24:47,563 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 17:52:43,586 INFO server.Server [main] Client connected
+2018-02-24 17:52:43,656 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 17:54:58,385 INFO server.Server [main] Client connected
+2018-02-24 17:54:58,410 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 17:56:25,195 INFO server.Server [main] Client connected
+2018-02-24 17:56:25,224 INFO client.Client [JavaFX Application Thread] stream started
+2018-02-24 18:18:29,496 INFO server.Server [main] Client connected
+2018-02-24 18:18:29,521 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-04 12:15:32,694 INFO server.Server [main] server started
+2018-03-04 12:15:50,391 INFO server.Server [main] Client connected
+2018-03-04 12:15:50,574 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-04 12:18:05,458 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-03-04 12:21:21,306 INFO server.Server [main] Client connected
+2018-03-04 12:21:21,328 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-04 13:47:54,850 INFO server.Server [main] Client connected
+2018-03-04 13:47:55,246 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-04 14:56:46,466 INFO server.Server [main] Client connected
+2018-03-04 14:56:46,601 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-04 15:21:37,630 INFO server.Server [main] server started
+2018-03-04 15:22:25,549 INFO server.Server [main] Client connected
+2018-03-04 15:22:25,592 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-04 15:22:52,421 ERROR sql.SqlAccessor [Thread-1] [SQLITE_ERROR] SQL error or missing database (no such table: Customer)
+2018-03-04 15:26:30,575 INFO server.Server [main] server started
+2018-03-04 15:27:00,239 INFO server.Server [main] Client connected
+2018-03-04 15:27:00,261 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-04 15:32:15,081 INFO server.Server [main] server started
+2018-03-04 15:32:25,618 INFO server.Server [main] Client connected
+2018-03-04 15:32:25,680 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-04 16:11:04,247 INFO server.Server [main] Client connected
+2018-03-04 16:11:04,270 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-04 16:51:23,796 INFO server.Server [main] Client connected
+2018-03-04 16:51:23,819 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-07 01:52:45,202 INFO server.Server [main] server started
+2018-03-07 01:53:16,811 INFO server.Server [main] Client connected
+2018-03-07 01:53:16,977 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-07 01:57:18,681 INFO server.Server [main] Client connected
+2018-03-07 01:57:18,882 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-07 01:59:26,444 INFO server.Server [main] Client connected
+2018-03-07 01:59:26,469 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-07 02:00:50,489 INFO server.Server [main] Client connected
+2018-03-07 02:00:50,515 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-07 02:01:55,010 INFO server.Server [main] Client connected
+2018-03-07 02:01:55,036 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-07 08:15:16,207 INFO server.Server [main] Client connected
+2018-03-07 08:15:16,306 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-07 08:15:39,905 INFO client.ClientFarmer [JavaFX Application Thread] setting up chatbox
+2018-03-07 08:16:22,743 INFO server.Server [main] Client connected
+2018-03-07 08:16:22,763 INFO client.Client [JavaFX Application Thread] stream started
+2018-03-09 10:40:48,708 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 10:41:41,621 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 10:42:52,687 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 10:45:59,203 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 10:46:43,566 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 10:49:50,685 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 10:51:01,217 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 10:52:15,489 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 10:56:30,082 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 10:57:09,683 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:03:08,543 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:17:46,217 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:18:08,687 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:19:17,505 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:20:37,212 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:21:48,615 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:22:52,791 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:23:34,812 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:28:19,025 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:32:59,070 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:34:38,694 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:35:37,087 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:36:09,478 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:36:55,426 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:38:24,838 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:39:18,748 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:39:50,724 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:40:24,961 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:41:43,250 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:42:14,632 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:43:46,991 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:44:21,052 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:46:02,947 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:46:39,197 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:47:09,460 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:47:33,129 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:52:12,730 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:53:21,749 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:55:19,221 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:58:13,421 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 11:58:59,913 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:00:12,611 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:00:30,641 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:02:07,259 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:02:29,040 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:02:58,691 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:03:33,902 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:04:21,735 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:04:41,250 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:05:09,662 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:05:32,987 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:07:37,630 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:08:05,594 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:10:19,314 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:10:51,960 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:11:10,851 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:11:48,749 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-09 12:12:54,920 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-17 11:51:37,252 ERROR client.Client [JavaFX Application Thread] Connection refused: connect
+2018-03-17 11:53:34,480 INFO client.Client [JavaFX Application Thread] stream started

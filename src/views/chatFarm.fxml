@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="chatFarm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#setupChatBox" prefHeight="317.0" prefWidth="600.0" styleClass="anchor" stylesheets="@paneFarm.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller">
+   <children>
+      <TextArea fx:id="chatfarmer" editable="false" layoutX="19.0" layoutY="47.0" prefHeight="220.0" prefWidth="565.0" />
+      <TextField fx:id="chatSendBoxFarmer" layoutX="20.0" layoutY="278.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="433.0" />
+      <JFXButton layoutX="466.0" layoutY="278.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="116.0" text="SEND" />
+   </children>
+</AnchorPane>

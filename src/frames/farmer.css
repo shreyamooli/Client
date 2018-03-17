@@ -1,0 +1,56 @@
+.main{
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: #ffffff;
+}
+
+.left{
+    -fx-background-color: rgb(255, 255, 255);
+   // -fx-border-color:  linear-gradient(to bottom, rgba(0, 179, 255, 0), rgb(0, 179, 255), rgba(0, 110, 94, 0));
+    -fx-border-width: 0px 2px 0px 0px;
+;
+
+}
+
+.center{
+    -fx-background-color: #e8e8e8;
+}
+
+
+.text{
+//   -fx-text-fill: #656565;
+    -fx-effect: dropshadow( gaussian , rgba(208, 208, 208, 0.62), 3 , 0.0 , 0 , 0 );
+    -fx-font-smoothing-type: gray;
+
+}
+
+.anchorBtn{
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow( gaussian , rgba(167, 167, 167, 0.98), 5 , 0.0 , 0 , 0 );
+}
+
+.anchor-text{
+    -fx-text-fill: #00b3ff;
+    -fx-effect: dropshadow( gaussian , rgba(167, 167, 167, 0.98), 2 , 0.0 , 0 , 0 );
+
+
+}
+
+.button:hover{
+    -fx-cursor: hand;
+}
+
+.button:hover .anchorBtn{
+    -fx-border-width: 3px 3px 3px 3px;
+    -fx-border-color: #00b3ff;
+//    -fx-border-color: linear-gradient(to bottom, rgba(0, 179, 255, 0), rgb(0, 179, 255), rgba(0, 110, 94, 0));;
+}
+
+.btn-image{
+    -fx-border-radius: 35px;
+    -fx-background-radius: 35px;
+    -fx-background-color: black;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow( gaussian , rgba(167, 167, 167, 0.98), 5 , 0.0 , 0 , 0 );
+
+}

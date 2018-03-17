@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="homeCustomer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="600.0" styleClass="anchor" stylesheets="@paneCustomer.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutX="19.0" layoutY="86.0" prefHeight="200.0" prefWidth="563.0">
+        <columns>
+          <TableColumn fx:id="cropName" prefWidth="88.0" text="name" />
+          <TableColumn fx:id="cropWeight" prefWidth="58.0" text="weight" />
+            <TableColumn fx:id="cropQuantity" prefWidth="75.0" text="quantity" />
+            <TableColumn fx:id="cropCost" prefWidth="76.0" text="cost" />
+            <TableColumn fx:id="cropAvailable" prefWidth="69.0" text="available" />
+            <TableColumn fx:id="cropOwner" prefWidth="117.0" text="owner" />
+        </columns>
+      </TableView>
+      <TextField layoutX="359.0" layoutY="53.0" />
+      <JFXButton layoutX="508.0" layoutY="53.0" prefHeight="25.0" prefWidth="73.0" text="search" />
+   </children>
+</AnchorPane>

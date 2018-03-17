@@ -1,0 +1,100 @@
+.root{
+    -fx-peach : #f7c59f;
+    -fx-eggshell : #ebebd3;
+    -fx-paradisePink : #da4167;
+    -fx-ginmetal : #2a324b;
+    -fx-myorange : #ffa400;
+}
+
+.wordPane{
+    -fx-background-color: white;
+    -fx-effect: dropshadow( gaussian , rgba(52, 52, 52, 0.98), 5 , 0.0 , 0 , 0 );
+  //  -fx-background-color: linear-gradient(to bottom, #373737, #15141c);
+
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+
+}
+
+.nextPane{
+    -fx-effect: dropshadow( gaussian , rgba(17, 17, 17, 0.98), 2 , 0.0 , 0 , 0 );
+    -fx-background-color: rgb(255, 255, 255);
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-background-color: linear-gradient(to bottom, rgb(0, 179, 255), rgba(0, 110, 94, 0.6));
+
+}
+
+.text-field{
+
+    -fx-focus-color: #656565;
+    -fx-faint-focus-color:#656565 ;
+    -fx-border-color: #00b3ff;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0px;
+    -fx-padding: 3px 3px 3px 3px;
+
+    -fx-background-radius: 2px;
+    -fx-border-radius: 2px;
+
+
+}
+
+.loginBtn{
+    -fx-border-color: rgb(255, 255, 255);
+    -fx-border-width: 0px 0px 3px 0px;
+    -fx-border-radius: 2px 2px 0px 0px;
+    -fx-background-radius: 2px 2px 0px 0px;
+    -fx-background-color: #00b3ff;
+    -fx-padding: 5px 15px 5px 15px;
+    -fx-text-fill: #fff;
+    -fx-effect: dropshadow( gaussian , rgba(205, 205, 205, 0.91), 7 , 0.0 , 0 , 5 );
+}
+
+
+.secondaryBtn{
+  //  -fx-border-color: rgb(255, 0, 13);
+    -fx-border-width: 1px;
+    -fx-border-radius: 200px;
+    -fx-background-radius: 200px;
+    -fx-background-color: #00b3ff;
+    -fx-padding: 5px 5px 5px 5px;
+    -fx-text-fill: #fff;
+    -fx-effect: dropshadow( gaussian , rgb(112, 112, 112), 5 , 0.0 , 0 , 0 );
+}
+
+
+
+
+.button:hover{
+    -fx-cursor: hand;
+  //  -fx-effect: dropshadow( gaussian , rgba(116, 116, 116, 0.98), 9 , 0.0 , 0 , 5 );
+    /*-fx-scale-x: 1.1;*/
+    /*-fx-scale-y: 1.1;*/
+}
+
+
+.button .image-view{
+    -fx-cursor: hand;
+    -fx-effect: dropshadow( gaussian , rgba(116, 116, 116, 0.98), 9 , 0.0 , 0 , 0 );
+    -fx-effect: innershadow( gaussian , #fdfdff, 7 , 1 , 1 , 1 );
+
+}
+
+.image-view{
+ //   -fx-effect: dropshadow( gaussian , rgba(8, 8, 8, 0.98), 5 , 0.0 , 0 , 0 );
+    -fx-effect: innershadow( gaussian , #bcbcbe, 7 , 1 , 1 , 1 );
+}
+
+.image-view-none{
+    -fx-effect: dropshadow( gaussian , rgba(255, 140, 0, 0.07), 8 , 0.0 , 3 , 3 );
+
+}
+
+.text{
+ //   -fx-text-fill: #656565;
+    -fx-effect: dropshadow( gaussian , rgba(208, 208, 208, 0.98), 3 , 0.0 , 0 , 0 );
+    -fx-font-smoothing-type: gray;
+
+}
