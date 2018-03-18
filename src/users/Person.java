@@ -8,28 +8,15 @@ import java.io.Serializable;
 
 public class Person implements Serializable {
 
-    boolean available;
-   transient SimpleStringProperty emailss;
-    transient SimpleStringProperty fullnamess;
-    transient SimpleStringProperty addressss;
-    transient SimpleStringProperty aliasss;
-    transient SimpleStringProperty availss;
     private String email;
+    private boolean available;
     private String fullName;
     private String password;
     private Image image;
     private double balance = 0.0;
-    private String address;
     private String alias;
-    private File file;
 
-    public File getFile() {
-        return file;
-    }
 
-    public void setFile(File file) {
-        this.file = file;
-    }
 
 
 
@@ -44,8 +31,7 @@ public class Person implements Serializable {
         this.fullName = fullName;
         this.password = password;
         this.image = image;
-        this.emailss = new SimpleStringProperty(email) ;
-        this.fullnamess = new SimpleStringProperty(fullName);
+
     }
 
     public boolean isAvailable() {
@@ -54,7 +40,6 @@ public class Person implements Serializable {
 
     public void setAvailable(boolean available) {
         this.available = available;
-        this.availss = new SimpleStringProperty("yes");
     }
 
     public String getAlias() {
@@ -63,16 +48,6 @@ public class Person implements Serializable {
 
     public void setAlias(String alias) {
         this.alias = alias;
-        this.aliasss = new SimpleStringProperty(alias);
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-        this.addressss = new SimpleStringProperty(address);
     }
 
     public double getBalance() {
@@ -82,6 +57,7 @@ public class Person implements Serializable {
     public void setBalance(float balance) {
         this.balance = balance;
     }
+
 
     public String getEmail() {
         return email;
@@ -97,7 +73,6 @@ public class Person implements Serializable {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
-        this.fullnamess = new SimpleStringProperty(fullName);
     }
 
     public String getPassword() {
@@ -108,15 +83,17 @@ public class Person implements Serializable {
         this.password = password;
     }
 
-    public Image getImage() {
-        return image;
+    public Byte[] getImage() {
+        // return (Byte[]) image;
+        if(image!=null)
+        return new Byte[(int)image.toString().length()];
+        else
+            return null;
     }
 
     public void setImage(Image image) {
         this.image = image;
     }
-
-    public String searchVal(String val){return val; }
 
     @Override
     public String toString() {

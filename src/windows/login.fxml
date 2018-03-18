@@ -13,7 +13,7 @@
             <JFXTextField fx:id="signUpName" alignment="CENTER" layoutX="46.0" layoutY="67.0" maxWidth="273.0" minWidth="218.0" prefHeight="45.0" prefWidth="273.0" promptText="FULL NAME" unFocusColor="#4d4d4d00" />
             <JFXTextField fx:id="signUpEmail" alignment="CENTER" layoutX="46.0" layoutY="113.0" maxWidth="273.0" minWidth="218.0" prefHeight="45.0" prefWidth="273.0" promptText="EMAIL" unFocusColor="#4d4d4d00" />
             <JFXPasswordField fx:id="signUpPassword" alignment="CENTER" layoutX="46.0" layoutY="159.0" maxWidth="145.0" minWidth="135.0" prefHeight="45.0" prefWidth="135.0" promptText="PASSWORD" unFocusColor="#4d4d4d00" />
-            <JFXPasswordField fx:id="signUpPassword1" layoutX="184.0" layoutY="159.0" maxWidth="145.0" minWidth="135.0" prefHeight="45.0" prefWidth="135.0" promptText="PASSWORD" unFocusColor="#4d4d4d00" />
+            <JFXPasswordField fx:id="signUpPassword2" layoutX="184.0" layoutY="159.0" maxWidth="145.0" minWidth="135.0" prefHeight="45.0" prefWidth="135.0" promptText="PASSWORD" unFocusColor="#4d4d4d00" />
             <JFXTextField fx:id="address" alignment="CENTER" layoutX="45.0" layoutY="205.0" maxWidth="273.0" minWidth="218.0" prefHeight="45.0" prefWidth="273.0" promptText="ADDRESS" unFocusColor="#4d4d4d00" />
             <JFXRadioButton fx:id="radioFarmer" layoutX="46.0" layoutY="252.0" onAction="#radioChanged" prefHeight="40.0" prefWidth="135.0" text="FARMER">
                <toggleGroup>
