@@ -218,7 +218,6 @@ public class ClientFarmer  {
             try {
                 cli.os.writeObject("addCrop");
                 cli.os.writeObject(c);
-                cli.os.writeObject(user);
             } catch (IOException e) {
                 cli.logger.error(e.getMessage());
                 e.printStackTrace();

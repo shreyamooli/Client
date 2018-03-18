@@ -347,7 +347,7 @@ public class Client extends Application {
 
     public void registerCustomer() throws IOException, ClassNotFoundException {
         Person c = new Customer(controllerLogin.signUpEmail.getText(), controllerLogin.signUpName.getText(), controllerLogin.signUpPassword.getText());
-
+        c.setAlias("customer");
         os.writeObject("signup");
         os.writeObject(c);
         int h = (int) is.readObject();
@@ -363,7 +363,7 @@ public class Client extends Application {
 
     public void registerFarmer() throws IOException, ClassNotFoundException {
         Person f = new Farmer(controllerLogin.signUpEmail.getText(), controllerLogin.signUpName.getText(), controllerLogin.signUpPassword.getText(), controllerLogin.address.getText());
-
+        f.setAlias("farmer");
         os.writeObject("signup");
         os.writeObject(f);
         int h = (int) is.readObject();

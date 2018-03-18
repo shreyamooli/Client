@@ -16,7 +16,7 @@ public class Crops implements Serializable {
 
 
     private String name;
-    private Image image;
+    private byte[] image;
     private double weight, cost, quantity;
     private boolean available;
     private File imagefile;
@@ -65,21 +65,12 @@ public class Crops implements Serializable {
         this.name = name;
     }
 
-    public Byte[] getImage() {
-        // return (Byte[]) image;
-        if(image!=null)
-            return new Byte[(int)image.toString().length()];
-        else
-            return null;    }
+    public byte[] getImage() {
+        return image;
+    }
 
     public void setImage(byte[] image) {
-
-
-        try {
-            this.image = Image.impl_fromPlatformImage(ImageIO.read(new ByteArrayInputStream(image)));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        this.image = image;
     }
     public double getWeight() {
         return weight;
