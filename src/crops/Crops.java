@@ -1,24 +1,27 @@
 package crops;
 
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.image.Image;
 
+import javax.imageio.ImageIO;
+
+import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 
-public abstract class Crops implements Serializable {
 
-    transient SimpleStringProperty namess;
-    transient SimpleStringProperty weightss;
-    transient SimpleStringProperty costss;
-    transient SimpleStringProperty quantityss;
-    transient SimpleStringProperty availss;
-    protected String name;
-    protected Image image;
-    protected double weight, cost, quantity;
-    protected boolean available;
-    protected File imagefile;
-    protected String owner;
+public class Crops implements Serializable {
+
+
+    private String name;
+    private Image image;
+    private double weight, cost, quantity;
+    private boolean available;
+    private File imagefile;
+
+    private String owner;
 
     public String getOwner() {
         return owner;
@@ -37,28 +40,10 @@ public abstract class Crops implements Serializable {
         this.available = available;
         this.imagefile = imagefile;
 
-        this.namess = new SimpleStringProperty(name);
-        this.weightss = new SimpleStringProperty(String.valueOf(weight));
-        this.costss = new SimpleStringProperty(String.valueOf(cost));
-        this.quantityss = new SimpleStringProperty(String.valueOf(quantity));
-        this.availss = new SimpleStringProperty(String.valueOf(available));
+
     }
 
-    public Crops(String name, Image image, double weight, double cost, double quantity, boolean available, File imagefile) {
-        this.name = name;
-        this.image = image;
-        this.weight = weight;
-        this.cost = cost;
-        this.quantity = quantity;
-        this.available = available;
-        this.imagefile = imagefile;
 
-        this.namess = new SimpleStringProperty(name);
-        this.weightss = new SimpleStringProperty(String.valueOf(weight));
-        this.costss = new SimpleStringProperty(String.valueOf(cost));
-        this.quantityss = new SimpleStringProperty(String.valueOf(quantity));
-        this.availss = new SimpleStringProperty(String.valueOf(available));
-    }
 
     public Crops(String name, double weight, double cost, double quantity, boolean available, File imagefile) {
         this.name = name;
@@ -69,11 +54,7 @@ public abstract class Crops implements Serializable {
         this.imagefile = imagefile;
         this.image = image;
 
-        this.namess = new SimpleStringProperty(name);
-        this.weightss = new SimpleStringProperty(String.valueOf(weight));
-        this.costss = new SimpleStringProperty(String.valueOf(cost));
-        this.quantityss = new SimpleStringProperty(String.valueOf(quantity));
-        this.availss = new SimpleStringProperty(String.valueOf(available));
+
     }
 
     public String getName() {
@@ -82,24 +63,30 @@ public abstract class Crops implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-        namess = new SimpleStringProperty(name);
     }
 
-    public Image getImage() {
-        return image;
-    }
+    public Byte[] getImage() {
+        // return (Byte[]) image;
+        if(image!=null)
+            return new Byte[(int)image.toString().length()];
+        else
+            return null;    }
 
-    public void setImage(Image image) {
-        this.image = image;
-    }
+    public void setImage(byte[] image) {
 
+
+        try {
+            this.image = Image.impl_fromPlatformImage(ImageIO.read(new ByteArrayInputStream(image)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public double getWeight() {
         return weight;
     }
 
     public void setWeight(double weight) {
         this.weight = weight;
-        this.weightss = new SimpleStringProperty(String.valueOf(weight));
     }
 
     public double getCost() {
@@ -108,7 +95,6 @@ public abstract class Crops implements Serializable {
 
     public void setCost(double cost) {
         this.cost = cost;
-        this.costss = new SimpleStringProperty(String.valueOf(cost));
 
     }
 
@@ -118,7 +104,6 @@ public abstract class Crops implements Serializable {
 
     public void setQuantity(double quantity) {
         this.quantity = quantity;
-        this.quantityss = new SimpleStringProperty(String.valueOf(quantity));
 
     }
 
@@ -128,7 +113,6 @@ public abstract class Crops implements Serializable {
 
     public void setAvailable(boolean available) {
         this.available = available;
-        this.availss = new SimpleStringProperty(String.valueOf(available));
 
     }
 

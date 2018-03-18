@@ -214,7 +214,7 @@ public class ClientFarmer  {
 
         if (checkCropValues()) {
             Crop c = new Crop(cf.cName.getText(), Double.valueOf(cf.cWeight.getText()), Double.valueOf(cf.cCost.getText()), Double.valueOf(cf.cQuantity.getText()), cf.cropAvailable.isSelected(), file);
-
+            c.setOwner(user.getEmail());
             try {
                 cli.os.writeObject("addCrop");
                 cli.os.writeObject(c);
@@ -315,7 +315,7 @@ public class ClientFarmer  {
         Image ill = new Image(fil.toURI().toString());
         //  Image ill = new Image("http://2.bp.blogspot.com/-Ol8pLJcc9oo/TnZY6R8YJ5I/AAAAAAAACSI/YDxcIHCZhy4/s150/duke_44x80.png");
         cf.pImage.setImage(ill);
-        user.setImage(ill);
+        user.setImage(ill.toString().getBytes());
 
         cli.os.writeObject("uploadUserImage");
         cli.os.writeObject(user);

@@ -3,7 +3,10 @@ package users;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.image.Image;
 
+import javax.imageio.ImageIO;
+import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 
 public class Person implements Serializable {
@@ -12,7 +15,7 @@ public class Person implements Serializable {
     private boolean available;
     private String fullName;
     private String password;
-    private Image image;
+    private byte[] image;
     private double balance = 0.0;
     private String alias;
 
@@ -54,7 +57,7 @@ public class Person implements Serializable {
         return balance;
     }
 
-    public void setBalance(float balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
@@ -83,16 +86,13 @@ public class Person implements Serializable {
         this.password = password;
     }
 
-    public Byte[] getImage() {
+    public byte[] getImage() {
         // return (Byte[]) image;
-        if(image!=null)
-        return new Byte[(int)image.toString().length()];
-        else
-            return null;
+       return image;
     }
 
-    public void setImage(Image image) {
-        this.image = image;
+    public void setImage(byte[] image) {
+this.image = image;
     }
 
     @Override
