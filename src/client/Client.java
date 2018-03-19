@@ -286,7 +286,7 @@ public class Client extends Application {
 
     }
 
-    protected Person getUser() {
+    public Person getUser() {
         return user;
     }
 

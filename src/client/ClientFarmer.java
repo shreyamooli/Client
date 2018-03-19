@@ -26,6 +26,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.controlsfx.control.PopOver;
 import users.Farmer;
@@ -52,7 +53,6 @@ public class ClientFarmer extends Client  {
     ObjectInputStream in;
     File file;
     PopOver pp;
-    Client cli;
     Farmer user = new Farmer();
 
     ControllerFarmerHome controllerFarmerHome;
@@ -70,6 +70,7 @@ public class ClientFarmer extends Client  {
     TextField editAvailable = new TextField();
 
     private AnchorPane root1, root2, root3;
+    private Stage crop= new Stage(), history= new Stage(), chat= new Stage();
 
 
 
@@ -122,15 +123,31 @@ public class ClientFarmer extends Client  {
 
     public void showCrops() {
 
-        Scene scene = new Scene(root1);
-
+       if(crop!=null && !crop.isShowing()) {
+           crop.show();
+           return;
+       }
+       crop.setScene(new Scene(root1));
+       crop.show();
 
     }
 
     public void showHistory() {
+        if(history!=null && !history.isShowing()) {
+            history.show();
+            return;
+        }
+        history.setScene(new Scene(root2));
+        history.show();
     }
 
     public void showChat() {
+        if(chat!=null && !chat.isShowing()) {
+            chat.show();
+            return;
+        }
+        chat.setScene(new Scene(root3));
+        chat.show();
     }
 
    /* public void shift() {
@@ -147,12 +164,12 @@ public class ClientFarmer extends Client  {
             double num = user.getBalance();
             //todo format num into dollars
             cf.pBalance.setText("$"+num+"");
-            cli.os.writeObject("getImage");
-            cli.os.writeObject(user);
+            os.writeObject("getImage");
+            os.writeObject(user);
 
 
             try {
-                File file = (File) cli.is.readObject();
+                File file = (File) is.readObject();
                 if(file!=null)
                 cf.pImage.setImage(new Image(file.toURI().toString()));
             } catch (ClassNotFoundException e) {
@@ -196,7 +213,7 @@ public class ClientFarmer extends Client  {
    /* public void setupChatBox() {
         if (!chatBoxBool)
             return;
-        cli.logger.info("setting up chatbox");
+        logger.info("setting up chatbox");
         t = new Thread(new StartServer());
         t.start();
         cf.gridChat.setVgap(1);
@@ -205,68 +222,19 @@ public class ClientFarmer extends Client  {
     }
 */
 
-    public void sendMessage() {
-        String msg = cf.chatSendBoxFarmer.getText();
-        if(msg.compareTo("")==0)
-            return;
-        Label lab = new Label(msg);
-
-        cf.chatSendBoxFarmer.clear();
-        lab.getStylesheets().add(getClass().getResource("/views/msg sheets.css").toExternalForm());
-        lab.getStyleClass().add("out");
-
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                cf.gridChat.addRow(cf.gridChat.getChildren().size()+1,lab);
-                Animation animation = new Timeline(
-                        new KeyFrame(Duration.seconds(.3),
-                                new KeyValue(cf.scrollPane.vvalueProperty(), 1)));
-                animation.play();
-            }
-        });
-
-        try {
-            meOut.writeObject(msg);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
 
 
-    private void setFarmer() {
-        if (!cf.firstRun)
-            return;
+   //todo set up chat box
 
 
-        shift();
-        setTable();
-        setupChatBox();
-
-      cf.firstRun = false;
-    }
-
-    public void loadWhoever(Event e) {
-        user = user;
-        setFarmer();
-        if (e.getSource() == cf.homeBtn)
-            loadFarm(cf.homeFarm);
-        if (e.getSource() == cf.cropBtn)
-            loadFarm(cf.cropFarm);
-        if (e.getSource() == cf.historyBtn)
-            loadFarm(cf.historyFarm);
-        if (e.getSource() == cf.chatBtn)
-            loadFarm(cf.chatFarm);
-    }
 
 
 
     public void getHistory() {
 
         try {
-            cli.os.writeObject("getHistory");
-            ResultSet rs = (ResultSet) cli.is.readObject();
+            os.writeObject("getHistory");
+            ResultSet rs = (ResultSet) is.readObject();
 
             while (rs.next()) {
                 GridPane gp = new GridPane();
@@ -285,22 +253,20 @@ public class ClientFarmer extends Client  {
 
 
         } catch (IOException e) {
-            cli.logger.error(e.getMessage());
+            logger.error(e.getMessage());
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            cli.logger.error(e.getMessage());
+            logger.error(e.getMessage());
             e.printStackTrace();
         } catch (SQLException e) {
-            cli.logger.error(e.getMessage());
+            logger.error(e.getMessage());
             e.printStackTrace();
         }
 
 
     }
 
-    public void addController(ControllerFarmer controllerFarmer) {
-        cf = controllerFarmer;
-    }
+
 
     public void setUser(Farmer f) {
         user = f;
@@ -314,18 +280,17 @@ public class ClientFarmer extends Client  {
             return;
 
         Image ill = new Image(fil.toURI().toString());
-        //  Image ill = new Image("http://2.bp.blogspot.com/-Ol8pLJcc9oo/TnZY6R8YJ5I/AAAAAAAACSI/YDxcIHCZhy4/s150/duke_44x80.png");
-        cf.pImage.setImage(ill);
+      //todo  cf.pImage.setImage(ill);
         user.setImage(ill.toString().getBytes());
 
-        cli.os.writeObject("uploadUserImage");
-        cli.os.writeObject(user);
-        cli.os.writeObject(fil.getAbsoluteFile());
+        os.writeObject("uploadUserImage");
+        os.writeObject(user);
+        os.writeObject(fil.getAbsoluteFile());
 
     }
 
 
-
+/*
     private class Server implements Runnable {
 
         Socket socket;
@@ -334,7 +299,7 @@ public class ClientFarmer extends Client  {
 
 
         public Server(Socket socket) {
-            this.socket = cli.sock;
+            this.socket = sock;
         }
 
         @Override
@@ -406,7 +371,7 @@ public class ClientFarmer extends Client  {
 
                 ServerSocket serverSocket = new ServerSocket(4000);
                 Socket socket = serverSocket.accept();
-                cli.logger.info("client server accepted");
+                logger.info("client server accepted");
 //                chatBoxFarm.appendText("client connected");
               //  cf.chatfarmer.appendText("client connected \n\n");
                 Label lab = new Label("Customer Connected");
@@ -435,7 +400,7 @@ public class ClientFarmer extends Client  {
                 return;
             }
         }
-    }
+    }*/
 }
 
 
