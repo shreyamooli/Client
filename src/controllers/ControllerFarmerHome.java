@@ -15,7 +15,7 @@ public class ControllerFarmerHome implements Initializable {
     @FXML
     public Label fName, lName, address, email, alias, balance;
 
-    Client client;
+    ClientFarmer client;
 
     
 
@@ -33,13 +33,15 @@ public class ControllerFarmerHome implements Initializable {
     }
 
     public void showCrops(ActionEvent actionEvent) {
-
+        client.showCrops();
     }
 
-    public void showKart(ActionEvent actionEvent) {
+    public void showHistory(ActionEvent actionEvent) {
+        client.showHistory();
     }
 
     public void showChat(ActionEvent actionEvent) {
+        client.showChat();
     }
 
     public void closeApp(ActionEvent actionEvent) {

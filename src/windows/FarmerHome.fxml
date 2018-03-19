@@ -29,7 +29,7 @@
                   <VBox layoutX="28.0" layoutY="125.0" spacing="7.0">
                      <children>
                         <JFXButton onAction="#showCrops" prefHeight="50.0" prefWidth="50.0" styleClass="btn" text="Crop" />
-                        <JFXButton onAction="#showKart" prefHeight="50.0" prefWidth="50.0" styleClass="btn" text="Kart" />
+                        <JFXButton onAction="#showHistory" prefHeight="50.0" prefWidth="50.0" styleClass="btn" text="Hist" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
                         <JFXButton onAction="#showChat" prefHeight="50.0" prefWidth="50.0" styleClass="btn" text="Chat" />
                      </children>
                   </VBox>

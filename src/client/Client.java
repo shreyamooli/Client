@@ -224,7 +224,7 @@ public class Client extends Application {
                     floader = new FXMLLoader(getClass().getResource("/windows/FarmerHome.fxml"));
                     root = floader.load();
                     controllerFarmerHome = floader.<ControllerFarmerHome>getController();
-                    cf = new ClientFarmer(this);
+                    cf = new ClientFarmer();
                     controllerFarmerHome.addClient(cf);
                     cf.setUser(f);
 
@@ -488,15 +488,6 @@ public class Client extends Application {
 
         }
     }
-
-
-
-
-
-
-
-
-
 
 
 
