@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@FarmerHome.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerFarmerHome">
+   <children>
+      <Pane layoutX="87.0" layoutY="30.0" prefHeight="328.0" prefWidth="548.0">
+         <children>
+            <AnchorPane layoutX="-30.0" prefHeight="28.0" prefWidth="70.0" styleClass="rounder" />
+            <AnchorPane layoutX="-56.0" layoutY="300.0" prefHeight="28.0" prefWidth="70.0" styleClass="rounder" />
+            <AnchorPane layoutX="-1.0" prefHeight="328.0" prefWidth="110.0" styleClass="left">
+               <children>
+                  <AnchorPane layoutX="20.0" layoutY="32.0" prefHeight="70.0" prefWidth="70.0" styleClass="pic">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-collaborator-male-80.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <VBox layoutX="28.0" layoutY="125.0" spacing="7.0">
+                     <children>
+                        <JFXButton onAction="#showCrops" prefHeight="50.0" prefWidth="50.0" styleClass="btn" text="Crop" />
+                        <JFXButton onAction="#showKart" prefHeight="50.0" prefWidth="50.0" styleClass="btn" text="Kart" />
+                        <JFXButton onAction="#showChat" prefHeight="50.0" prefWidth="50.0" styleClass="btn" text="Chat" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="109.0" prefHeight="328.0" prefWidth="439.0" styleClass="right">
+               <children>
+                  <Label layoutX="33.0" layoutY="27.0" styleClass="h1" text="Basic Details">
+                     <font>
+                        <Font name="Arial Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="80.0" styleClass="title" text="First Name">
+                     <font>
+                        <Font name="Arial Narrow" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="243.0" layoutY="80.0" styleClass="title" text="Last Name">
+                     <font>
+                        <Font name="Arial Narrow" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="145.0" styleClass="title" text="Email Id">
+                     <font>
+                        <Font name="Arial Narrow" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="214.0" styleClass="title" text="Address">
+                     <font>
+                        <Font name="Arial Narrow" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="248.0" layoutY="145.0" styleClass="title" text="Alias">
+                     <font>
+                        <Font name="Arial Narrow" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="121.0" styleClass="title" text="_______________________________" />
+                  <Label layoutX="235.0" layoutY="121.0" styleClass="title" text="_______________________________" />
+                  <Label layoutX="243.0" layoutY="185.0" styleClass="title" text="_______________________________" />
+                  <Label layoutX="34.0" layoutY="185.0" styleClass="title" text="_______________________________" />
+                  <Label layoutX="34.0" layoutY="252.0" styleClass="title" text="_______________________________" />
+                  <Label fx:id="balance" layoutX="243.0" layoutY="247.0" text="BALANCE : ">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fName" layoutX="42.0" layoutY="119.0" styleClass="specificLabel" text="          ." />
+                  <Label fx:id="lName" layoutX="253.0" layoutY="119.0" styleClass="specificLabel" text="          ." />
+                  <Label fx:id="alias" layoutX="253.0" layoutY="183.0" styleClass="specificLabel" text="          ." />
+                  <Label fx:id="email" layoutX="42.0" layoutY="183.0" styleClass="specificLabel" text="          ." />
+                  <Label fx:id="address" layoutX="44.0" layoutY="249.0" styleClass="specificLabel" text="          ." />
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="410.0" layoutY="2.0" onAction="#closeApp" prefHeight="25.0" prefWidth="29.0">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-delete-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

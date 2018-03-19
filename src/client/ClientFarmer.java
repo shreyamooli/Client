@@ -2,6 +2,7 @@ package client;
 
 import com.jfoenix.controls.JFXToggleButton;
 import controllers.ControllerFarmer;
+import controllers.ControllerFarmerHome;
 import crops.Crop;
 import helpers.TREC;
 import javafx.animation.Animation;
@@ -40,7 +41,7 @@ import java.util.ArrayList;
 
 import static client.Client.primaryStage;
 
-public class ClientFarmer  {
+public class ClientFarmer extends Client  {
 
 
 
@@ -53,7 +54,7 @@ public class ClientFarmer  {
     Client cli;
     Farmer user = new Farmer();
 
-    ControllerFarmer cf;
+    ControllerFarmerHome controllerFarmerHome;
 
     TextField name,weight,cost,quantity;
     JFXToggleButton available;

@@ -2,6 +2,7 @@ package client;
 
 import controllers.ControllerCustomer;
 import controllers.ControllerFarmer;
+import controllers.ControllerFarmerHome;
 import controllers.ControllerLogin;
 import helpers.EffectUtilities;
 import javafx.animation.KeyFrame;
@@ -54,6 +55,7 @@ public class Client extends Application {
     private ClientCustomer cc;
     private ControllerLogin controllerLogin;
     private ControllerFarmer controllerFarmer;
+    private ControllerFarmerHome controllerFarmerHome;
     private ControllerCustomer controllerCustomer;
 
 
@@ -210,16 +212,22 @@ public class Client extends Application {
                     os.writeObject(a);
                     Farmer f  = (Farmer) is.readObject();
                     System.out.println(user.toString());
-                    floader = new FXMLLoader(getClass().getResource("/views/paneFarm.fxml"));
+//                    floader = new FXMLLoader(getClass().getResource("/views/paneFarm.fxml"));
+//                    root = floader.load();
+//                    controllerFarmer = floader.<ControllerFarmer>getController();
+//                    controllerFarmer.addClient(this);
+//                    cf = new ClientFarmer(this);
+//                    controllerFarmer.addImmediateClient(cf);
+//                    cf.setUser(f);
+
+
+                    floader = new FXMLLoader(getClass().getResource("/windows/FarmerHome.fxml"));
                     root = floader.load();
-                    controllerFarmer = floader.<ControllerFarmer>getController();
-                    controllerFarmer.addClient(this);
+                    controllerFarmerHome = floader.<ControllerFarmerHome>getController();
                     cf = new ClientFarmer(this);
-                    controllerFarmer.addImmediateClient(cf);
+                    controllerFarmerHome.addClient(cf);
                     cf.setUser(f);
 
-
-                    //    floader.<Controller>getController().pName.setText("help");
 
                     Scene scene = new Scene(root);
                     scene.setFill(Color.TRANSPARENT);
