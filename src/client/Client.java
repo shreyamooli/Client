@@ -211,7 +211,7 @@ public class Client extends Application {
                     os.writeObject(controllerLogin.signInEmail.getText());
                     os.writeObject(a);
                     Farmer f  = (Farmer) is.readObject();
-                    System.out.println(user.toString());
+                    System.out.println(f.toString());
 //                    floader = new FXMLLoader(getClass().getResource("/views/paneFarm.fxml"));
 //                    root = floader.load();
 //                    controllerFarmer = floader.<ControllerFarmer>getController();
@@ -224,9 +224,7 @@ public class Client extends Application {
                     floader = new FXMLLoader(getClass().getResource("/windows/FarmerHome.fxml"));
                     root = floader.load();
                     controllerFarmerHome = floader.<ControllerFarmerHome>getController();
-                    cf = new ClientFarmer();
-                    controllerFarmerHome.addClient(cf);
-                    cf.setUser(f);
+                    cf = new ClientFarmer(controllerFarmerHome, f);
 
 
                     Scene scene = new Scene(root);

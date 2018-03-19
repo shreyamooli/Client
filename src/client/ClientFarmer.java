@@ -75,18 +75,25 @@ public class ClientFarmer extends Client  {
     public boolean firstRun = true;
     private boolean cropBool = true;
 
-    public ClientFarmer() {
+    public ClientFarmer(ControllerFarmerHome cf, Farmer f) {
 
+        this.user = f;
+        controllerFarmerHome = cf;
+        controllerFarmerHome.addClient(this);
         try {
 
-            loadAll();
+         //   loadAll();
             configureDisplay();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
 
+    }
+
+    public void setUser(Farmer f) {
+        this.user = f;
     }
 
     private void configureDisplay() {
@@ -96,7 +103,7 @@ public class ClientFarmer extends Client  {
         controllerFarmerHome.address.setText(user.getAddress());
         controllerFarmerHome.alias.setText(user.getAlias());
         controllerFarmerHome.email.setText(user.getEmail());
-        controllerFarmerHome.balance.setText(String.valueOf(user.getBalance()));
+        controllerFarmerHome.balance.setText("BALANCE : "+String.valueOf(user.getBalance()));
     }
 
     private void loadAll() throws IOException {
@@ -266,9 +273,7 @@ public class ClientFarmer extends Client  {
 
 
 
-    public void setUser(Farmer f) {
-        user = f;
-    }
+
 
 
     public void upload() throws IOException {

@@ -22,7 +22,7 @@ public class Farmer extends Person implements FarmerOptions {
 
     public Farmer(String email, String fullName, String password, String address) {
         super(email, fullName, password);
-        address = address;
+        this.address = address;
     }
 
     public Farmer() {
@@ -34,7 +34,7 @@ public class Farmer extends Person implements FarmerOptions {
     }
 
     public void setAddress(String address) {
-        address = address;
+        this.address = address;
     }
 
     @Override

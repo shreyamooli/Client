@@ -129,7 +129,7 @@ public class Controller implements Initializable {
     }
 
     public void loadWhoeverFarm(ActionEvent actionEvent) {
-        cf.loadWhoever(actionEvent);
+      //  cf.loadWhoever(actionEvent);
     }
     public void loadWhoeverCus(ActionEvent actionEvent) {
 cc.loadWhoever(actionEvent);
@@ -174,7 +174,7 @@ cc.loadWhoever(actionEvent);
     }
 
     public void shift(MouseEvent mouseEvent) {
-       cf.shift();
+     //  cf.shift();
     }
 
     public void upload(ActionEvent actionEvent) {
