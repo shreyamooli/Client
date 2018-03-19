@@ -2,6 +2,7 @@ package controllers;
 
 import client.Client;
 import client.ClientFarmer;
+import com.jfoenix.controls.JFXToggleButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,7 +14,9 @@ import java.util.ResourceBundle;
 public class ControllerFarmerHome implements Initializable {
 
     @FXML
-    public Label fName, lName, address, email, alias, balance;
+    public Label fName, address, email, alias, balance;
+    @FXML
+    public JFXToggleButton chat;
 
     ClientFarmer client;
 
@@ -32,19 +35,30 @@ public class ControllerFarmerHome implements Initializable {
 
     }
 
-    public void showCrops(ActionEvent actionEvent) {
+    @FXML
+    private void showCrops(ActionEvent actionEvent) {
         client.showCrops();
     }
 
-    public void showHistory(ActionEvent actionEvent) {
+    @FXML
+    private void showHistory(ActionEvent actionEvent) {
         client.showHistory();
     }
 
-    public void showChat(ActionEvent actionEvent) {
+    @FXML
+    private void showChat(ActionEvent actionEvent) {
         client.showChat();
     }
 
-    public void closeApp(ActionEvent actionEvent) {
+    @FXML
+    private void closeApp(ActionEvent actionEvent) {
         client.appClose();
     }
+
+    @FXML
+    private void updateAvailability(){
+        client.updateAvailability(chat.isSelected());
+    }
+
+
 }

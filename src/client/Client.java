@@ -38,8 +38,8 @@ public class Client extends Application {
 
     static AnchorPane cust, cropCust, kart, chatCus;
     public static Socket sock;
-    public ObjectOutputStream os;
-    public ObjectInputStream is;
+    public static ObjectOutputStream os;
+    public static ObjectInputStream is;
     public ObjectInputStream reader; // for reading data from server
     public static Person user = new Person();
     public static Stage primaryStage;

@@ -99,10 +99,10 @@ public class ClientFarmer extends Client  {
     private void configureDisplay() {
 
         controllerFarmerHome.fName.setText(user.getFullName());
-        controllerFarmerHome.lName.setText(user.getFullName());
         controllerFarmerHome.address.setText(user.getAddress());
         controllerFarmerHome.alias.setText(user.getAlias());
         controllerFarmerHome.email.setText(user.getEmail());
+        controllerFarmerHome.chat.setSelected(user.isAvailable());
         controllerFarmerHome.balance.setText("BALANCE : "+String.valueOf(user.getBalance()));
     }
 
@@ -542,6 +542,16 @@ public class ClientFarmer extends Client  {
             e.printStackTrace();
         }
 
+    }
+
+    public void updateAvailability(boolean selected) {
+        try {
+            this.user.setAvailable(selected);
+            super.os.writeObject("updateFarmer");
+            super.os.writeObject(this.user);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
