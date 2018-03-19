@@ -64,10 +64,6 @@ public class ClientFarmer extends Client  {
     JFXToggleButton available;
     ImageView imageView;
 
-    TextField editWeight = new TextField();
-    TextField editCost = new TextField();
-    TextField editQuantity = new TextField();
-    TextField editAvailable = new TextField();
 
     private AnchorPane root1, root2, root3;
     private Stage crop= new Stage(), history= new Stage(), chat= new Stage();
@@ -75,7 +71,9 @@ public class ClientFarmer extends Client  {
 
 
     private boolean chatBoxBool = true;
-
+    public boolean farmBool = true;
+    public boolean firstRun = true;
+    private boolean cropBool = true;
 
     public ClientFarmer() {
 
@@ -153,7 +151,7 @@ public class ClientFarmer extends Client  {
    /* public void shift() {
 
 
-        if (!cf.farmBool)
+        if (!controllerFarmerChat.farmBool)
             return;
 
         try {
@@ -290,6 +288,259 @@ public class ClientFarmer extends Client  {
     }
 
 
+    //crops operations
+
+    public void addCrop() {
+
+
+        if (checkCropValues()) {
+            Crop c = new Crop(controllerFarmerCrop.cName.getText(), Double.valueOf(controllerFarmerCrop.cWeight.getText()), Double.valueOf(controllerFarmerCrop.cCost.getText()), Double.valueOf(controllerFarmerCrop.cQuantity.getText()), controllerFarmerCrop.cropAvailable.isSelected(), file);
+            c.setOwner(user.getEmail());
+            try {
+                os.writeObject("addCrop");
+                os.writeObject(c);
+            } catch (IOException e) {
+                logger.error(e.getMessage());
+                e.printStackTrace();
+            }
+
+
+
+        }
+
+
+    }
+
+    public void displayAddCrop() {
+
+        addCrop();
+        updateTable();
+        clearCropBar();
+
+
+    }
+
+    private void clearCropBar() {
+        controllerFarmerCrop.cName.clear();
+        controllerFarmerCrop.cWeight.clear();
+        controllerFarmerCrop.cCost.clear();
+        controllerFarmerCrop.cQuantity.clear();
+        controllerFarmerCrop.cropAvailable.setSelected(false);
+        controllerFarmerCrop.cImage.setImage(null);
+
+    }
+
+
+    public void cropImage() throws IOException {
+
+        FileChooser fc = new FileChooser();
+        File fil = fc.showOpenDialog(primaryStage);
+        if(fil==null)
+            return;
+        file = fil;
+        Image ill = new Image(fil.toURI().toString());
+        controllerFarmerCrop.cImage.setImage(ill);
+
+    }
+
+    private boolean checkCropValues() {
+
+        if (controllerFarmerCrop.cName.getText().compareTo("") == 0)
+            return false;
+        if (controllerFarmerCrop.cWeight.getText().compareTo("") == 0)
+            return false;
+        if (controllerFarmerCrop.cCost.getText().compareTo("") == 0)
+            return false;
+        if (controllerFarmerCrop.cQuantity.getText().compareTo("") == 0)
+            return false;
+
+        return true;
+
+    }
+
+    private void updateTable() {
+        ArrayList list = getArrayList();
+        ObservableList<Object> cropList = FXCollections.observableArrayList(list);
+
+        controllerFarmerCrop.cropTable.setItems(null);
+        controllerFarmerCrop.cropTable.getColumns().removeAll();
+        controllerFarmerCrop.cropTable.setItems(cropList);
+
+
+    }
+
+    private ArrayList getArrayList() {
+        try {
+            os.writeObject("getObservableList");
+            os.writeObject(user);
+
+
+            return (ArrayList) is.readObject();
+        } catch (IOException e) {
+            logger.error(e.getMessage());
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            logger.error(e.getMessage());
+            e.printStackTrace();
+        }
+        return new ArrayList();
+    }
+
+
+    public void setTable() {
+
+        if (!cropBool)
+            return;
+
+        ArrayList list = getArrayList();
+        ObservableList<Object> cropList = FXCollections.observableArrayList(list);
+        controllerFarmerCrop.ctName.setCellValueFactory(new PropertyValueFactory("Name"));
+        controllerFarmerCrop.ctWeight.setCellValueFactory(new PropertyValueFactory("Weight"));
+        controllerFarmerCrop.ctCost.setCellValueFactory(new PropertyValueFactory("Cost"));
+        controllerFarmerCrop.ctQuantity.setCellValueFactory(new PropertyValueFactory("Quantity"));
+        controllerFarmerCrop.ctAvailable.setCellValueFactory(new PropertyValueFactory("Available"));
+
+
+        TREC expans = getExpanse();
+
+        controllerFarmerCrop.cropTable.setItems(null);
+        controllerFarmerCrop.cropTable.getColumns().removeAll();
+        controllerFarmerCrop.cropTable.getColumns().add(0, expans);
+        controllerFarmerCrop.cropTable.setItems(cropList);
+
+
+
+        cropBool = false;
+    }
+
+    private TREC getExpanse() {
+        TREC<Object> expans = new TREC<> (param -> {
+
+            //   Crop c = (Crop) param.getTableRow().getItem();
+            HBox hbox = new HBox();
+            HBox hboxbtn = new HBox();
+            GridPane editor = new GridPane();
+            editor.setBackground(new Background(new BackgroundFill(Color.gray(0.95), CornerRadii.EMPTY, Insets.EMPTY)));
+
+
+            Crop c = (Crop) param.getValue();
+
+            //trying values here
+            TextField editWeight = new TextField();
+            TextField editCost = new TextField();
+            TextField editQuantity = new TextField();
+            TextField editAvailable = new TextField();
+
+
+
+            editWeight.setPromptText("edit weight");
+            editCost.setPromptText("edit cost");
+            editQuantity.setPromptText("edit quatity");
+            editAvailable.setPromptText("edit availablity");
+
+
+            editWeight.setPrefSize(100, 25);
+            editCost.setPrefSize(100, 25);
+            editQuantity.setPrefSize(100, 25);
+            editAvailable.setPrefSize(100, 25);
+
+//
+//
+            hbox.getChildren().addAll(editWeight, editCost, editQuantity, editAvailable);
+//
+            editor.setVgap(17);
+//
+            Button save = new Button("Save");
+            save.setOnAction(event -> {
+                // save();
+
+                if(editCost.getText().compareToIgnoreCase("")!=0){
+                    c.setCost(Double.parseDouble(editCost.getText()));
+                }
+                if(editQuantity.getText().compareToIgnoreCase("")!=0){
+                    c.setQuantity(Double.parseDouble(editQuantity.getText()));
+                }
+                if(editWeight.getText().compareToIgnoreCase("")!=0){
+                    c.setWeight(Double.parseDouble(editWeight.getText()));
+                }
+
+
+                //  Crop c = (Crop) param.getTableRow().getItem();
+                try {
+                    os.writeObject("updateCrop");
+                    os.writeObject(c);
+                    os.writeObject(user);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                //todo save something
+                param.toggleExpanded();
+            });
+            Button cancel = new Button("Cancel");
+            cancel.setOnAction(event -> {
+                // save();
+                param.toggleExpanded();
+            });
+
+            hboxbtn.getChildren().addAll(save, cancel);
+            save.getStyleClass().add("saveAndCancel");
+            cancel.getStyleClass().add("saveAndCancel");
+
+            hbox.setSpacing(5);
+            hboxbtn.setSpacing(15);
+            hbox.setPrefHeight(45);
+            hboxbtn.setPrefHeight(45);
+
+            editor.addRow(1, hbox);
+            editor.addRow(2, hboxbtn);
+
+            editWeight.setPadding(new Insets(5));
+            editCost.setPadding(new Insets(5));
+            editQuantity.setPadding(new Insets(5));
+            editAvailable.setPadding(new Insets(5));
+            editor.setPadding(new Insets(5, 5, 5, 5));
+
+            return editor;
+        });
+
+        return expans;
+    }
+
+    //chat options
+
+
+    public void sendMessage() {
+        String msg = controllerFarmerChat.chatSendBoxFarmer.getText();
+        if(msg.compareTo("")==0)
+            return;
+        Label lab = new Label(msg);
+
+        controllerFarmerChat.chatSendBoxFarmer.clear();
+        lab.getStylesheets().add(getClass().getResource("/views/msg sheets.css").toExternalForm());
+        lab.getStyleClass().add("out");
+
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                controllerFarmerChat.gridChat.addRow(controllerFarmerChat.gridChat.getChildren().size()+1,lab);
+                Animation animation = new Timeline(
+                        new KeyFrame(Duration.seconds(.3),
+                                new KeyValue(controllerFarmerChat.scrollPane.vvalueProperty(), 1)));
+                animation.play();
+            }
+        });
+
+        try {
+            meOut.writeObject(msg);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+
 /*
     private class Server implements Runnable {
 
@@ -328,16 +579,16 @@ public class ClientFarmer extends Client  {
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
-                            cf.gridChat.addRow(cf.gridChat.getChildren().size()+1,huh);
+                            controllerFarmerChat.gridChat.addRow(controllerFarmerChat.gridChat.getChildren().size()+1,huh);
                             Animation animation = new Timeline(
                                     new KeyFrame(Duration.seconds(.3),
-                                            new KeyValue(cf.scrollPane.vvalueProperty(), 1)));
+                                            new KeyValue(controllerFarmerChat.scrollPane.vvalueProperty(), 1)));
                             animation.play();
                         }
                     });
 
 
-                    //cf.chatfarmer.appendText("n"+msg);
+                    //controllerFarmerChat.chatfarmer.appendText("n"+msg);
 
 
                 } catch (IOException e) {
@@ -366,14 +617,14 @@ public class ClientFarmer extends Client  {
 
 
             try {
-                ta = cf.chatfarmer;
+                ta = controllerFarmerChat.chatfarmer;
 
 
                 ServerSocket serverSocket = new ServerSocket(4000);
                 Socket socket = serverSocket.accept();
                 logger.info("client server accepted");
 //                chatBoxFarm.appendText("client connected");
-              //  cf.chatfarmer.appendText("client connected \n\n");
+              //  controllerFarmerChat.chatfarmer.appendText("client connected \n\n");
                 Label lab = new Label("Customer Connected");
                 lab.getStylesheets().add(getClass().getResource("/views/msg sheets.css").toExternalForm());
                 lab.getStyleClass().add("mid");
@@ -381,10 +632,10 @@ public class ClientFarmer extends Client  {
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
-                        cf.gridChat.addRow(1,lab);
-                        cf.gridChat.setVgap(2);
-                        cf.scrollPane.setFitToHeight(true);
-//                        cf.gridChat.add
+                        controllerFarmerChat.gridChat.addRow(1,lab);
+                        controllerFarmerChat.gridChat.setVgap(2);
+                        controllerFarmerChat.scrollPane.setFitToHeight(true);
+//                        controllerFarmerChat.gridChat.add
 
 
 

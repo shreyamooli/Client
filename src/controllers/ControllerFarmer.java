@@ -118,9 +118,6 @@ public class ControllerFarmer implements Initializable {
     public boolean cropBool = true;
 
 
-    public void loadWhoeverFarm(ActionEvent actionEvent) {
-        cfi.loadWhoever(actionEvent);
-    }
 
     public void appClose(ActionEvent actionEvent) {
         cli.appClose();
@@ -141,7 +138,6 @@ public class ControllerFarmer implements Initializable {
 
     public void addImmediateClient(ClientFarmer cf) {
         this.cfi = cf;
-        cfi.addController(this);
     }
 
     public void setIconified(ActionEvent actionEvent) {
@@ -165,9 +161,6 @@ public class ControllerFarmer implements Initializable {
         //cfi.setupChatBox();
     }
 
-    public void sendMessage(ActionEvent actionEvent) {
-        cfi.sendMessage();
-    }
 
     public void addCrop(ActionEvent actionEvent) {
         cfi.addCrop();
@@ -181,7 +174,7 @@ public class ControllerFarmer implements Initializable {
         }
     }
 
-    public void updateChat(){
-        cfi.updateChat(chatAvail.isSelected());
-    }
+//    public void updateChat(){
+//        cfi.updateChat(chatAvail.isSelected());
+//    }
 }
