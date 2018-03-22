@@ -233,14 +233,9 @@ public class Client extends Application {
                     scene.getStylesheets().add(getClass().getResource("/helpers/style.css").toExternalForm());
                     root.getStyleClass().add("mo");
                     root.layout();
-                    Stage newStage = new Stage();
-                    newStage.setScene(scene);
-                    newStage.show();
-                    registerStage(newStage);
-
-//                    primaryStage.setScene(scene);
-//                    primaryStage.show();
-//                    registerStage(primaryStage);
+                    primaryStage.setScene(scene);
+                    primaryStage.show();
+                    registerStage(primaryStage);
 
 
 

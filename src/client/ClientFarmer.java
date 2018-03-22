@@ -56,9 +56,9 @@ public class ClientFarmer extends Client  {
     Farmer user = new Farmer();
 
     ControllerFarmerHome controllerFarmerHome;
-    ControllerFarmerCrop controllerFarmerCrop;
-    ControllerFarmerHistory controllerFarmerHistory;
-    ControllerFarmerChat controllerFarmerChat;
+//    ControllerFarmerHome controllerFarmerHome;
+//    ControllerFarmerHistory controllerFarmerHistory;
+//    ControllerFarmerChat controllerFarmerChat;
 
     TextField name,weight,cost,quantity;
     JFXToggleButton available;
@@ -84,6 +84,7 @@ public class ClientFarmer extends Client  {
 
          //   loadAll();
             configureDisplay();
+            updateTable();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -106,8 +107,8 @@ public class ClientFarmer extends Client  {
         controllerFarmerHome.balance.setText("BALANCE : "+String.valueOf(user.getBalance()));
     }
 
-    private void loadAll() throws IOException {
-        floader = new FXMLLoader(getClass().getResource("/windows/FarmerCrop.fxml"));
+   /* private void loadAll() throws IOException {
+        floader = new FXMLLoader(getClass().getResource("/windows/FarmerHome.fxml"));
         root1=floader.load();
         controllerFarmerCrop = floader.<ControllerFarmerCrop>getController();
         controllerFarmerCrop.addClient(this);
@@ -125,7 +126,7 @@ public class ClientFarmer extends Client  {
 
     }
 
-
+*/
     public void showCrops() {
 
        if(crop!=null && !crop.isShowing()) {
@@ -299,7 +300,7 @@ public class ClientFarmer extends Client  {
 
 
         if (checkCropValues()) {
-            Crop c = new Crop(controllerFarmerCrop.cName.getText(), Double.valueOf(controllerFarmerCrop.cWeight.getText()), Double.valueOf(controllerFarmerCrop.cCost.getText()), Double.valueOf(controllerFarmerCrop.cQuantity.getText()), controllerFarmerCrop.cropAvailable.isSelected(), file);
+            Crop c = new Crop(controllerFarmerHome.cName.getText(), Double.valueOf(controllerFarmerHome.cWeight.getText()), Double.valueOf(controllerFarmerHome.cCost.getText()), Double.valueOf(controllerFarmerHome.cQuantity.getText()), controllerFarmerHome.cropAvailable.isSelected(), file);
             c.setOwner(user.getEmail());
             try {
                 os.writeObject("addCrop");
@@ -318,45 +319,28 @@ public class ClientFarmer extends Client  {
 
     public void displayAddCrop() {
 
-        addCrop();
-        updateTable();
-        clearCropBar();
+      //  addCrop();
+      //  updateTable();
+      //  clearCropBar();
 
 
     }
 
     private void clearCropBar() {
-        controllerFarmerCrop.cName.clear();
-        controllerFarmerCrop.cWeight.clear();
-        controllerFarmerCrop.cCost.clear();
-        controllerFarmerCrop.cQuantity.clear();
-        controllerFarmerCrop.cropAvailable.setSelected(false);
-        controllerFarmerCrop.cImage.setImage(null);
-
-    }
-
-
-    public void cropImage() throws IOException {
-
-        FileChooser fc = new FileChooser();
-        File fil = fc.showOpenDialog(primaryStage);
-        if(fil==null)
-            return;
-        file = fil;
-        Image ill = new Image(fil.toURI().toString());
-        controllerFarmerCrop.cImage.setImage(ill);
+        controllerFarmerHome.cName.clear();
+      //  controllerFarmerHome.cImage.setImage(ill);
 
     }
 
     private boolean checkCropValues() {
 
-        if (controllerFarmerCrop.cName.getText().compareTo("") == 0)
+        if (controllerFarmerHome.cName.getText().compareTo("") == 0)
             return false;
-        if (controllerFarmerCrop.cWeight.getText().compareTo("") == 0)
+        if (controllerFarmerHome.cWeight.getText().compareTo("") == 0)
             return false;
-        if (controllerFarmerCrop.cCost.getText().compareTo("") == 0)
+        if (controllerFarmerHome.cCost.getText().compareTo("") == 0)
             return false;
-        if (controllerFarmerCrop.cQuantity.getText().compareTo("") == 0)
+        if (controllerFarmerHome.cQuantity.getText().compareTo("") == 0)
             return false;
 
         return true;
@@ -367,9 +351,9 @@ public class ClientFarmer extends Client  {
         ArrayList list = getArrayList();
         ObservableList<Object> cropList = FXCollections.observableArrayList(list);
 
-        controllerFarmerCrop.cropTable.setItems(null);
-        controllerFarmerCrop.cropTable.getColumns().removeAll();
-        controllerFarmerCrop.cropTable.setItems(cropList);
+        controllerFarmerHome.cropTable.setItems(null);
+        controllerFarmerHome.cropTable.getColumns().removeAll();
+        controllerFarmerHome.cropTable.setItems(cropList);
 
 
     }
@@ -399,19 +383,19 @@ public class ClientFarmer extends Client  {
 
         ArrayList list = getArrayList();
         ObservableList<Object> cropList = FXCollections.observableArrayList(list);
-        controllerFarmerCrop.ctName.setCellValueFactory(new PropertyValueFactory("Name"));
-        controllerFarmerCrop.ctWeight.setCellValueFactory(new PropertyValueFactory("Weight"));
-        controllerFarmerCrop.ctCost.setCellValueFactory(new PropertyValueFactory("Cost"));
-        controllerFarmerCrop.ctQuantity.setCellValueFactory(new PropertyValueFactory("Quantity"));
-        controllerFarmerCrop.ctAvailable.setCellValueFactory(new PropertyValueFactory("Available"));
+        controllerFarmerHome.ctName.setCellValueFactory(new PropertyValueFactory("Name"));
+        controllerFarmerHome.ctWeight.setCellValueFactory(new PropertyValueFactory("Weight"));
+        controllerFarmerHome.ctCost.setCellValueFactory(new PropertyValueFactory("Cost"));
+        controllerFarmerHome.ctQuantity.setCellValueFactory(new PropertyValueFactory("Quantity"));
+        controllerFarmerHome.ctAvailable.setCellValueFactory(new PropertyValueFactory("Available"));
 
 
         TREC expans = getExpanse();
 
-        controllerFarmerCrop.cropTable.setItems(null);
-        controllerFarmerCrop.cropTable.getColumns().removeAll();
-        controllerFarmerCrop.cropTable.getColumns().add(0, expans);
-        controllerFarmerCrop.cropTable.setItems(cropList);
+        controllerFarmerHome.cropTable.setItems(null);
+        controllerFarmerHome.cropTable.getColumns().removeAll();
+        controllerFarmerHome.cropTable.getColumns().add(0, expans);
+        controllerFarmerHome.cropTable.setItems(cropList);
 
 
 
@@ -516,22 +500,22 @@ public class ClientFarmer extends Client  {
 
 
     public void sendMessage() {
-        String msg = controllerFarmerChat.chatSendBoxFarmer.getText();
+        String msg = controllerFarmerHome.chatSendBoxFarmer.getText();
         if(msg.compareTo("")==0)
             return;
         Label lab = new Label(msg);
 
-        controllerFarmerChat.chatSendBoxFarmer.clear();
+        controllerFarmerHome.chatSendBoxFarmer.clear();
         lab.getStylesheets().add(getClass().getResource("/views/msg sheets.css").toExternalForm());
         lab.getStyleClass().add("out");
 
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                controllerFarmerChat.gridChat.addRow(controllerFarmerChat.gridChat.getChildren().size()+1,lab);
+                controllerFarmerHome.gridChat.addRow(controllerFarmerHome.gridChat.getChildren().size()+1,lab);
                 Animation animation = new Timeline(
                         new KeyFrame(Duration.seconds(.3),
-                                new KeyValue(controllerFarmerChat.scrollPane.vvalueProperty(), 1)));
+                                new KeyValue(controllerFarmerHome.scrollPane.vvalueProperty(), 1)));
                 animation.play();
             }
         });
@@ -552,6 +536,9 @@ public class ClientFarmer extends Client  {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void cropImage() throws IOException {
     }
 
 
@@ -594,7 +581,7 @@ public class ClientFarmer extends Client  {
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
-                            controllerFarmerChat.gridChat.addRow(controllerFarmerChat.gridChat.getChildren().size()+1,huh);
+                            controllerFarmerHome.gridChat.addRow(controllerFarmerChat.gridChat.getChildren().size()+1,huh);
                             Animation animation = new Timeline(
                                     new KeyFrame(Duration.seconds(.3),
                                             new KeyValue(controllerFarmerChat.scrollPane.vvalueProperty(), 1)));

@@ -10,10 +10,7 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -44,6 +41,7 @@ public class ControllerFarmerHome implements Initializable {
     @FXML public TableColumn ctAvailable, ctCost, ctName, ctQuantity, ctWeight;
     @FXML public TableView cropTable ;
     @FXML public TextField chatSendBoxFarmer;
+    @FXML public ScrollPane scrollPane;
     
 
 
