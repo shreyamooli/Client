@@ -15,6 +15,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.control.SkinBase;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -82,8 +83,8 @@ public class Client extends Application {
 
         this.primaryStage = primaryStage;
 
-        floader = new FXMLLoader(getClass().getResource("/views/login.fxml"));
-        floader = new FXMLLoader(getClass().getResource("/frames/login.fxml"));
+      //  floader = new FXMLLoader(getClass().getResource("/views/login.fxml"));
+      //  floader = new FXMLLoader(getClass().getResource("/frames/login.fxml"));
         floader = new FXMLLoader(getClass().getResource("/windows/login.fxml"));
         root = floader.load();
 
@@ -232,9 +233,16 @@ public class Client extends Application {
                     scene.getStylesheets().add(getClass().getResource("/helpers/style.css").toExternalForm());
                     root.getStyleClass().add("mo");
                     root.layout();
-                    primaryStage.setScene(scene);
-                    primaryStage.show();
-                    registerStage(primaryStage);
+                    Stage newStage = new Stage();
+                    newStage.setScene(scene);
+                    newStage.show();
+                    registerStage(newStage);
+
+//                    primaryStage.setScene(scene);
+//                    primaryStage.show();
+//                    registerStage(primaryStage);
+
+
 
                     return;
                 }

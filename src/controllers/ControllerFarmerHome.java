@@ -1,9 +1,12 @@
 package controllers;
 
-import client.Client;
 import client.ClientFarmer;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXToggleButton;
+import interfaces.Speed;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,11 +17,18 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
+
 public class ControllerFarmerHome implements Initializable {
+
+
+
+
 
     @FXML
     public Label fName, address, email, alias, balance;
@@ -55,18 +65,44 @@ public class ControllerFarmerHome implements Initializable {
     }
 
     @FXML
-    private void showCrops(ActionEvent actionEvent) {
-        client.showCrops();
+    private void showCrop(ActionEvent actionEvent) {
+        show(cropPane);
     }
 
     @FXML
     private void showHistory(ActionEvent actionEvent) {
-        client.showHistory();
+        show(historyPane);
     }
 
     @FXML
     private void showChat(ActionEvent actionEvent) {
-        client.showChat();
+show(chatPane);    }
+    @FXML
+    private void showHome(ActionEvent actionEvent) {
+        show(homePane);
+    }
+
+    private void show(AnchorPane pane) {
+
+        chatPane.setOpacity(0);
+        historyPane.setOpacity(0);
+        cropPane.setOpacity(0);
+        homePane.setOpacity(0);
+
+        chatPane.setDisable(true);
+        historyPane.setDisable(true);
+        cropPane.setDisable(true);
+        homePane.setDisable(true);
+
+        pane.toFront();
+        pane.setDisable(false);
+
+        KeyValue keyValue1 = new KeyValue(pane.opacityProperty(), 1);
+        Timeline timeline1 = new Timeline(new KeyFrame(Duration.millis(Speed.FAST), keyValue1));
+        timeline1.play();
+
+
+
     }
 
     @FXML
@@ -79,16 +115,14 @@ public class ControllerFarmerHome implements Initializable {
         client.updateAvailability(chat.isSelected());
     }
 
-
-    public void cropImage(ActionEvent actionEvent) {
+    @FXML
+    private void cropImage(ActionEvent actionEvent) {
+    }
+    @FXML
+    private void displayAddCrop(ActionEvent actionEvent) {
+    }
+    @FXML
+    private void sendMessage(ActionEvent actionEvent) {
     }
 
-    public void displayAddCrop(ActionEvent actionEvent) {
-    }
-
-    public void sendMessage(ActionEvent actionEvent) {
-    }
-
-    public void showHome(ActionEvent actionEvent) {
-    }
 }
