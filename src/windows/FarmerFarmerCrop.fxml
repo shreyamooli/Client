@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.labs.scene.control.window.Window?>
+
+<AnchorPane fx:id="cropPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@FarmerHomeCrop.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerFarmerHome">
+   <children>
+      <AnchorPane fx:id="crops" prefHeight="349.0" prefWidth="700.0" stylesheets="@FarmerHomeCrop.css">
+         <children>
+            <TableView fx:id="cropTable" layoutY="58.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="227.0" prefWidth="700.0" styleClass="table-vie">
+               <columns>
+                  <TableColumn fx:id="ctName" prefWidth="173.0" resizable="false" text="name" />
+                  <TableColumn fx:id="ctWeight" prefWidth="104.0" resizable="false" text="weight" />
+                  <TableColumn fx:id="ctCost" prefWidth="112.0" resizable="false" text="cost" />
+                  <TableColumn fx:id="ctQuantity" prefWidth="147.0" resizable="false" text="quantity" />
+                  <TableColumn fx:id="ctAvailable" prefWidth="122.0" resizable="false" text="available" />
+               </columns>
+            </TableView>
+            <AnchorPane layoutX="-2.0" layoutY="291.0" prefHeight="57.0" prefWidth="700.0">
+               <children>
+                  <JFXButton contentDisplay="TOP" layoutX="19.0" layoutY="4.0" onAction="#cropImage" prefHeight="22.0" prefWidth="45.0" style="-fx-border-color: #ffcb00; -fx-cursor: hand;" styleClass="imgBtn" text="Img" textFill="#ffcb00">
+                     <font>
+                        <Font name="Microsoft JhengHei Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="cImage" fitHeight="22.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="cName" alignment="CENTER" layoutX="99.0" layoutY="17.0" prefWidth="90.0" promptText="Name" />
+                  <JFXTextField fx:id="cWeight" alignment="CENTER" layoutX="305.0" layoutY="16.0" prefWidth="90.0" promptText="Weight" unFocusColor="#4d4d4d" />
+                  <JFXTextField fx:id="cCost" alignment="CENTER" layoutX="202.0" layoutY="17.0" prefWidth="90.0" promptText="Cost" />
+                  <JFXTextField fx:id="cQuantity" alignment="CENTER" layoutX="407.0" layoutY="16.0" prefWidth="90.0" promptText="Quantity" />
+                  <JFXToggleButton fx:id="cropAvailable" layoutX="488.0" layoutY="3.0" prefHeight="17.0" prefWidth="131.0" text="Available" />
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="619.0" onAction="#displayAddCrop" prefHeight="40.0" prefWidth="40.0" styleClass="addbtn" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="51.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-add-row-80.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <Window layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="119.0" />
+            <Label layoutX="34.0" layoutY="13.0" styleClass="h1" text="Your Crops">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
