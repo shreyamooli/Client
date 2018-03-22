@@ -1,3 +1,10 @@
+
+.root{
+
+
+    -fx-somcolor: #000000;
+}
+
 .text{
     -fx-font-smoothing-type: gray;
     -fx-effect: dropshadow( three-pass-box , rgba(211, 211, 211, 0.13), 10, 0.0 , 0 , 0 );
@@ -8,11 +15,11 @@
 .rounder{
     -fx-border-radius: 40px;
     -fx-background-radius: 40px;
-    -fx-background-color: dodgerblue;
+    -fx-background-color: -fx-somcolor;
 }
 
 .left{
-    -fx-background-color: dodgerblue;
+    -fx-background-color: -fx-somcolor;
 }
 .right{
     -fx-background-color: white;
@@ -44,7 +51,7 @@
 .btn{
     -fx-border-radius: 0px;
     -fx-background-radius: 0px;
-    -fx-background-color: dodgerblue;
+    -fx-background-color: -fx-somcolor;
 
     -fx-border-width: 0px 0px 3.5px 0px;
     -fx-border-color: rgb(255, 255, 255);
@@ -67,7 +74,7 @@
 }
 
 .btn:hover{
-    -fx-background-color: derive(dodgerblue, 10%);
+    -fx-background-color: derive(-fx-somcolor, 10%);
     -fx-border-color: derive(darkgoldenrod, 70%);
 
 
@@ -178,7 +185,7 @@
 
 
 .imgBtn{
-    -fx-border-color: dodgerblue;
+    -fx-border-color: -fx-somcolor;
 
 }
 
@@ -206,7 +213,7 @@
 }
 
 .h1{
-    -fx-text-fill: #1888e6;
+    -fx-text-fill: -fx-somcolor;
     -fx-effect: dropshadow( gaussian , rgba(211, 211, 211, 0.37), 7, 0.0 , 0 , 0 );
 
 }

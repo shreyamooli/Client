@@ -26,6 +26,11 @@
          <children>
             <AnchorPane layoutX="-76.0" layoutY="-19.0" prefHeight="460.0" prefWidth="736.0" styleClass="left">
                <children>
+                  <Label blendMode="DIFFERENCE" layoutX="90.0" layoutY="145.0" text="WELCOME" textFill="#464646">
+                     <font>
+                        <Font name="Arial Narrow" size="137.0" />
+                     </font>
+                  </Label>
                   <AnchorPane layoutX="20.0" layoutY="32.0" prefHeight="70.0" prefWidth="70.0" styleClass="pic" />
                   <HBox layoutX="48.0" layoutY="404.0" prefHeight="50.0" prefWidth="640.0" spacing="15.0">
                      <children>
@@ -181,7 +186,7 @@
                                           <JFXTextField fx:id="cCost" alignment="CENTER" layoutX="202.0" layoutY="17.0" prefWidth="90.0" promptText="Cost" />
                                           <JFXTextField fx:id="cQuantity" alignment="CENTER" layoutX="407.0" layoutY="16.0" prefWidth="90.0" promptText="Quantity" />
                                           <JFXToggleButton fx:id="cropAvailable" layoutX="488.0" layoutY="3.0" prefHeight="17.0" prefWidth="131.0" text="Available" />
-                                          <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="619.0" onAction="#displayAddCrop" prefHeight="40.0" prefWidth="40.0" styleClass="addbtn" text=" ">
+                                          <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="619.0" onAction="#addCrop" prefHeight="40.0" prefWidth="40.0" styleClass="addbtn" text=" ">
                                              <graphic>
                                                 <ImageView fitHeight="51.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>

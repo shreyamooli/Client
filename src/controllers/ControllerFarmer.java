@@ -19,9 +19,6 @@ import java.util.ResourceBundle;
 public class ControllerFarmer implements Initializable {
     static Client cli;
     static ClientFarmer cfi;
-
-    @FXML
-    AnchorPane topPane;
     @FXML
     public
     AnchorPane bottomPane;
@@ -90,10 +87,6 @@ public class ControllerFarmer implements Initializable {
     public
     ToggleButton homeBtn, cropAvailable;
     @FXML
-    ToggleGroup bar1;
-
-
-    @FXML
     public
     TextField cName;
     @FXML
@@ -111,13 +104,13 @@ public class ControllerFarmer implements Initializable {
     public ScrollPane scrollPane;
     @FXML
     public JFXToggleButton chatAvail;
-
-
     public boolean farmBool = true;
     public boolean firstRun = true;
     public boolean cropBool = true;
-
-
+    @FXML
+    AnchorPane topPane;
+    @FXML
+    ToggleGroup bar1;
 
     public void appClose(ActionEvent actionEvent) {
         cli.appClose();

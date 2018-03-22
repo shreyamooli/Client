@@ -28,20 +28,20 @@ public class ControllerFarmerHome implements Initializable {
 
 
     @FXML
-    public Label fName, address, email, alias, balance;
+    private Label fName, address, email, alias, balance;
     @FXML
-    public JFXToggleButton chat, cropAvailable;
+    private JFXToggleButton chat, cropAvailable;
     @FXML
-    public AnchorPane chatPane, cropPane, crops, historyPane, homePane, middle;
+    private AnchorPane chatPane, cropPane, crops, historyPane, homePane, middle;
     @FXML
-            public GridPane gridChat, gridHistory;
+            private GridPane gridChat, gridHistory;
     @FXML
-            public ImageView cImage;
-    @FXML public JFXTextField cCost, cName, cQuantity, cWeight;
-    @FXML public TableColumn ctAvailable, ctCost, ctName, ctQuantity, ctWeight;
-    @FXML public TableView cropTable ;
-    @FXML public TextField chatSendBoxFarmer;
-    @FXML public ScrollPane scrollPane;
+            private ImageView cImage;
+    @FXML private JFXTextField cCost, cName, cQuantity, cWeight;
+    @FXML private TableColumn ctAvailable, ctCost, ctName, ctQuantity, ctWeight;
+    @FXML private TableView cropTable ;
+    @FXML private TextField chatSendBoxFarmer;
+    @FXML private ScrollPane scrollPane;
     
 
 
@@ -52,7 +52,7 @@ public class ControllerFarmerHome implements Initializable {
 
 
 
-    public void addClient(ClientFarmer client) {
+    private void addClient(ClientFarmer client) {
         this.client = client;
     }
 
@@ -98,9 +98,6 @@ show(chatPane);    }
         KeyValue keyValue1 = new KeyValue(pane.opacityProperty(), 1);
         Timeline timeline1 = new Timeline(new KeyFrame(Duration.millis(Speed.FAST), keyValue1));
         timeline1.play();
-
-
-
     }
 
     @FXML
@@ -117,7 +114,8 @@ show(chatPane);    }
     private void cropImage(ActionEvent actionEvent) {
     }
     @FXML
-    private void displayAddCrop(ActionEvent actionEvent) {
+    private void addCrop(ActionEvent actionEvent) {
+
     }
     @FXML
     private void sendMessage(ActionEvent actionEvent) {

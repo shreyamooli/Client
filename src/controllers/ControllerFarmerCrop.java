@@ -1,26 +1,14 @@
 package controllers;
 
 import client.ClientFarmer;
-import crops.Crop;
-import helpers.TREC;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.stage.FileChooser;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
 
 public class ControllerFarmerCrop {
-    ClientFarmer clientFarmer;
     public
     TableColumn ctAvailable;
     @FXML
@@ -38,7 +26,6 @@ public class ControllerFarmerCrop {
     @FXML
     public
     TableView cropTable;
-
     @FXML
     public
     TextField cName;
@@ -56,6 +43,7 @@ public class ControllerFarmerCrop {
     @FXML
     public
     ToggleButton homeBtn, cropAvailable;
+    ClientFarmer clientFarmer;
 
     public void addClient(ClientFarmer clientFarmer) {
         this.clientFarmer = clientFarmer;
