@@ -312,9 +312,12 @@ public class ClientFarmer extends Client  {
 
 
 
+        }else{
+            checkErr("all values must be entered", controllerFarmerHome.cWeight,0);
         }
 
-
+        setTable();
+        clearCropBar();
     }
 
     public void displayAddCrop() {
@@ -328,6 +331,12 @@ public class ClientFarmer extends Client  {
 
     private void clearCropBar() {
         controllerFarmerHome.cName.clear();
+        controllerFarmerHome.cWeight.clear();
+        controllerFarmerHome.cCost.clear();
+        controllerFarmerHome.cImage.setImage(null);
+        controllerFarmerHome.cQuantity.clear();
+        controllerFarmerHome.cropAvailable.setSelected(false);
+
       //  controllerFarmerHome.cImage.setImage(ill);
 
     }
@@ -418,14 +427,13 @@ public class ClientFarmer extends Client  {
             TextField editWeight = new TextField();
             TextField editCost = new TextField();
             TextField editQuantity = new TextField();
-            TextField editAvailable = new TextField();
+            JFXToggleButton editAvailable = new JFXToggleButton();
 
 
 
             editWeight.setPromptText("edit weight");
             editCost.setPromptText("edit cost");
             editQuantity.setPromptText("edit quatity");
-            editAvailable.setPromptText("edit availablity");
 
 
             editWeight.setPrefSize(100, 25);
@@ -453,12 +461,13 @@ public class ClientFarmer extends Client  {
                     c.setWeight(Double.parseDouble(editWeight.getText()));
                 }
 
+                c.setAvailable(editAvailable.isSelected());
 
                 //  Crop c = (Crop) param.getTableRow().getItem();
                 try {
-                    os.writeObject("updateCrop");
+                    os.writeObject("update");
                     os.writeObject(c);
-                    os.writeObject(user);
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -531,14 +540,25 @@ public class ClientFarmer extends Client  {
     public void updateAvailability(boolean selected) {
         try {
             this.user.setAvailable(selected);
-            super.os.writeObject("updateFarmer");
-            super.os.writeObject(this.user);
+            os.writeObject("update");
+            os.writeObject(user);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void cropImage() throws IOException {
+
+        FileChooser f = new FileChooser();
+        File file = f.showOpenDialog(primaryStage);
+        if(file==null)
+            return;
+
+        Image image = new Image(file.toURI().toString());
+        controllerFarmerHome.cImage.setImage(image);
+
+
+
     }
 
 

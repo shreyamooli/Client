@@ -135,6 +135,12 @@
 
 }
 
+.table-vie .cell .text{
+    -fx-text-fill: #4a4a4a;
+    -fx-effect: dropshadow( gaussian , rgba(76, 76, 76, 0.15), 15 , 0.0 , 0 , 0 );
+
+}
+
 .table-vie:focused{
     /*-fx-text-fill: #75a1b6;*/
     -fx-stroke: transparent;

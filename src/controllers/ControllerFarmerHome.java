@@ -16,6 +16,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,20 +29,20 @@ public class ControllerFarmerHome implements Initializable {
 
 
     @FXML
-    private Label fName, address, email, alias, balance;
+    public Label fName, address, email, alias, balance;
     @FXML
-    private JFXToggleButton chat, cropAvailable;
+    public JFXToggleButton chat, cropAvailable;
     @FXML
-    private AnchorPane chatPane, cropPane, crops, historyPane, homePane, middle;
+    public AnchorPane chatPane, cropPane, crops, historyPane, homePane, middle;
     @FXML
-            private GridPane gridChat, gridHistory;
+            public GridPane gridChat, gridHistory;
     @FXML
-            private ImageView cImage;
-    @FXML private JFXTextField cCost, cName, cQuantity, cWeight;
-    @FXML private TableColumn ctAvailable, ctCost, ctName, ctQuantity, ctWeight;
-    @FXML private TableView cropTable ;
-    @FXML private TextField chatSendBoxFarmer;
-    @FXML private ScrollPane scrollPane;
+            public ImageView cImage;
+    @FXML public JFXTextField cCost, cName, cQuantity, cWeight;
+    @FXML public TableColumn ctAvailable, ctCost, ctName, ctQuantity, ctWeight;
+    @FXML public TableView cropTable ;
+    @FXML public TextField chatSendBoxFarmer;
+    @FXML public ScrollPane scrollPane;
     
 
 
@@ -52,7 +53,7 @@ public class ControllerFarmerHome implements Initializable {
 
 
 
-    private void addClient(ClientFarmer client) {
+    public void addClient(ClientFarmer client) {
         this.client = client;
     }
 
@@ -112,10 +113,15 @@ show(chatPane);    }
 
     @FXML
     private void cropImage(ActionEvent actionEvent) {
+        try {
+            client.cropImage();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     private void addCrop(ActionEvent actionEvent) {
-
+        client.addCrop();
     }
     @FXML
     private void sendMessage(ActionEvent actionEvent) {
