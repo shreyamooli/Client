@@ -61,6 +61,7 @@ public class ControllerFarmerHome implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+
     }
 
     @FXML
@@ -125,6 +126,11 @@ show(chatPane);    }
     }
     @FXML
     private void sendMessage(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    private void chooseColor(){
+        client.chooseColor();
     }
 
 }

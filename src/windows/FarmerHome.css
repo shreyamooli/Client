@@ -1,7 +1,6 @@
 
 .root{
 
-
     -fx-somcolor: #000000;
 }
 
@@ -221,5 +220,41 @@
 .h1{
     -fx-text-fill: -fx-somcolor;
     -fx-effect: dropshadow( gaussian , rgba(211, 211, 211, 0.37), 7, 0.0 , 0 , 0 );
+
+}
+
+.titled-pane{
+
+
+    -fx-text-fill: #656565;
+    -fx-effect: dropshadow( gaussian , rgba(195, 193, 189, 0.55), 2 , 0.0 , 0 , 0 );
+
+}
+
+
+.titled-pane .content{
+    -fx-border-width: 0px;
+    -fx-border-color: transparent;
+    -fx-border-insets: 0px;
+    -fx-background-color: white;
+}
+
+.titled-pane .title{
+    -fx-border-width: 0px 0px .5px 0px ;
+    -fx-border-color: #d1d1d1;
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(101, 101, 101, 0.26);
+    -fx-effect: dropshadow( gaussian , rgb(195, 193, 189), 2 , 0.0 , 0 , 0 );
+}
+
+
+.choice-box{
+    -fx-background-color: rgb(255, 255, 255);
+    -fx-background-radius: 0px 15px 15px 0px;
+    -fx-mark-color: orange;
+}
+
+.choice-box .arrow{
+    -fx-background-color: rgb(255, 255, 255);
 
 }

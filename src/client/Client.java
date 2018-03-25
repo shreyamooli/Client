@@ -1,7 +1,6 @@
 package client;
 
 import controllers.ControllerCustomer;
-import controllers.ControllerFarmer;
 import controllers.ControllerFarmerHome;
 import controllers.ControllerLogin;
 import helpers.EffectUtilities;
@@ -44,18 +43,16 @@ public class Client extends Application {
     public ObjectInputStream reader; // for reading data from server
     public static Person user = new Person();
     public static Stage primaryStage;
-    public AnchorPane root;
+    public static AnchorPane root;
     public static String erre = "";
     public  Logger logger = LogManager.getLogger(Client.class);
     FXMLLoader floader = new FXMLLoader();
-    Controller con = floader.getController();
    // private Person user;
     private int offset = 0;
     private double average=350;
     private ClientFarmer cf;
     private ClientCustomer cc;
     private ControllerLogin controllerLogin;
-    private ControllerFarmer controllerFarmer;
     private ControllerFarmerHome controllerFarmerHome;
     private ControllerCustomer controllerCustomer;
 
@@ -120,23 +117,10 @@ public class Client extends Application {
         primaryStage.setIconified(true);
     }
 
-    public Controller getController(){
-        return con;
-    }
 
 
 
-    public void loadPane() {
-        try {
-            con.anchorPane = FXMLLoader.load(getClass().getResource("/views/add.fxml"));
-            Pane newLoadedPane = FXMLLoader.load(getClass().getResource("/views/add.fxml"));
-            root.getChildren().add(newLoadedPane);
 
-        } catch (IOException e) {
-            logger.error(e.getMessage());
-            e.printStackTrace();
-        }
-    }
 
 
     public void setStreams() {
@@ -151,41 +135,9 @@ public class Client extends Application {
         }
     }
 
-    public void generic(FXMLLoader fxml) {
-        try {
-
-            root = fxml.load();
-            con = fxml.<Controller>getController();
-            con.addClient(this);
-
-
-        //    floader.<Controller>getController().pName.setText("help");
-
-            Scene scene = new Scene(root);
-            scene.setFill(Color.TRANSPARENT);
-            scene.getStylesheets().add(getClass().getResource("/views/paneFarm.css").toExternalForm());
-            root.getStyleClass().add("mo");
-            primaryStage.setScene(scene);
-            primaryStage.show();
-            registerStage(primaryStage);
-        } catch (IOException e) {
-            logger.error(e.getMessage());
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-
-        }
-
-
-    }
 
 
 
-    public void loadScene(String s, Person p) {
-        user = p;
-        floader = new FXMLLoader(getClass().getResource(s));
-        generic(floader);
-
-    }
 
 
 
@@ -252,12 +204,12 @@ public class Client extends Application {
                     user = p;
 
 
-                    floader = new FXMLLoader(getClass().getResource("/views/paneCustomer.fxml"));
+                    floader = new FXMLLoader(getClass().getResource("/windows/CustomerHome.fxml"));
 
                     root = floader.load();
                     Scene scene = new Scene(root);
                     scene.setFill(Color.TRANSPARENT);
-                    scene.getStylesheets().add(getClass().getResource("/views/paneFarm.css").toExternalForm());
+                    scene.getStylesheets().add(getClass().getResource("/helpers/style.css").toExternalForm());
                     root.getStyleClass().add("mo");
                     root.layout();
 
@@ -267,9 +219,9 @@ public class Client extends Application {
                    // generic(floader);
 
                     controllerCustomer = floader.<ControllerCustomer>getController();
-                    controllerCustomer.addClient(this);
-                    cc = new ClientCustomer(this);
-                    controllerCustomer.addImmediateClient(cc);
+                    cc = new ClientCustomer();
+                    controllerCustomer.addClient(cc);
+                    cc.startUp();
                     //loadScene("/views/paneCustomer.fxml", p);
                     return;
                 } else {
@@ -281,7 +233,7 @@ public class Client extends Application {
             }
 
         }
-        checkErr("Incorrect email or password", con.signInEmail, -10);
+        checkErr("Incorrect email or password", controllerLogin.signInEmail, -10);
         erre = "Incorrect email or password";
 
 
@@ -332,7 +284,7 @@ public class Client extends Application {
                                     return;
                                 } else {
                                     if (controllerLogin.signUpPassword.getText().compareTo(controllerLogin.signUpPassword2.getText()) != 0)
-                                        checkErr("passwors do not match", con.signUpPassword, offset);
+                                        checkErr("passwors do not match", controllerLogin.signUpPassword, offset);
                                     if (!controllerLogin.signUpEmail.getText().contains("@"))
                                         checkErr("not a valid email", controllerLogin.signUpEmail, offset);
 

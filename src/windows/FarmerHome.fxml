@@ -10,6 +10,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -95,15 +96,6 @@
                         <Insets top="5.0" />
                      </padding>
                   </HBox>
-                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="702.0" layoutY="2.0" onAction="#closeApp" prefHeight="25.0" prefWidth="29.0">
-                     <graphic>
-                        <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/icons8-delete-50.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
                   <AnchorPane fx:id="middle" layoutX="15.0" layoutY="50.0" prefHeight="349.0" prefWidth="681.0">
                      <children>
                         <AnchorPane fx:id="homePane" disable="true" opacity="0.0" prefHeight="349.0" prefWidth="703.0" styleClass="right">
@@ -278,6 +270,30 @@
                         </AnchorPane>
                      </children>
                   </AnchorPane>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="5.0" onAction="#chooseColor">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-settings-48.png" />
+                           </image>
+                           <effect>
+                              <InnerShadow choke="0.5" color="WHITE" radius="14.4475" width="38.79" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="700.0" onAction="#closeApp" prefHeight="25.0" prefWidth="29.0">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-delete-50.png" />
+                           </image>
+                           <effect>
+                              <InnerShadow choke="0.26" color="WHITE" height="77.34" radius="45.582499999999996" width="106.99" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
                </children>
             </AnchorPane>
          </children>

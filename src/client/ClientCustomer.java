@@ -34,7 +34,6 @@ public class ClientCustomer extends Client {
     listenchat l;
     static ObjectOutputStream myOut;
     static ObjectInputStream  myIn;
-    Client cli;
     private ControllerCustomer controllerCustomer;
 
     TextField editWeight = new TextField();
@@ -43,9 +42,11 @@ public class ClientCustomer extends Client {
     TextField editAvailable = new TextField();
 
 
-    public ClientCustomer(Client client) throws IOException {
-        cli = client;
+    public ClientCustomer() throws IOException {
+
     }
+
+
 
     public void initiateChat(){
 
@@ -62,8 +63,8 @@ public class ClientCustomer extends Client {
     }
 
     public void sendMessage(){
-        String msg = controllerCustomer.chatSendBoxCustomer.getText();
-        controllerCustomer.chatSendBoxCustomer.clear();
+        String msg = controllerCustomer.chatField.getText();
+        controllerCustomer.chatField.clear();
         Label lab = new Label(msg);
         lab.getStylesheets().add(getClass().getResource("/views/msg sheets.css").toExternalForm());
         lab.getStyleClass().add("out");
@@ -88,73 +89,37 @@ public class ClientCustomer extends Client {
     }
 
 
-    protected void loadCustomer(AnchorPane p) {
-        try {
 
-            controllerCustomer.homeCustomer.setOpacity(0.0);
-            controllerCustomer.chatCustomer.setOpacity(0.0);
-            controllerCustomer.cropCustomer.setOpacity(0.0);
-            controllerCustomer.homeCustomer.setDisable(true);
-            controllerCustomer.chatCustomer.setDisable(true);
-            controllerCustomer.cropCustomer.setDisable(true);
-            p.toFront();
-            p.setDisable(false);
-
-            KeyValue keyValue = new KeyValue(p.opacityProperty(), 1);
-            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(350), keyValue));
-            timeline.play();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            logger.error(e.getMessage());
-        }
-    }
-
-    public void loadWhoever(Event e) {
-
-        setCustomer();
-        if (e.getSource() == controllerCustomer.homeBtnCus)
-            loadCustomer(controllerCustomer.homeCustomer);
-        if (e.getSource() == controllerCustomer.cropBtnCus)
-            loadCustomer(controllerCustomer.cropCustomer);
-        if (e.getSource() == controllerCustomer.historyBtnCus)
-            loadCustomer(controllerCustomer.homeCustomer);
-        if (e.getSource() == controllerCustomer.chatBtnCus)
-            loadCustomer(controllerCustomer.chatCustomer);
-    }
 
 
 
 
 
     private void setCustomer() {
-        if (!controllerCustomer.firstRun)
-            return;
-        controllerCustomer.cEmail.setText("Email : "+user.getEmail());
-        controllerCustomer.cAddress.setText("");
-        controllerCustomer.cusName.setText("Name : "+user.getFullName());
-        controllerCustomer.cAlias.setText("customer");
+
+        controllerCustomer.email.setText("Email : "+user.getEmail());
+        controllerCustomer.fName.setText("Name : "+user.getFullName());
+        controllerCustomer.alias.setText("customer");
         controllerCustomer.cBalance.setText("Balance : $"+String.valueOf(user.getBalance()));
 
-        getFarmersForChat();
+       // getFarmersForChat();
         getCrops();
 
-        controllerCustomer.firstRun = false;
     }
 
 
     private void getCrops(){
         try {
-            cli.os.writeObject("getCropsForCustomer");
-            ArrayList e  = (ArrayList) cli.is.readObject();
+            os.writeObject("getCropsForCustomer");
+            ArrayList e  = (ArrayList) is.readObject();
             ObservableList<Object> crops = FXCollections.observableArrayList(e);
 
-            controllerCustomer.cropName.setCellValueFactory(new PropertyValueFactory("name"));
-            controllerCustomer.cropWeight.setCellValueFactory(new PropertyValueFactory("weight"));
-            controllerCustomer.cropCost.setCellValueFactory(new PropertyValueFactory("cost"));
-            controllerCustomer.cropQuantity.setCellValueFactory(new PropertyValueFactory("quantity"));
-            controllerCustomer.cropAvailable.setCellValueFactory(new PropertyValueFactory("available"));
-            controllerCustomer.cropOwner.setCellValueFactory(new PropertyValueFactory("owner"));
+            controllerCustomer.ctName.setCellValueFactory(new PropertyValueFactory("name"));
+            controllerCustomer.ctWeight.setCellValueFactory(new PropertyValueFactory("weight"));
+            controllerCustomer.ctCost.setCellValueFactory(new PropertyValueFactory("cost"));
+            controllerCustomer.ctQuantity.setCellValueFactory(new PropertyValueFactory("quantity"));
+            controllerCustomer.ctAvailable.setCellValueFactory(new PropertyValueFactory("available"));
+            controllerCustomer.ctOwner.setCellValueFactory(new PropertyValueFactory("owner"));
             controllerCustomer.cropTable.setItems(crops);
 
 
@@ -252,10 +217,10 @@ public class ClientCustomer extends Client {
         }
 
         try {
-            cli.os.writeObject("saveToKart");
-            cli.os.writeObject(c);
-            cli.os.writeObject(v);
-            cli.os.writeObject(user);
+            os.writeObject("saveToKart");
+            os.writeObject(c);
+            os.writeObject(v);
+            os.writeObject(user);
 
             updateKart();
 
@@ -276,7 +241,7 @@ public class ClientCustomer extends Client {
 
         try{
 
-            cli.os.writeObject("search by farmer");
+            os.writeObject("search by farmer");
 
 
         }catch(IOException e){
@@ -291,13 +256,13 @@ public class ClientCustomer extends Client {
     private void getFarmersForChat(){
         try {
 
-            cli.os.writeObject("get farmer list");
+            os.writeObject("get farmer list");
 
-            ArrayList e  = (ArrayList) cli.is.readObject();
+            ArrayList e  = (ArrayList) is.readObject();
             ObservableList<Object> client = FXCollections.observableArrayList(e);
 
-            controllerCustomer.farmerColumn.setCellValueFactory(new PropertyValueFactory("fullName"));
-            controllerCustomer.farmerTable.setItems(client);
+            controllerCustomer.chatColumn.setCellValueFactory(new PropertyValueFactory("fullName"));
+            controllerCustomer.chatTable.setItems(client);
 
 
 
@@ -318,13 +283,17 @@ public class ClientCustomer extends Client {
         try {
 
             user.setBalance((float) (user.getBalance()+a));
-            cli.os.writeObject("addCredit");
-            cli.os.writeObject(user);
+            os.writeObject("update");
+            os.writeObject(user);
             controllerCustomer.cBalance.setText("Balance : $"+String.valueOf(user.getBalance()));
             controllerCustomer.creditField.clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void startUp() {
+        setCustomer();
     }
 
     private class listenchat implements Runnable{

@@ -2,6 +2,10 @@ package controllers;
 
 import client.Client;
 import client.ClientCustomer;
+import interfaces.Speed;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,6 +13,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,93 +22,120 @@ public class ControllerCustomer implements Initializable {
 
 
 
+
     @FXML
-    public AnchorPane bottomPaneCus, chatCustomer,homeCustomer,cropCustomer;
+    public AnchorPane chatPane, cropPane, crops,homePane,kartPane,middle;
     @FXML
-    ImageView cImage;
+    public GridPane gridChat, gridHistory;
     @FXML
-    public Label cAddress, cAlias, cEmail, cusName;
+            public Label alias, email, fName;
     @FXML
-    public
-    TextArea chatBoxCustomer;
-    @FXML
-    public
-    TextField chatSendBoxCustomer, cropSearch, creditField;
-    @FXML
-    public TitledPane cBalance;
-    @FXML
-    public
-    ToggleButton chatBtnCus;
-    @FXML
-    public
-    ToggleButton cropBtnCus;
-    @FXML
-    public
-    ToggleButton historyBtnCus;
-    @FXML
-    public
-    ToggleButton homeBtnCus;
-    @FXML
-    ToggleGroup bar1;
-    @FXML
-    public GridPane gridChat;
-    @FXML
-    public ScrollPane scrollPane;
-    @FXML
-    public TableView farmerTable, cropTable;
-    @FXML
-    public TableColumn farmerColumn, cropName, cropWeight, cropQuantity, cropAvailable, cropOwner, cropCost;
+            public ScrollPane scrollPane, scrollPane1;
+
+    @FXML public TableColumn ctAvailable, ctCost, ctName, ctQuantity, ctWeight, ctOwner, chatColumn;
+    @FXML public TableView cropTable, chatTable;
+    @FXML public TextArea chatBox;
+    @FXML public TextField chatField, creditField;
+    @FXML public TitledPane cBalance;
 
 
+    public ControllerCustomer() {
+    }
 
-
-    Client cli;
-    ClientCustomer cc;
+    ClientCustomer clientCustomer;
     public boolean firstRun = true;
 
-    public void addClient(Client client) {
-        cli = client;
-    }
-
-    public void addImmediateClient(ClientCustomer cc) {
-        this.cc = cc;
-        cc.addController(this);
+    public void addClient(ClientCustomer client) {
+        clientCustomer = client;
+        client.addController(this);
     }
 
 
-    public void addCredit(){
+
+    @FXML
+    private void addCredit(){
         if(creditField.getText().equalsIgnoreCase(""))
             return;
         int a = Integer.parseInt(creditField.getText());
-        cc.addCredit(a);
+        clientCustomer.addCredit(a);
     }
 
-    public void loadWhoeverCus(ActionEvent actionEvent) {
-        cc.loadWhoever(actionEvent);
+
+    @FXML
+    private void appClose(ActionEvent actionEvent) {
+
     }
 
-    public void appClose(ActionEvent actionEvent) {
-        cli.appClose();
+    @FXML
+    private void setIconified(ActionEvent actionEvent) {
+
     }
 
-    public void setIconified(ActionEvent actionEvent) {
-        cli.setIconified();
+    @FXML
+    private void sendMessage(ActionEvent actionEvent) {
+
     }
 
-    public void sendMessage(ActionEvent actionEvent) {
-        cc.sendMessage();
-    }
+    @FXML
+    private void initiateChat(ActionEvent actionEvent) {
 
-    public void initiateChat(ActionEvent actionEvent) {
-        cc.initiateChat();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        homeBtnCus.setTooltip(new Tooltip("show home tab"));
-        cropBtnCus.setTooltip(new Tooltip("show crops"));
-        chatBtnCus.setTooltip(new Tooltip("show chat tab"));
-        historyBtnCus.setTooltip(new Tooltip("show kart tab"));
 
+
+    }
+
+    @FXML
+    private void showHome(ActionEvent actionEvent) {
+        show(homePane);
+    }
+
+    @FXML
+    private void showCrop(ActionEvent actionEvent) {
+        show(cropPane);
+    }
+
+    @FXML
+    private void showHistory(ActionEvent actionEvent) {
+        show(kartPane);
+    }
+
+    @FXML
+    private void showChat(ActionEvent actionEvent) {
+        show(chatPane);
+    }
+
+    @FXML
+    private void loadImage(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    private void chooseColor(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    private void closeApp(ActionEvent actionEvent) {
+    }
+
+    private void show(AnchorPane pane) {
+
+        chatPane.setOpacity(0);
+        kartPane.setOpacity(0);
+        cropPane.setOpacity(0);
+        homePane.setOpacity(0);
+
+        chatPane.setDisable(true);
+        kartPane.setDisable(true);
+        cropPane.setDisable(true);
+        homePane.setDisable(true);
+
+        pane.toFront();
+        pane.setDisable(false);
+
+        KeyValue keyValue1 = new KeyValue(pane.opacityProperty(), 1);
+        Timeline timeline1 = new Timeline(new KeyFrame(Duration.millis(Speed.FAST), keyValue1));
+        timeline1.play();
     }
 }

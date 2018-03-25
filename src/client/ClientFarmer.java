@@ -1,5 +1,6 @@
 package client;
 
+import com.jfoenix.controls.JFXColorPicker;
 import com.jfoenix.controls.JFXToggleButton;
 import controllers.*;
 import crops.Crop;
@@ -12,9 +13,11 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.NodeOrientation;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -31,10 +34,7 @@ import javafx.util.Duration;
 import org.controlsfx.control.PopOver;
 import users.Farmer;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.ResultSet;
@@ -557,6 +557,81 @@ public class ClientFarmer extends Client  {
         Image image = new Image(file.toURI().toString());
         controllerFarmerHome.cImage.setImage(image);
 
+
+
+    }
+
+    public void chooseColor() {
+
+        JFXColorPicker colorPick = new JFXColorPicker();
+        Stage stage = new Stage();
+        AnchorPane parent = new AnchorPane();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        parent.getChildren().add(colorPick);
+        stage.show();
+        colorPick.show();
+        Color color = colorPick.getValue();
+
+
+
+        colorPick.setOnAction((EventHandler) t -> {
+            String strings;
+            stage.close();
+            strings = colorPick.getValue().toString();
+            strings = strings.substring(2);
+            strings = strings.replace("ff","");
+
+            strings = ".troot{ -fx-somcolor : #"+ strings +"; }";
+          //  System.out.println(strings);
+
+            File file = new File("Client/src/helpers/background.css");
+            try {
+                file.createNewFile();
+//                FileWriter fileWriter = new FileWriter(file);
+//                PrintWriter printWriter = new PrintWriter(fileWriter);
+//                printWriter.print(strings);
+
+//                for (int i =0; i<root.getStylesheets().size();i++){
+//
+//                    if(root.getStylesheets().get(i).endsWith("d.css")){
+//                        root.getStylesheets().remove(i);
+//
+//                    }
+//                }
+//
+//                for (int i = 0; i < root.getStyleClass().size() ; i++) {
+//                    if(root.getStyleClass().get(i).endsWith("troot")){
+//                  //      root.getStyleClass().remove(i);
+//                        //   root.requestLayout();
+//                    }
+//                }
+
+                BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+                writer.write(strings);
+                writer.close();
+             //   root.getStylesheets().add(getClass().getResource("/helpers/background.css").toExternalForm());
+             //   root.getStylesheets().add(getClass().getResource("/helpers/style.css").toExternalForm());
+             //   root.getStylesheets().add(getClass().getResource("/windows/FarmerHome.css").toExternalForm());
+
+                root.getStylesheets().add(getClass().getResource("/helpers/background.css").toExternalForm());
+             //   root.getStyleClass().add("troot");
+              //  root.getStyleClass().remove(2);
+
+                //root.requestLayout();
+
+
+                root.getStyleClass().clear();
+                root.getStyleClass().addAll("troot","mo","root" );
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return;
+            }
+
+
+        });
 
 
     }
