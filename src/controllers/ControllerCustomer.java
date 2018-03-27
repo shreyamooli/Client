@@ -26,7 +26,7 @@ public class ControllerCustomer implements Initializable {
     @FXML
     public AnchorPane chatPane, cropPane, crops,homePane,kartPane,middle;
     @FXML
-    public GridPane gridChat, gridHistory;
+    public GridPane gridChat, grisHistory;
     @FXML
             public Label alias, email, fName;
     @FXML

@@ -1,5 +1,6 @@
 package client;
 
+import com.jfoenix.controls.JFXButton;
 import controllers.ControllerCustomer;
 import crops.Crop;
 import helpers.TREC;
@@ -13,13 +14,22 @@ import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.geometry.Insets;
 import javafx.geometry.NodeOrientation;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import jfxtras.scene.control.window.CloseIcon;
+import jfxtras.scene.control.window.MinimizeIcon;
+import jfxtras.scene.control.window.Window;
+import kart.Kart;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -104,6 +114,7 @@ public class ClientCustomer extends Client {
 
        // getFarmersForChat();
         getCrops();
+        updateKart();
 
     }
 
@@ -136,7 +147,7 @@ public class ClientCustomer extends Client {
     }
 
 
-    private TREC getExpanse() {
+   /* private TREC getExpanse() {
         TREC<Object> expans = new TREC<>(param -> {
 
             //   Crop c = (Crop) param.getTableRow().getItem();
@@ -165,6 +176,8 @@ public class ClientCustomer extends Client {
 //
             Button save = new Button("add to kart");
             save.setOnAction(event -> {
+
+
 
 
                 if(editQuantity.getText().compareToIgnoreCase("")!=0){
@@ -206,21 +219,85 @@ public class ClientCustomer extends Client {
         });
 
         return expans;
+    }*/
+
+
+
+
+    private TREC getExpanse() {
+        TREC<Object> expans = new TREC<>(param -> {
+
+            //   Crop c = (Crop) param.getTableRow().getItem();
+
+
+            Crop c = (Crop) param.getValue();
+            GridPane gridPane = new GridPane();
+
+            JFXButton buy = new JFXButton("Buy");
+            JFXButton cancel = new JFXButton("Cancel");
+            Label label = new Label("Quantity:");
+            label.setPrefWidth(89);
+
+            ChoiceBox<Integer> choices = new ChoiceBox<>();
+            choices.setValue(1);
+          //  choices.setPrefSize(80,40);
+
+            for (int i = 0; i < c.getQuantity() ; i++) {
+                choices.getItems().add(i+1);
+            }
+
+            gridPane.addRow(1,label,choices,buy,cancel);
+            gridPane.setHgap(15);
+            gridPane.setVgap(10);
+            gridPane.getStylesheets().add(getClass().getResource("/windows/FarmerHome.css").toExternalForm());
+            buy.getStyleClass().add("btnSend");
+            cancel.getStyleClass().add("btnSend");
+
+
+
+
+            Window window = new Window("New Item");
+            window.setPrefSize(340,100);
+            window.getContentPane().getChildren().add(gridPane);
+      //      window.getRightIcons().add(new CloseIcon(window));
+
+            controllerCustomer.crops.getChildren().add(window);
+            cancel.setOnAction(e->{
+                window.close();
+            });
+            buy.setOnAction(e->{
+                writeToKart(c,choices.getValue());
+                window.close();
+            });
+
+            window.setVisible(true);
+
+
+            GridPane giridPane = new GridPane();
+            param.toggleExpanded();
+
+            return giridPane;
+
+        });
+
+        return expans;
     }
 
     private void writeToKart(Crop c, double v) {
         //todo write info to database then to kart
 
-        if(v > c.getQuantity()) {
-
-            return;
-        }
+        Kart item = new Kart();
+        item.setCustomerEmail(user.getEmail());
+        item.setCropQuantity(v);
+        item.setAmount(v*c.getCost());
+        item.setCropCost(c.getCost());
+        item.setCropName(c.getName());
+        item.setCropOwner(c.getOwner());
 
         try {
             os.writeObject("saveToKart");
-            os.writeObject(c);
-            os.writeObject(v);
-            os.writeObject(user);
+            os.writeObject(item);
+
 
             updateKart();
 
@@ -234,6 +311,84 @@ public class ClientCustomer extends Client {
     }
 
     private void updateKart() {
+
+        if(controllerCustomer.grisHistory.getChildren().size() > 0)
+        controllerCustomer.grisHistory.getChildren().remove(0,controllerCustomer.grisHistory.getChildren().size());
+
+        try {
+            os.writeObject("getKart");
+            os.writeObject(user.getEmail());
+            ArrayList<Kart> list = (ArrayList) is.readObject();
+
+            for (Kart k: list
+                 ) {
+                addToKart(k);
+            }
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void addToKart(Kart k) {
+
+        BorderPane bp = new BorderPane();
+
+        String dateString = k.getDate().toString();
+        String cropNameString = k.getCropName();
+        String amountString = String.valueOf(k.getAmount());
+        String cropQuantityString = String.valueOf(k.getCropQuantity());
+        JFXButton checkout = new JFXButton("Checkout");
+        JFXButton remove = new JFXButton("remove from kart");
+
+        checkout.setOnAction(e->{
+            try {
+                os.writeObject("commit");
+                os.writeObject(k);
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        });
+
+        remove.setOnAction(e->{
+            try {
+                os.writeObject("remove");
+                os.writeObject(k);
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        });
+
+
+        Label label = new Label("you bought : "+cropNameString);
+        label.setPrefWidth(400);
+        AnchorPane space = new AnchorPane();
+        space.setPrefSize(550,10);
+        space.getStyleClass().add("filler");
+        VBox vBox = new VBox();
+        VBox hBox = new VBox();
+        vBox.getChildren().addAll(label, new Label("the quantity is : "+cropQuantityString), new Label("your total is : "+amountString),space);
+        hBox.getChildren().addAll(checkout, remove);
+        bp.setCenter(vBox);
+        bp.setLeft(new Label(dateString));
+        bp.setRight(hBox);
+        bp.getStyleClass().add("bp");
+        bp.setPadding(new Insets(10));
+        vBox.setPadding(new Insets(0,10,0,25));
+        bp.setPrefSize(600,300);
+        bp.requestLayout();
+
+    //    controllerCustomer.grisHistory.addRow(controllerCustomer.grisHistory.getChildren().size(), bp);
+        controllerCustomer.grisHistory.add(bp,1,controllerCustomer.grisHistory.getChildren().size());
+
+
+
+
+
 
     }
 

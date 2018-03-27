@@ -5,65 +5,103 @@ import crops.Crop;
 import users.Customer;
 import users.Farmer;
 
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
-public class Kart {
 
-    public Farmer farmer = new Farmer();
-    public Customer customer = new Customer();
-    public Crop crop = new Crop();
-    public Date date;
 
-    public String farmerEmail;
-    public String customerEmail;
-    public double cropPrice;
-    public double cropQuantity;
+public class Kart implements Serializable {
 
 
 
-    public Kart(){
+    private String date;
+    private String customerEmail;
+    private String cropName, cropOwner;
+    private double cropCost, cropQuantity, amount;
 
-        farmerEmail = farmer.getEmail();
-        customerEmail=customer.getEmail();
-        cropPrice = crop.getCost();
-        cropQuantity = crop.getQuantity();
-        date = new Date();
+
+    public Kart(String customerEmail, String cropName, String cropOwner, double cropCost, double cropQuantity, double amount) {
+        this.customerEmail = customerEmail;
+        this.cropName = cropName;
+        this.cropOwner = cropOwner;
+        this.cropCost = cropCost;
+        this.cropQuantity = cropQuantity;
+        this.amount = amount;
+
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now =  LocalDateTime.now();
+
+        date = dtf.format(now);
     }
-    public String getFarmerEmail(){
-        return farmerEmail;
+
+    public Kart() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now =  LocalDateTime.now();
+
+        date = dtf.format(now);
     }
-    public String getCustomerEmail(){
+
+    public String getDate() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now =  LocalDateTime.now();
+
+        date = dtf.format(now);
+
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getCustomerEmail() {
         return customerEmail;
-    }
-    public double getCropPrice(){
-        return cropPrice;
-    }
-
-    public double getCropQuantity() {
-        return cropQuantity;
     }
 
     public void setCustomerEmail(String customerEmail) {
         this.customerEmail = customerEmail;
     }
 
-    public void setFarmerEmail(String farmerEmail) {
-        this.farmerEmail = farmerEmail;
+    public String getCropName() {
+        return cropName;
     }
 
-    public void setCropPrice(double cropPrice) {
-        this.cropPrice = cropPrice;
+    public void setCropName(String cropName) {
+        this.cropName = cropName;
+    }
+
+    public String getCropOwner() {
+        return cropOwner;
+    }
+
+    public void setCropOwner(String cropOwner) {
+        this.cropOwner = cropOwner;
+    }
+
+    public double getCropCost() {
+        return cropCost;
+    }
+
+    public void setCropCost(double cropCost) {
+        this.cropCost = cropCost;
+    }
+
+    public double getCropQuantity() {
+        return cropQuantity;
     }
 
     public void setCropQuantity(double cropQuantity) {
         this.cropQuantity = cropQuantity;
     }
 
-    public Date getDate() {
-        return date;
+    public double getAmount() {
+        return amount;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 }

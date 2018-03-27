@@ -622,7 +622,10 @@ public class ClientFarmer extends Client  {
 
 
                 root.getStyleClass().clear();
+                root.applyCss();
                 root.getStyleClass().addAll("troot","mo","root" );
+                root.applyCss();
+
 
 
             } catch (IOException e) {
