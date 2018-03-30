@@ -45,6 +45,7 @@ public class ClientCustomer extends Client {
     static ObjectOutputStream myOut;
     static ObjectInputStream  myIn;
     private ControllerCustomer controllerCustomer;
+    private static ArrayList<Kart> kartList = new ArrayList<>();
 
     TextField editWeight = new TextField();
     TextField editCost = new TextField();
@@ -318,9 +319,9 @@ public class ClientCustomer extends Client {
         try {
             os.writeObject("getKart");
             os.writeObject(user.getEmail());
-            ArrayList<Kart> list = (ArrayList) is.readObject();
+            kartList = (ArrayList) is.readObject();
 
-            for (Kart k: list
+            for (Kart k: kartList
                  ) {
                 addToKart(k);
             }
@@ -349,6 +350,9 @@ public class ClientCustomer extends Client {
             try {
                 os.writeObject("commit");
                 os.writeObject(k);
+                user.setBalance(user.getBalance()-k.getAmount());
+                controllerCustomer.cBalance.setText("Balance : $"+String.valueOf(user.getBalance()));
+
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
@@ -358,6 +362,7 @@ public class ClientCustomer extends Client {
             try {
                 os.writeObject("remove");
                 os.writeObject(k);
+                updateKart();
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
@@ -408,6 +413,8 @@ public class ClientCustomer extends Client {
 
     }
 
+
+
     private void getFarmersForChat(){
         try {
 
@@ -449,6 +456,7 @@ public class ClientCustomer extends Client {
 
     public void startUp() {
         setCustomer();
+        getFarmersForChat();
     }
 
     private class listenchat implements Runnable{

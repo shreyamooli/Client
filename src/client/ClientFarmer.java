@@ -52,20 +52,11 @@ public class ClientFarmer extends Client  {
     ObjectOutputStream meOut;
     ObjectInputStream in;
     File file;
-    PopOver pp;
-    Farmer user = new Farmer();
+    static Farmer user = new Farmer();
 
     ControllerFarmerHome controllerFarmerHome;
-//    ControllerFarmerHome controllerFarmerHome;
-//    ControllerFarmerHistory controllerFarmerHistory;
-//    ControllerFarmerChat controllerFarmerChat;
-
-    TextField name,weight,cost,quantity;
-    JFXToggleButton available;
-    ImageView imageView;
 
 
-    private AnchorPane root1, root2, root3;
     private Stage crop= new Stage(), history= new Stage(), chat= new Stage();
 
 
@@ -93,9 +84,7 @@ public class ClientFarmer extends Client  {
 
     }
 
-    public void setUser(Farmer f) {
-        this.user = f;
-    }
+
 
     private void configureDisplay() {
 
@@ -107,113 +96,7 @@ public class ClientFarmer extends Client  {
         controllerFarmerHome.balance.setText("BALANCE : "+String.valueOf(user.getBalance()));
     }
 
-   /* private void loadAll() throws IOException {
-        floader = new FXMLLoader(getClass().getResource("/windows/FarmerHome.fxml"));
-        root1=floader.load();
-        controllerFarmerCrop = floader.<ControllerFarmerCrop>getController();
-        controllerFarmerCrop.addClient(this);
 
-        floader = new FXMLLoader(getClass().getResource("/windows/FarmerHistory.fxml"));
-        root2=floader.load();
-        controllerFarmerHistory = floader.<ControllerFarmerHistory>getController();
-        controllerFarmerHistory.addClient(this);
-
-        floader = new FXMLLoader(getClass().getResource("/windows/FarmerChat.fxml"));
-        root3=floader.load();
-        controllerFarmerChat = floader.<ControllerFarmerChat>getController();
-        controllerFarmerChat.addClient(this);
-
-
-    }
-
-*/
-    public void showCrops() {
-
-       if(crop!=null && !crop.isShowing()) {
-           crop.show();
-           return;
-       }
-       crop.setScene(new Scene(root1));
-       crop.show();
-
-    }
-
-    public void showHistory() {
-        if(history!=null && !history.isShowing()) {
-            history.show();
-            return;
-        }
-        history.setScene(new Scene(root2));
-        history.show();
-    }
-
-    public void showChat() {
-        if(chat!=null && !chat.isShowing()) {
-            chat.show();
-            return;
-        }
-        chat.setScene(new Scene(root3));
-        chat.show();
-    }
-
-   /* public void shift() {
-
-
-        if (!controllerFarmerChat.farmBool)
-            return;
-
-        try {
-            cf.pName.setText("Name : " + user.getFullName());
-            cf.pAlias.setText("Alias : " + user.getAlias());
-            cf.pAddress.setText("Address : " + user.getAddress());
-            cf.pEmail.setText("Email : " + user.getEmail());
-            double num = user.getBalance();
-            //todo format num into dollars
-            cf.pBalance.setText("$"+num+"");
-            os.writeObject("getImage");
-            os.writeObject(user);
-
-
-            try {
-                File file = (File) is.readObject();
-                if(file!=null)
-                cf.pImage.setImage(new Image(file.toURI().toString()));
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-            cf.farmBool = false;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-*/
-//    protected void loadFarm(AnchorPane p) {
-//        try {
-//
-//            cf.welcome.setOpacity(0.0);
-//            cf.welcome.setDisable(true);
-//            cf.homeFarm.setOpacity(0.0);
-//            cf.cropFarm.setOpacity(0.0);
-//            cf.historyFarm.setOpacity(0.0);
-//            cf.chatFarm.setOpacity(0.0);
-//
-//            cf.homeFarm.setDisable(true);
-//            cf.cropFarm.setDisable(true);
-//            cf.historyFarm.setDisable(true);
-//            cf.chatFarm.setDisable(true);
-//
-//            p.setDisable(false);
-//            p.toFront();
-//
-//            KeyValue keyValue = new KeyValue(p.opacityProperty(), 1);
-//            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(350), keyValue));
-//            timeline.play();
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
 
 
    /* public void setupChatBox() {
@@ -320,14 +203,7 @@ public class ClientFarmer extends Client  {
         clearCropBar();
     }
 
-    public void displayAddCrop() {
 
-      //  addCrop();
-      //  updateTable();
-      //  clearCropBar();
-
-
-    }
 
     private void clearCropBar() {
         controllerFarmerHome.cName.clear();
@@ -539,8 +415,9 @@ public class ClientFarmer extends Client  {
 
     public void updateAvailability(boolean selected) {
         try {
-            this.user.setAvailable(selected);
-            os.writeObject("update");
+            user.setAvailable(selected);
+            os.writeObject("updatefarmer");
+            System.out.println(user.isAvailable());
             os.writeObject(user);
         } catch (IOException e) {
             e.printStackTrace();
