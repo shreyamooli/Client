@@ -105,6 +105,7 @@ show(chatPane);    }
     @FXML
     private void closeApp(ActionEvent actionEvent) {
         client.appClose();
+        client.checkT();
     }
 
     @FXML
@@ -126,6 +127,7 @@ show(chatPane);    }
     }
     @FXML
     private void sendMessage(ActionEvent actionEvent) {
+        client.sendMessage();
     }
 
     @FXML

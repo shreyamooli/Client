@@ -12,6 +12,7 @@ import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -31,6 +32,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import kart.Kart;
 import org.controlsfx.control.PopOver;
 import users.Farmer;
 
@@ -49,6 +51,7 @@ public class ClientFarmer extends Client  {
 
 
     Thread t;
+    StartServer startServer;
     ObjectOutputStream meOut;
     ObjectInputStream in;
     File file;
@@ -73,9 +76,10 @@ public class ClientFarmer extends Client  {
         controllerFarmerHome.addClient(this);
         try {
 
-         //   loadAll();
             configureDisplay();
-            updateTable();
+            setTable();
+            setupChatBox();
+            getHistory();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -99,17 +103,15 @@ public class ClientFarmer extends Client  {
 
 
 
-   /* public void setupChatBox() {
-        if (!chatBoxBool)
-            return;
-        logger.info("setting up chatbox");
-        t = new Thread(new StartServer());
-        t.start();
-        cf.gridChat.setVgap(1);
+    public void setupChatBox() {
 
-        chatBoxBool = false;
+        logger.info("setting up chatbox");
+        startServer = new StartServer();
+        t = new Thread(startServer);
+        t.start();
+        controllerFarmerHome.gridChat.setVgap(1);
+
     }
-*/
 
 
 
@@ -123,20 +125,53 @@ public class ClientFarmer extends Client  {
 
         try {
             os.writeObject("getHistory");
-            ResultSet rs = (ResultSet) is.readObject();
+            os.writeObject(user);
+            ArrayList<Kart> list = (ArrayList) is.readObject();
+            int i=0;
 
-            while (rs.next()) {
-                GridPane gp = new GridPane();
-                Label cropName, customerName, quantity, amount;
-                cropName = new Label(rs.getString(1));
-                customerName = new Label(rs.getString(2));
-                quantity = new Label(String.valueOf(rs.getDouble(3)));
-                amount = new Label(String.valueOf(rs.getDouble(4)));
-                gp.setMinWidth(300);
-                gp.add(cropName, 1, 1);
-                gp.add(customerName, 1, 2);
-                gp.add(quantity, 1, 3);
-                gp.add(amount, 1, 4);
+            for (Kart k: list
+                 ) {
+
+
+                BorderPane bp = new BorderPane();
+
+                String dateString = k.getDate().toString();
+                String cropNameString = k.getCropName();
+                String amountString = String.valueOf(k.getAmount());
+                String cropQuantityString = String.valueOf(k.getCropQuantity());
+
+                Label label = new Label("you bought : "+cropNameString);
+                label.setPrefWidth(400);
+                AnchorPane space = new AnchorPane();
+                space.setPrefSize(550,10);
+                space.getStyleClass().add("filler");
+                VBox vBox = new VBox();
+                VBox hBox = new VBox();
+                vBox.getChildren().addAll(label, new Label("the quantity is : "+cropQuantityString), new Label("your total is : "+amountString),space);
+                bp.setCenter(vBox);
+                bp.setLeft(new Label(dateString));
+                bp.setRight(hBox);
+                bp.getStyleClass().add("bp");
+                bp.setPadding(new Insets(10));
+                vBox.setPadding(new Insets(0,10,0,25));
+                bp.setPrefSize(600,300);
+                bp.requestLayout();
+
+
+//                GridPane gp = new GridPane();
+//                Label cropName, customerName, quantity, amount;
+//                cropName = new Label(k.getCropName());
+//                customerName = new Label(k.getCustomerEmail());
+//                quantity = new Label(String.valueOf(k.getCropQuantity()));
+//                amount = new Label(String.valueOf(k.getAmount()));
+//                gp.setMinWidth(300);
+//                gp.add(cropName, 1, 1);
+//                gp.add(customerName, 1, 2);
+//                gp.add(quantity, 1, 3);
+//                gp.add(amount, 1, 4);
+                controllerFarmerHome.gridHistory.add(bp,1,controllerFarmerHome.gridHistory.getChildren().size());
+                i++;
+
 
             }
 
@@ -145,9 +180,6 @@ public class ClientFarmer extends Client  {
             logger.error(e.getMessage());
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            logger.error(e.getMessage());
-            e.printStackTrace();
-        } catch (SQLException e) {
             logger.error(e.getMessage());
             e.printStackTrace();
         }
@@ -200,6 +232,7 @@ public class ClientFarmer extends Client  {
         }
 
         setTable();
+        updateTable();
         clearCropBar();
     }
 
@@ -237,7 +270,7 @@ public class ClientFarmer extends Client  {
         ObservableList<Object> cropList = FXCollections.observableArrayList(list);
 
         controllerFarmerHome.cropTable.setItems(null);
-        controllerFarmerHome.cropTable.getColumns().removeAll();
+     //   controllerFarmerHome.cropTable.getColumns().removeAll();
         controllerFarmerHome.cropTable.setItems(cropList);
 
 
@@ -415,9 +448,7 @@ public class ClientFarmer extends Client  {
 
     public void updateAvailability(boolean selected) {
         try {
-            user.setAvailable(selected);
             os.writeObject("updatefarmer");
-            System.out.println(user.isAvailable());
             os.writeObject(user);
         } catch (IOException e) {
             e.printStackTrace();
@@ -452,7 +483,7 @@ public class ClientFarmer extends Client  {
 
 
 
-        colorPick.setOnAction((EventHandler) t -> {
+        colorPick.setOnAction((EventHandler<ActionEvent>) t -> {
             String strings;
             stage.close();
             strings = colorPick.getValue().toString();
@@ -507,7 +538,7 @@ public class ClientFarmer extends Client  {
 
             } catch (IOException e) {
                 e.printStackTrace();
-                return;
+
             }
 
 
@@ -516,9 +547,13 @@ public class ClientFarmer extends Client  {
 
     }
 
+    public void checkT() {
+        if(t.isAlive())
+            startServer.server.interrupt();
+
+    }
 
 
-/*
     private class Server implements Runnable {
 
         Socket socket;
@@ -528,6 +563,10 @@ public class ClientFarmer extends Client  {
 
         public Server(Socket socket) {
             this.socket = sock;
+        }
+
+        public Server() {
+
         }
 
         @Override
@@ -556,16 +595,16 @@ public class ClientFarmer extends Client  {
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
-                            controllerFarmerHome.gridChat.addRow(controllerFarmerChat.gridChat.getChildren().size()+1,huh);
+                            controllerFarmerHome.gridChat.addRow(controllerFarmerHome.gridChat.getChildren().size()+1,huh);
                             Animation animation = new Timeline(
                                     new KeyFrame(Duration.seconds(.3),
-                                            new KeyValue(controllerFarmerChat.scrollPane.vvalueProperty(), 1)));
+                                            new KeyValue(controllerFarmerHome.scrollPane.vvalueProperty(), 1)));
                             animation.play();
                         }
                     });
 
 
-                    //controllerFarmerChat.chatfarmer.appendText("n"+msg);
+                    //controllerFarmerHome.chatfarmer.appendText("n"+msg);
 
 
                 } catch (IOException e) {
@@ -578,12 +617,20 @@ public class ClientFarmer extends Client  {
             }
 
 
+           // setupChatBox();
+
+        }
+
+        public void interrupt() {
+            msg="0000";
+            Platform.exit();
         }
     }
 
     private class StartServer implements Runnable {
 
-        TextArea ta = new TextArea();
+
+        public ClientFarmer.Server server = new Server();
 
         public StartServer() {
 
@@ -594,14 +641,13 @@ public class ClientFarmer extends Client  {
 
 
             try {
-                ta = controllerFarmerChat.chatfarmer;
 
 
-                ServerSocket serverSocket = new ServerSocket(4000);
+                ServerSocket serverSocket = new ServerSocket(user.getChatPort());
                 Socket socket = serverSocket.accept();
                 logger.info("client server accepted");
 //                chatBoxFarm.appendText("client connected");
-              //  controllerFarmerChat.chatfarmer.appendText("client connected \n\n");
+              //  controllerFarmerHome.chatfarmer.appendText("client connected \n\n");
                 Label lab = new Label("Customer Connected");
                 lab.getStylesheets().add(getClass().getResource("/views/msg sheets.css").toExternalForm());
                 lab.getStyleClass().add("mid");
@@ -609,10 +655,10 @@ public class ClientFarmer extends Client  {
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
-                        controllerFarmerChat.gridChat.addRow(1,lab);
-                        controllerFarmerChat.gridChat.setVgap(2);
-                        controllerFarmerChat.scrollPane.setFitToHeight(true);
-//                        controllerFarmerChat.gridChat.add
+                        controllerFarmerHome.gridChat.addRow(1,lab);
+                        controllerFarmerHome.gridChat.setVgap(2);
+                        controllerFarmerHome.scrollPane.setFitToHeight(true);
+//                        controllerFarmerHome.gridChat.add
 
 
 
@@ -620,7 +666,8 @@ public class ClientFarmer extends Client  {
                 });
                 meOut = new ObjectOutputStream(socket.getOutputStream());
                 in = new ObjectInputStream(socket.getInputStream());
-                Thread t = new Thread(new Server(socket));
+                server = new Server(socket);
+                Thread t = new Thread(server);
                 t.start();
 
             } catch (IOException e) {
@@ -628,7 +675,12 @@ public class ClientFarmer extends Client  {
                 return;
             }
         }
-    }*/
+
+        public void interrupt() {
+            Thread.currentThread().interrupt();
+            return;
+        }
+    }
 }
 
 

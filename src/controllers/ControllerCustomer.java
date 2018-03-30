@@ -63,6 +63,7 @@ public class ControllerCustomer implements Initializable {
 
     @FXML
     private void appClose(ActionEvent actionEvent) {
+        clientCustomer.appClose();
 
     }
 
@@ -73,11 +74,12 @@ public class ControllerCustomer implements Initializable {
 
     @FXML
     private void sendMessage(ActionEvent actionEvent) {
-
+        clientCustomer.sendMessage();
     }
 
     @FXML
     private void initiateChat(ActionEvent actionEvent) {
+        clientCustomer.initiateChat();
 
     }
 

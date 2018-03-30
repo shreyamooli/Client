@@ -1,15 +1,9 @@
 package kart;
 
-import client.ClientFarmer;
-import crops.Crop;
-import users.Customer;
-import users.Farmer;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-
 
 
 public class Kart implements Serializable {
@@ -20,7 +14,15 @@ public class Kart implements Serializable {
     private String customerEmail;
     private String cropName, cropOwner;
     private double cropCost, cropQuantity, amount;
+    private boolean committed = false;
 
+    public boolean isCommitted() {
+        return committed;
+    }
+
+    public void setCommitted(boolean committed) {
+        this.committed = committed;
+    }
 
     public Kart(String customerEmail, String cropName, String cropOwner, double cropCost, double cropQuantity, double amount) {
         this.customerEmail = customerEmail;
@@ -44,12 +46,8 @@ public class Kart implements Serializable {
         date = dtf.format(now);
     }
 
+
     public String getDate() {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        LocalDateTime now =  LocalDateTime.now();
-
-        date = dtf.format(now);
-
         return date;
     }
 

@@ -30,6 +30,8 @@ import jfxtras.scene.control.window.CloseIcon;
 import jfxtras.scene.control.window.MinimizeIcon;
 import jfxtras.scene.control.window.Window;
 import kart.Kart;
+import users.Farmer;
+import users.Person;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -46,6 +48,8 @@ public class ClientCustomer extends Client {
     static ObjectInputStream  myIn;
     private ControllerCustomer controllerCustomer;
     private static ArrayList<Kart> kartList = new ArrayList<>();
+    private ArrayList<Farmer> chatList;
+
 
     TextField editWeight = new TextField();
     TextField editCost = new TextField();
@@ -62,8 +66,10 @@ public class ClientCustomer extends Client {
     public void initiateChat(){
 
 
+       Farmer farmer = (Farmer) controllerCustomer.chatTable.getSelectionModel().getSelectedItem();
 
-       l= this.new listenchat();
+
+       l= this.new listenchat(farmer.getChatPort());
 
 
         t = new Thread(l);
@@ -295,6 +301,7 @@ public class ClientCustomer extends Client {
         item.setCropName(c.getName());
         item.setCropOwner(c.getOwner());
 
+
         try {
             os.writeObject("saveToKart");
             os.writeObject(item);
@@ -349,9 +356,14 @@ public class ClientCustomer extends Client {
         checkout.setOnAction(e->{
             try {
                 os.writeObject("commit");
+                k.setCommitted(true);
                 os.writeObject(k);
                 user.setBalance(user.getBalance()-k.getAmount());
                 controllerCustomer.cBalance.setText("Balance : $"+String.valueOf(user.getBalance()));
+                os.writeObject("remove");
+                os.writeObject(k);
+                updateKart();
+
 
             } catch (IOException e1) {
                 e1.printStackTrace();
@@ -420,8 +432,8 @@ public class ClientCustomer extends Client {
 
             os.writeObject("get farmer list");
 
-            ArrayList e  = (ArrayList) is.readObject();
-            ObservableList<Object> client = FXCollections.observableArrayList(e);
+            chatList  = (ArrayList) is.readObject();
+            ObservableList<Object> client = FXCollections.observableArrayList(chatList);
 
             controllerCustomer.chatColumn.setCellValueFactory(new PropertyValueFactory("fullName"));
             controllerCustomer.chatTable.setItems(client);
@@ -462,13 +474,13 @@ public class ClientCustomer extends Client {
     private class listenchat implements Runnable{
 
         private String msg="";
-
+        private int sockNum;
         Socket s;
 
 
-        public listenchat() {
+        public listenchat(int chatPort) {
 
-
+            sockNum = chatPort;
         }
 
 
@@ -477,7 +489,7 @@ public class ClientCustomer extends Client {
         public void run() {
 
             try {
-                s = new Socket(InetAddress.getLocalHost(),4000);
+                s = new Socket(InetAddress.getLocalHost(),sockNum);
                 myIn = new ObjectInputStream(s.getInputStream());
                 myOut = new ObjectOutputStream(s.getOutputStream());
                 //controllerCustomer.chatBoxCustomer.appendText("connected \n");

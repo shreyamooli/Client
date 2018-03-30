@@ -150,9 +150,9 @@
                               </ImageView>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="cropPane" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="349.0" prefWidth="700.0" style="-fx-background-color: white;" stylesheets="@FarmerHomeCrop.css">
+                        <AnchorPane fx:id="cropPane" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="349.0" prefWidth="700.0" styleClass="filler">
                            <children>
-                              <AnchorPane fx:id="crops" prefHeight="349.0" prefWidth="700.0" stylesheets="@FarmerHomeCrop.css">
+                              <AnchorPane fx:id="crops" prefHeight="349.0" prefWidth="700.0">
                                  <children>
                                     <TableView fx:id="cropTable" layoutY="58.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="227.0" prefWidth="700.0" styleClass="table-vie">
                                        <columns>
@@ -245,7 +245,7 @@
                            <children>
                               <ScrollPane fx:id="scrollPane1" layoutX="30.0" layoutY="75.0" prefHeight="220.0" prefWidth="649.0">
                                  <content>
-                                    <GridPane fx:id="grisHistory" prefHeight="220.0" prefWidth="626.0" vgap="5.0">
+                                    <GridPane fx:id="gridHistory" prefHeight="220.0" prefWidth="626.0" vgap="5.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
