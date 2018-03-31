@@ -119,7 +119,7 @@
                                     </GridPane>
                                  </content>
                               </ScrollPane>
-                              <Label layoutX="41.0" layoutY="27.0" styleClass="h1" text="Shopping Kart">
+                              <Label fx:id="shoppingKart" layoutX="41.0" layoutY="27.0" styleClass="h1" text="Shopping Kart">
                                  <font>
                                     <Font name="Arial Bold" size="23.0" />
                                  </font>

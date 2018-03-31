@@ -28,7 +28,7 @@ public class ControllerCustomer implements Initializable {
     @FXML
     public GridPane gridChat, grisHistory;
     @FXML
-            public Label alias, email, fName;
+            public Label alias, email, fName, shoppingKart;
     @FXML
             public ScrollPane scrollPane, scrollPane1;
 
@@ -111,6 +111,7 @@ public class ControllerCustomer implements Initializable {
 
     @FXML
     private void loadImage(ActionEvent actionEvent) {
+        clientCustomer.loadImage();
     }
 
     @FXML

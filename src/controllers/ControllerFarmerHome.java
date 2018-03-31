@@ -43,6 +43,7 @@ public class ControllerFarmerHome implements Initializable {
     @FXML public TableView cropTable ;
     @FXML public TextField chatSendBoxFarmer;
     @FXML public ScrollPane scrollPane;
+    @FXML public ImageView image;
     
 
 
@@ -128,6 +129,10 @@ show(chatPane);    }
     @FXML
     private void sendMessage(ActionEvent actionEvent) {
         client.sendMessage();
+    }
+    @FXML
+    private void upload(ActionEvent actionEvent) {
+        client.upload();
     }
 
     @FXML

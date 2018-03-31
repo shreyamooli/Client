@@ -41,13 +41,13 @@ public class Client extends Application {
     public static ObjectOutputStream os;
     public static ObjectInputStream is;
     public ObjectInputStream reader; // for reading data from server
-    public static Person user = new Person();
+    public static Person person = new Person();
     public static Stage primaryStage;
     public static AnchorPane root;
     public static String erre = "";
     public  Logger logger = LogManager.getLogger(Client.class);
     FXMLLoader floader = new FXMLLoader();
-   // private Person user;
+   // private Person person;
     private int offset = 0;
     private double average=350;
     private ClientFarmer cf;
@@ -198,10 +198,10 @@ public class Client extends Application {
                     os.writeObject("getUser");
                     os.writeObject(controllerLogin.signInEmail.getText());
                     os.writeObject(a);
-                    Person p = (Person) is.readObject();
+                    Customer p = (Customer) is.readObject();
 
 
-                    user = p;
+
 
 
                     floader = new FXMLLoader(getClass().getResource("/windows/CustomerHome.fxml"));
@@ -219,7 +219,7 @@ public class Client extends Application {
                    // generic(floader);
 
                     controllerCustomer = floader.<ControllerCustomer>getController();
-                    cc = new ClientCustomer();
+                    cc = new ClientCustomer( p);
                     controllerCustomer.addClient(cc);
                     cc.startUp();
                     //loadScene("/views/paneCustomer.fxml", p);
@@ -240,7 +240,7 @@ public class Client extends Application {
     }
 
     public Person getUser() {
-        return user;
+        return person;
     }
 
     public boolean checkErr(String c, TextField b, int a) {

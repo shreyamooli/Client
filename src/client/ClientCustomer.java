@@ -20,8 +20,10 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -30,9 +32,11 @@ import jfxtras.scene.control.window.CloseIcon;
 import jfxtras.scene.control.window.MinimizeIcon;
 import jfxtras.scene.control.window.Window;
 import kart.Kart;
+import users.Customer;
 import users.Farmer;
 import users.Person;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -44,11 +48,13 @@ public class ClientCustomer extends Client {
 
     Thread t;
     listenchat l;
+    private static Customer user;
     static ObjectOutputStream myOut;
     static ObjectInputStream  myIn;
     private ControllerCustomer controllerCustomer;
     private static ArrayList<Kart> kartList = new ArrayList<>();
     private ArrayList<Farmer> chatList;
+    File currentImageFile;
 
 
     TextField editWeight = new TextField();
@@ -57,8 +63,8 @@ public class ClientCustomer extends Client {
     TextField editAvailable = new TextField();
 
 
-    public ClientCustomer() throws IOException {
-
+    public ClientCustomer(Customer p) throws IOException {
+        this.user = p;
     }
 
 
@@ -291,7 +297,7 @@ public class ClientCustomer extends Client {
     }
 
     private void writeToKart(Crop c, double v) {
-        //todo write info to database then to kart
+        //todo write info to database then to kart -- done
 
         Kart item = new Kart();
         item.setCustomerEmail(user.getEmail());
@@ -323,6 +329,8 @@ public class ClientCustomer extends Client {
         if(controllerCustomer.grisHistory.getChildren().size() > 0)
         controllerCustomer.grisHistory.getChildren().remove(0,controllerCustomer.grisHistory.getChildren().size());
 
+        double total = 0;
+
         try {
             os.writeObject("getKart");
             os.writeObject(user.getEmail());
@@ -331,7 +339,11 @@ public class ClientCustomer extends Client {
             for (Kart k: kartList
                  ) {
                 addToKart(k);
+                total += k.getAmount();
             }
+
+
+            controllerCustomer.shoppingKart.setText("ShoppingKart                  your total is :"+total);
 
 
         } catch (IOException e) {
@@ -353,6 +365,21 @@ public class ClientCustomer extends Client {
         JFXButton checkout = new JFXButton("Checkout");
         JFXButton remove = new JFXButton("remove from kart");
 
+
+
+        ChoiceBox<Double> choices = new ChoiceBox<>();
+        ChoiceBox<String> locations = new ChoiceBox<>();
+        locations.getItems().addAll("Linsted Market", "Kingston Market", "Papine Market");
+        locations.setValue("Choose Location");
+      //  locations.getItems().set(0,"choose location");
+
+        for (int i = 0; i < k.getCropQuantity()*2 ; i++) {
+            choices.getItems().add(i+1.0);
+        }
+        choices.setValue(k.getAmount());
+
+
+
         checkout.setOnAction(e->{
             try {
                 os.writeObject("commit");
@@ -364,8 +391,23 @@ public class ClientCustomer extends Client {
                 os.writeObject(k);
                 updateKart();
 
+                os.writeObject("getCrop");
+                os.writeObject(k.getCropName());
+                os.writeObject(k.getCropOwner());
+                Crop c = (Crop) is.readObject();
+                c.setQuantity(c.getQuantity()-k.getCropQuantity());
+                os.writeObject("updateCrop");
+                os.writeObject(c);
+
+                //todo  edit crop quantity ---- done
+                //todo update item quantity from basket page --- done
+                //todo  total for all items in basket --- done
+                //todo  specify location pickup -- done
+
 
             } catch (IOException e1) {
+                e1.printStackTrace();
+            } catch (ClassNotFoundException e1) {
                 e1.printStackTrace();
             }
         });
@@ -380,6 +422,19 @@ public class ClientCustomer extends Client {
             }
         });
 
+        choices.setOnAction(e->{
+            k.setCropQuantity(choices.getValue());
+            k.setAmount(k.getCropQuantity()*k.getCropCost());
+            try {
+                os.writeObject("updateKart");
+                os.writeObject(k);
+
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+            updateKart();
+        });
+
 
         Label label = new Label("you bought : "+cropNameString);
         label.setPrefWidth(400);
@@ -388,7 +443,11 @@ public class ClientCustomer extends Client {
         space.getStyleClass().add("filler");
         VBox vBox = new VBox();
         VBox hBox = new VBox();
-        vBox.getChildren().addAll(label, new Label("the quantity is : "+cropQuantityString), new Label("your total is : "+amountString),space);
+        HBox labelAndQuantity = new HBox();
+        labelAndQuantity.getChildren().add(new Label("the quantity is : "+cropQuantityString));
+        labelAndQuantity.getChildren().add(choices);
+        vBox.getChildren().addAll(label, labelAndQuantity, new Label("your total is : "+amountString),space);
+        vBox.getChildren().add(locations);
         hBox.getChildren().addAll(checkout, remove);
         bp.setCenter(vBox);
         bp.setLeft(new Label(dateString));
@@ -469,6 +528,18 @@ public class ClientCustomer extends Client {
     public void startUp() {
         setCustomer();
         getFarmersForChat();
+    }
+
+    public void loadImage() {
+
+        FileChooser fc = new FileChooser();
+        currentImageFile = fc.showOpenDialog(primaryStage);
+        if (currentImageFile == null)
+            return;
+
+        Image ill = new Image(currentImageFile.toURI().toString());
+        //todo  cf.pImage.setImage(ill);
+        user.setImage(ill.toString().getBytes());
     }
 
     private class listenchat implements Runnable{

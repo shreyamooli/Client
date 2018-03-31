@@ -36,6 +36,8 @@ import kart.Kart;
 import org.controlsfx.control.PopOver;
 import users.Farmer;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -80,6 +82,7 @@ public class ClientFarmer extends Client  {
             setTable();
             setupChatBox();
             getHistory();
+            setUpImage();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -88,6 +91,31 @@ public class ClientFarmer extends Client  {
 
     }
 
+    private void setUpImage() {
+       try {
+           byte[] b = user.getImage();
+
+         //  File file = new File(String.valueOf(b));
+
+
+           Image test = Image.impl_fromPlatformImage(ImageIO.read(new ByteArrayInputStream(b)));
+           controllerFarmerHome.image.setImage(test);
+           BufferedImage img = ImageIO.read(new ByteArrayInputStream(b));
+
+       //    ByteArrayInputStream bis = new ByteArrayInputStream(b);
+       //    BufferedImage bImage2 = ImageIO.read(bis);
+       //    ImageIO.write(bImage2, "jpg", new File("output.jpg") );
+
+
+
+
+       }catch(NullPointerException e){
+           logger.error("no image in db");
+       } catch (IOException e) {
+           e.printStackTrace();
+       }
+
+    }
 
 
     private void configureDisplay() {
@@ -192,7 +220,7 @@ public class ClientFarmer extends Client  {
 
 
 
-    public void upload() throws IOException {
+    public void upload()  {
         FileChooser fc = new FileChooser();
         File fil = fc.showOpenDialog(primaryStage);
         if (fil == null)
@@ -200,11 +228,23 @@ public class ClientFarmer extends Client  {
 
         Image ill = new Image(fil.toURI().toString());
       //todo  cf.pImage.setImage(ill);
-        user.setImage(ill.toString().getBytes());
+      //  user.setImage(ill.toString().getBytes());
+        controllerFarmerHome.image.setImage(ill);
 
-        os.writeObject("uploadUserImage");
-        os.writeObject(user);
-        os.writeObject(fil.getAbsoluteFile());
+        try {
+//            os.writeObject("uploadUserImage");
+//            os.writeObject(user);
+//            os.writeObject(fil.getAbsoluteFile());
+
+            os.writeObject("updateFarmerImage");
+            os.writeObject(user);
+            os.writeObject(fil);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
@@ -217,6 +257,8 @@ public class ClientFarmer extends Client  {
         if (checkCropValues()) {
             Crop c = new Crop(controllerFarmerHome.cName.getText(), Double.valueOf(controllerFarmerHome.cWeight.getText()), Double.valueOf(controllerFarmerHome.cCost.getText()), Double.valueOf(controllerFarmerHome.cQuantity.getText()), controllerFarmerHome.cropAvailable.isSelected(), file);
             c.setOwner(user.getEmail());
+            Image img = controllerFarmerHome.cImage.getImage();
+            c.setImage(img.toString().getBytes());
             try {
                 os.writeObject("addCrop");
                 os.writeObject(c);
@@ -374,7 +416,7 @@ public class ClientFarmer extends Client  {
 
                 //  Crop c = (Crop) param.getTableRow().getItem();
                 try {
-                    os.writeObject("update");
+                    os.writeObject("updateCrop");
                     os.writeObject(c);
 
                 } catch (IOException e) {
